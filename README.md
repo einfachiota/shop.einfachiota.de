@@ -1,6 +1,6 @@
 # eimag.einfachiota.de
 
-> My stellar Nuxt.js project
+> Startseite und Vorverkaufsstelle für das einfachIOTA Magazin
 
 ## Build Setup
 
@@ -18,5 +18,3 @@ $ yarn start
 # generate static project
 $ yarn generate
 ```
-
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
