@@ -1,68 +1,92 @@
 <template>
-  <div class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        eimag.einfachiota.de
-      </h1>
-      <h2 class="subtitle">
-        My stellar Nuxt.js project
-      </h2>
-      <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green">
-          Documentation
+  <div id="home">
+    <div class="section section-background">
+      <div class="container">
+        <h1>Das einfachIOTA Magazin ist da!</h1>
+        <p>Jetzt die erste Ausgabe der eiMag online vorbestellen.</p>
+        <div class="info-box">
+          <img src="~/assets/front.png" />
+        </div>
+        <br />
+        <a v-scroll-to="'#order'" class="el-button el-button--primary">
+          Zur Vorbestellung
         </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
+      </div>
+    </div>
+    <div id="order" class="section section-background">
+      <div class="container">
+        <h2>Ab jetzt Vorbestellbar!</h2>
+        <p></p>
+        <div class="info-box">lll</div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-
 export default {
-  components: {
-    Logo
-  }
+  components: {}
 }
 </script>
 
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+<style lang="scss">
+.el-main {
+  padding: 0px !important;
+}
+#home {
   text-align: center;
 }
+.section {
+  padding: 80px 0;
+  height: 100vh;
+  &-background {
+    background-color: var(--light);
+    p {
+      max-width: 600px;
+      margin: 15px auto 30px;
+    }
+    a {
+      text-decoration: none;
+    }
 
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
+    .container {
+      width: 100%;
+      h1 {
+      }
+      p {
+        font-size: 1.2em;
+      }
+      .info-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          max-width: 600px;
+          width: 80%;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+        }
+      }
+    }
+  }
+  .headline-wrapper {
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
+@media only screen and (max-width: 740px) {
+  .hero {
+    padding-top: 40px;
+  }
+  .headline-wrapper {
+    flex-wrap: wrap;
+    h2 {
+      margin-bottom: 20px;
+    }
+  }
+  .btn-social {
+    margin-bottom: 5px !important;
+  }
 }
 </style>
