@@ -1,8 +1,8 @@
 {
-  "name": "electron-vue-admin",
+  "name": "store-manager",
   "version": "3.0.0",
-  "author": "Pan <panfree23@gmail.com>",
-  "description": "An electron-vue project",
+  "author": "huhn <huhn@einfachIOTA.de>",
+  "description": "store-manager for store",
   "license": "MIT",
   "main": "./dist/electron/main.js",
   "scripts": {
@@ -19,8 +19,8 @@
     "postinstall": "npm run lint:fix"
   },
   "build": {
-    "productName": "electron-vue-admin",
-    "appId": "org.simulatedgreg.electron-vue",
+    "productName": "store-manager",
+    "appId": "de.einfachiota.store-manager",
     "directories": {
       "output": "build"
     },

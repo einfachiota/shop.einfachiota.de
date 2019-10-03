@@ -1,8 +1,7 @@
-# electron-vue-admin
+# store-manager
 
-> An electron-vue project
+> An store-manager
 
-This is a vue electron admin project base on  [vueAdmin-template](https://github.com/PanJiaChen/vueAdmin-template) , and was generated from [electron-vue](https://github.com/SimulatedGREG/electron-vue) using [vue-cli](https://github.com/vuejs/vue-cli). Documentation about this project can be found [here](https://simulatedgreg.gitbooks.io/electron-vue/content/index.html).
 
 ## Build Setup
 
@@ -22,15 +21,3 @@ npm run lint
 # run webpack in production
 npm run pack
 ```
----
-
-
-## Demo
-
-![](https://github.com/PanJiaChen/PanJiaChen.github.io/blob/master/images/electron-login.png)
-
-![](https://github.com/PanJiaChen/PanJiaChen.github.io/blob/master/images/electron-admin.gif)
-
-
-## Download
-Mac: [app release](https://github.com/PanJiaChen/electron-vue-admin/releases/tag/v3.0.0)

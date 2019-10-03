@@ -27,14 +27,16 @@ const user = {
   actions: {
     // 登录
     Login({ commit }, userInfo) {
+      console.log('Login::userInfo', userInfo)
       const username = userInfo.username.trim()
       return new Promise((resolve, reject) => {
         login(username, userInfo.password).then(response => {
-          const data = response.data
-          setToken(data.token)
-          commit('SET_TOKEN', data.token)
+          console.log('Login::response', response)
+          setToken(response.token)
+          commit('SET_TOKEN', response.token)
           resolve()
         }).catch(error => {
+          console.log('Login::errer', error)
           reject(error)
         })
       })
@@ -44,14 +46,20 @@ const user = {
     GetInfo({ commit, state }) {
       return new Promise((resolve, reject) => {
         getInfo(state.token).then(response => {
-          const data = response.data
-          if (data.roles && data.roles.length > 0) { // 验证返回的roles是否是一个非空数组
-            commit('SET_ROLES', data.roles)
+          console.log('response', response)
+          const user = response.user
+
+          // TODO: ADD ROLES
+          user.roles = ['admin']
+          if (user.roles && user.roles.length > 0) { // 验证返回的roles是否是一个非空数组
+            commit('SET_ROLES', user.roles)
           } else {
             reject('getInfo: roles must be a non-null array !')
           }
-          commit('SET_NAME', data.name)
-          commit('SET_AVATAR', data.avatar)
+          commit('SET_NAME', user.id)
+          // TODO add user avatar
+          user.avatar = ''
+          commit('SET_AVATAR', user.avatar)
           resolve(response)
         }).catch(error => {
           reject(error)

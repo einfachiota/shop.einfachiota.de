@@ -1,8 +1,9 @@
 import request from '@/utils/request'
 
 export function login(username, password) {
+  console.log('login')
   return request({
-    url: '/user/login',
+    url: '/auth/login',
     method: 'post',
     data: {
       username,
@@ -13,9 +14,9 @@ export function login(username, password) {
 
 export function getInfo(token) {
   return request({
-    url: '/user/info',
+    url: '/auth/info',
     method: 'get',
-    params: { token }
+    headers: { authorization: token }
   })
 }
 
