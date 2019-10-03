@@ -17,15 +17,18 @@
       <div class="container">
         <h2>Ab jetzt Vorbestellbar!</h2>
         <p></p>
-        <div class="info-box">lll</div>
+        <div class="info-box">
+          <Order />
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import Order from '../components/Order'
 export default {
-  components: {}
+  components: { Order }
 }
 </script>
 

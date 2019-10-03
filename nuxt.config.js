@@ -27,7 +27,7 @@ module.exports = {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['@/plugins/element-ui'],
+  plugins: ['@/plugins/element-ui', { src: '~/plugins/paypal.js', ssr: false }],
   /*
    ** Nuxt.js dev-modules
    */
@@ -54,8 +54,10 @@ module.exports = {
   /*
    ** Build configuration
    */
+
   build: {
     transpile: [/^element-ui/],
+    vendor: ['vue-paypal-checkout'],
     /*
      ** You can extend webpack config here
      */
