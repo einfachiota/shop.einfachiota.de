@@ -3,43 +3,45 @@
     <div v-if="order_step == 1">
       <h3>Wohin soll Deine Bestellung geliefert werden?</h3>
       <el-form
-        :model="formInline"
+        ref="ruleForm"
+        :model="ruleForm"
         class="demo-form-inline"
         status-icon
         :rules="rules"
       >
-        <el-form-item label="Vorname">
+        <el-form-item label="Vorname" prop="first_name">
           <el-input
-            v-model="formInline.first_name"
+            v-model="ruleForm.first_name"
             placeholder="Dein Vorname"
+            required="true"
           ></el-input>
         </el-form-item>
-        <el-form-item label="Nachname">
+        <el-form-item label="Nachname" prop="last_name">
           <el-input
-            v-model="formInline.last_name"
+            v-model="ruleForm.last_name"
             placeholder="Dein Nachname"
           ></el-input>
         </el-form-item>
-        <el-form-item label="Adresse">
+        <el-form-item label="Adresse" prop="address">
           <el-input
-            v-model="formInline.address"
+            v-model="ruleForm.address"
             placeholder="Deine Straße und Hausnummer"
           ></el-input>
         </el-form-item>
-        <el-form-item label="Postleitzahl">
+        <el-form-item label="Postleitzahl" prop="zip_code">
           <el-input
-            v-model="formInline.zip_code"
+            v-model="ruleForm.zip_code"
             placeholder="Deine Postleitzahl"
           ></el-input>
         </el-form-item>
-        <el-form-item label="Stadt">
+        <el-form-item label="Stadt" prop="city">
           <el-input
-            v-model="formInline.city"
+            v-model="ruleForm.city"
             placeholder="Deine Stadt"
           ></el-input>
         </el-form-item>
-        <el-form-item label="Land">
-          <el-select v-model="formInline.country" placeholder="Wähle dein Land">
+        <el-form-item label="Land" prop="country">
+          <el-select v-model="ruleForm.country" placeholder="Wähle dein Land">
             <el-option label="Deutschland" value="de"></el-option>
             <el-option label="Österreich" value="ch"></el-option>
             <el-option label="Schweiz" value="at"></el-option>
@@ -47,22 +49,22 @@
           </el-select>
         </el-form-item>
         <el-form-item label="Anzahl" prop="amount">
-          <el-input v-model.number="formInline.amount"></el-input>
+          <el-input v-model.number="ruleForm.amount"></el-input>
         </el-form-item>
-        <el-form-item label="E-Mail Addresse">
+        <el-form-item label="E-Mail Addresse" prop="email">
           <el-input
-            v-model="formInline.email"
+            v-model="ruleForm.email"
             placeholder="Deine E-Mail Addresse, falls bei der Lieferung etwas schief geht."
           ></el-input>
         </el-form-item>
         <div>
           <p>
             <strong>Summe:</strong>
-            {{ formInline.amount * 10 }}€
+            {{ ruleForm.amount * 10 }}€
           </p>
         </div>
         <el-form-item>
-          <el-button type="primary" @click="onSubmit"
+          <el-button type="primary" @click="onSubmit('ruleForm')"
             >Zahlungspflichtig bestellen</el-button
           >
         </el-form-item>
@@ -71,8 +73,9 @@
 
     <div v-if="order_step == 2">
       <h3>Wie willst du bezahlen?</h3>
+      <p>Kosten: {{ final_price }}</p>
       <paypal-checkout
-        amount="10.00"
+        :amount="`${final_price}`"
         currency="EUR"
         :client="paypal_credentials"
         env="sandbox"
@@ -122,33 +125,121 @@ export default {
           no_shipping: 1
         }
       },
-      formInline: {
-        user: '',
+      ruleForm: {
+        email: '',
+        first_name: '',
+        last_name: '',
+        address: '',
+        zip_code: '',
+        city: '',
         country: 'de',
-        amount: 1
+        amount: 1,
+        final_price: null
       },
       rules: {
+        email: [
+          {
+            required: true,
+            message: 'Bitte gib deinen E-Mail an.',
+            trigger: 'blur'
+          },
+          {
+            type: 'email',
+            message: 'Bitte gib eine korrekte E-Mail an.',
+            trigger: 'blur'
+          }
+        ],
+        first_name: [
+          {
+            required: true,
+            message: 'Bitte gib deinen Vornamen an.',
+            trigger: 'blur'
+          },
+          {
+            min: 2,
+            max: 300,
+            message: 'Length should be 2 to 300',
+            trigger: 'blur'
+          }
+        ],
+        last_name: [
+          {
+            required: true,
+            message: 'Bitte gib deinen Nachnamen an.',
+            trigger: 'blur'
+          },
+          {
+            min: 2,
+            max: 300,
+            message: 'Length should be 2 to 300',
+            trigger: 'blur'
+          }
+        ],
+        address: [
+          {
+            required: true,
+            message: 'Bitte gib deine Adresse an.',
+            trigger: 'blur'
+          },
+          {
+            min: 2,
+            max: 300,
+            message: 'Length should be 2 to 300',
+            trigger: 'blur'
+          }
+        ],
+        zip_code: [
+          {
+            required: true,
+            message: 'Bitte gib deine Postleitzahl an.',
+            trigger: 'blur'
+          },
+          {
+            min: 2,
+            max: 10,
+            message: 'Length should be 2 to 300',
+            trigger: 'blur'
+          }
+        ],
+        city: [
+          {
+            required: true,
+            message: 'Bitte gib deine Stadt an.',
+            trigger: 'blur'
+          },
+          {
+            min: 2,
+            max: 300,
+            message: 'Length should be 2 to 300',
+            trigger: 'blur'
+          }
+        ],
         amount: [{ validator: checkAmount, trigger: 'blur' }]
       }
     }
   },
   methods: {
-    onSubmit() {
-      console.log('submit!')
-      this.order_step = 2
-      /*
-      const self = this
-      this.$axios
-        .post('http://localhost:5000/api/orders', this.formInline)
-        .then((err, result) => {
-          console.log(err)
-          console.log(result)
-        })
-        .catch((err) => {
-          console.log('err')
-          console.log(err)
-        })
-        */
+    onSubmit(formName) {
+      this.$refs[formName].validate((valid) => {
+        if (valid) {
+          console.log('submit!')
+          const self = this
+          this.$axios
+            .post('http://localhost:5000/api/orders', this.ruleForm)
+            .then((result) => {
+              console.log(result)
+              self.order_step = 2
+              self.final_price = result.data.final_price
+            })
+            .catch((err) => {
+              console.log('err')
+              console.log(err)
+            })
+        } else {
+          console.log('error submit!!')
+          return false
+        }
+      })
     },
     paymentAuthorized(data) {
       console.log(data)
