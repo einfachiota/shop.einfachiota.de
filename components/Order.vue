@@ -79,12 +79,14 @@
         currency="EUR"
         :client="paypal_credentials"
         env="sandbox"
-        :invoice-number="'201705051002'"
+        :invoice-number="order._id"
         :experience="experience"
         @payment-authorized="paymentAuthorized"
         @payment-completed="paymentCompleted"
         @payment-cancelled="paymentCancelled"
       ></paypal-checkout>
+      <el-button @click="payWithIota">Pay with IOTA</el-button>
+      <img v-if="qrCodeData" :src="qrCodeData.src" alt="QR CODE" />
     </div>
     <div v-if="order_step == 3">
       <h3>Danke für deinen Kauf</h3>
@@ -93,8 +95,11 @@
 </template>
 
 <script>
+import * as IotaQR from '@tangle-frost/iota-qr-lib/pkg/iota-qr-lib.js'
+
 export default {
   data() {
+    console.log('socket', this.$socket)
     const checkAmount = (rule, value, callback) => {
       if (!value) {
         return callback(
@@ -112,8 +117,12 @@ export default {
       }, 200)
     }
     return {
+      socket: null,
       order_step: 1,
       ordered: false,
+      qrCodeData: null,
+      final_price: 10,
+      order: null,
       paypal_credentials: {
         sandbox:
           'ARytaJaq51tIosygQrzAvBhZcPSLd3YX6gn_kvGZN3uesBNSBcPi1VUgHQ7CrCG83onm7PQUHOATOxeH',
@@ -218,6 +227,9 @@ export default {
       }
     }
   },
+  created() {
+    console.log('created()')
+  },
   methods: {
     onSubmit(formName) {
       this.$refs[formName].validate((valid) => {
@@ -229,6 +241,7 @@ export default {
             .then((result) => {
               console.log(result)
               self.order_step = 2
+              self.order = result.data
               self.final_price = result.data.final_price
             })
             .catch((err) => {
@@ -250,6 +263,52 @@ export default {
     },
     paymentCancelled(data) {
       console.log(data)
+    },
+    payWithIota() {
+      const self = this
+      this.$axios
+        .post(
+          `http://localhost:5000/api/pay_with_iota?id=${this.order._id}`,
+          this.order
+        )
+        .then(function(response) {
+          console.log(response)
+          self.data = response.data
+          self.$socket.client.emit('storeClientInfo', {
+            customId: response.data.order._id
+          })
+          const paymentData = IotaQR.TrinityPaymentQR.generatePaymentData(
+            response.data.payment.address,
+            response.data.payment.value,
+            'EINFACHIOTA',
+            ''
+          )
+          IotaQR.TrinityPaymentQR.renderHtml(paymentData, 'png', 8).then(
+            (qrCodeData) => {
+              self.show = false
+              self.qrCodeData = qrCodeData
+              console.log('qr_code_data', qrCodeData)
+              console.log('qr_code_data', qrCodeData.src)
+            }
+          )
+        })
+        .catch(function(error) {
+          console.log('CLG')
+          console.log(error)
+          self.data.status = 'error'
+        })
+    }
+  },
+  sockets: {
+    connect() {
+      console.log('socket connected')
+    },
+    payments() {
+      console.log('payments')
+      alert()
+    },
+    disconnect() {
+      console.log('socket disconnect')
     }
   }
 }

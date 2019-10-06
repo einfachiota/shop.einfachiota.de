@@ -27,7 +27,14 @@ module.exports = {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['@/plugins/element-ui', { src: '~/plugins/paypal.js', ssr: false }],
+  plugins: [
+    '@/plugins/element-ui',
+    { src: '~/plugins/paypal.js', ssr: false },
+    {
+      src: '~/plugins/socket.io.js',
+      ssr: false // <-- this line is required
+    }
+  ],
   /*
    ** Nuxt.js dev-modules
    */
@@ -50,7 +57,12 @@ module.exports = {
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
    */
-  axios: {},
+  axios: {
+    proxy: true // Can be also an object with default options
+  },
+  proxy: {
+    '/api': { target: 'http://localhost:5000', ws: true }
+  },
   /*
    ** Build configuration
    */
