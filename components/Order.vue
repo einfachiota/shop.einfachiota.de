@@ -259,6 +259,7 @@ export default {
     },
     paymentCompleted(data) {
       console.log(data)
+      this.payWithPaypal(data)
       this.order_step = 3
     },
     paymentCancelled(data) {
@@ -291,6 +292,23 @@ export default {
               console.log('qr_code_data', qrCodeData.src)
             }
           )
+        })
+        .catch(function(error) {
+          console.log('CLG')
+          console.log(error)
+          self.data.status = 'error'
+        })
+    },
+    payWithPaypal(payment) {
+      const self = this
+      console.log('payWithPaypal', payment)
+      this.$axios
+        .post(
+          `http://localhost:5000/api/pay_with_paypal?id=${this.order._id}`,
+          { payment }
+        )
+        .then(function(response) {
+          console.log(response)
         })
         .catch(function(error) {
           console.log('CLG')
