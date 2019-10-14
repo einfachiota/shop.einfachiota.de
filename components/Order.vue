@@ -1,7 +1,6 @@
 <template>
   <div>
     <div v-if="order_step == 1">
-      <h3>Wohin soll Deine Bestellung geliefert werden?</h3>
       <el-form
         ref="ruleForm"
         :model="ruleForm"
@@ -57,17 +56,17 @@
             placeholder="Deine E-Mail Addresse, falls bei der Lieferung etwas schief geht."
           ></el-input>
         </el-form-item>
-        <div>
-          <p>
-            <strong>Summe:</strong>
-            {{ ruleForm.amount * 10 }}€
-          </p>
+        <div class="form-footer">
+          <div class="price">
+            <h3>{{ ruleForm.amount * 10 }}€</h3>
+            <h5>Summe</h5>
+          </div>
+          <el-form-item class="submit-btn">
+            <el-button type="primary" @click="onSubmit('ruleForm')"
+              >Zahlungspflichtig bestellen</el-button
+            >
+          </el-form-item>
         </div>
-        <el-form-item>
-          <el-button type="primary" @click="onSubmit('ruleForm')"
-            >Zahlungspflichtig bestellen</el-button
-          >
-        </el-form-item>
       </el-form>
     </div>
 
@@ -331,3 +330,26 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+.form-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+}
+h3 {
+  font-size: 72px;
+  line-height: 1;
+}
+h5 {
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: 800;
+  opacity: 0.5;
+  font-family: 'Roboto Slab', serif;
+}
+.submit-btn {
+  margin-bottom: 0;
+}
+</style>

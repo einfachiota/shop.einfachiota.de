@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <nuxt />
-  </div>
+  <nuxt />
 </template>
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400|Roboto+Slab:700');
@@ -40,6 +38,7 @@ p {
 }
 :root {
   --primary: #00b7c5;
+  --primary_50: rgba(0, 183, 197, 0.5);
   --primary-darken: #03a3af;
   --secondary: #0b5d9e;
   --secondary-2: #5ab0b2;
