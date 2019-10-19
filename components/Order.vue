@@ -11,6 +11,7 @@
         <el-form-item label="Vorname" prop="first_name">
           <el-input
             v-model="ruleForm.first_name"
+            disabled
             placeholder="Dein Vorname"
             required="true"
           ></el-input>
@@ -18,24 +19,28 @@
         <el-form-item label="Nachname" prop="last_name">
           <el-input
             v-model="ruleForm.last_name"
+            disabled
             placeholder="Dein Nachname"
           ></el-input>
         </el-form-item>
         <el-form-item label="Adresse" prop="address">
           <el-input
             v-model="ruleForm.address"
+            disabled
             placeholder="Deine Straße und Hausnummer"
           ></el-input>
         </el-form-item>
         <el-form-item label="Postleitzahl" prop="zip_code">
           <el-input
             v-model="ruleForm.zip_code"
+            disabled
             placeholder="Deine Postleitzahl"
           ></el-input>
         </el-form-item>
         <el-form-item label="Stadt" prop="city">
           <el-input
             v-model="ruleForm.city"
+            disabled
             placeholder="Deine Stadt"
           ></el-input>
         </el-form-item>
@@ -48,11 +53,12 @@
           </el-select>
         </el-form-item>
         <el-form-item label="Anzahl" prop="amount">
-          <el-input v-model.number="ruleForm.amount"></el-input>
+          <el-input disabled v-model.number="ruleForm.amount"></el-input>
         </el-form-item>
         <el-form-item label="E-Mail Addresse" prop="email">
           <el-input
             v-model="ruleForm.email"
+            disabled
             placeholder="Deine E-Mail Addresse, falls bei der Lieferung etwas schief geht."
           ></el-input>
         </el-form-item>
@@ -62,8 +68,8 @@
             <h5>Summe</h5>
           </div>
           <el-form-item class="submit-btn">
-            <el-button type="primary" @click="onSubmit('ruleForm')"
-              >Zahlungspflichtig bestellen</el-button
+            <el-button disabled type="primary" @click="onSubmit('ruleForm')"
+              >Bald Zahlungspflichtig bestellen</el-button
             >
           </el-form-item>
         </div>
