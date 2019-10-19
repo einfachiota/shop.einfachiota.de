@@ -74,8 +74,5 @@ module.exports = {
      ** You can extend webpack config here
      */
     extend(config, ctx) {}
-  },
-  router: {
-    base: process.env.DEPLOY_ENV === 'GH_PAGES' ? '/eimag.einfachiota.de/' : ''
   }
 }
