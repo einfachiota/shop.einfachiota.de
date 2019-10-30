@@ -11,7 +11,6 @@
         <el-form-item label="Vorname" prop="first_name">
           <el-input
             v-model="ruleForm.first_name"
-            disabled
             placeholder="Dein Vorname"
             required="true"
           ></el-input>
@@ -19,28 +18,24 @@
         <el-form-item label="Nachname" prop="last_name">
           <el-input
             v-model="ruleForm.last_name"
-            disabled
             placeholder="Dein Nachname"
           ></el-input>
         </el-form-item>
         <el-form-item label="Adresse" prop="address">
           <el-input
             v-model="ruleForm.address"
-            disabled
             placeholder="Deine Straße und Hausnummer"
           ></el-input>
         </el-form-item>
         <el-form-item label="Postleitzahl" prop="zip_code">
           <el-input
             v-model="ruleForm.zip_code"
-            disabled
             placeholder="Deine Postleitzahl"
           ></el-input>
         </el-form-item>
         <el-form-item label="Stadt" prop="city">
           <el-input
             v-model="ruleForm.city"
-            disabled
             placeholder="Deine Stadt"
           ></el-input>
         </el-form-item>
@@ -53,13 +48,12 @@
           </el-select>
         </el-form-item>
         <el-form-item label="Anzahl" prop="amount">
-          <el-input disabled v-model.number="ruleForm.amount"></el-input>
+          <el-input v-model.number="ruleForm.amount"></el-input>
         </el-form-item>
-        <el-form-item label="E-Mail Addresse" prop="email">
+        <el-form-item label="E-Mail Adresse" prop="email">
           <el-input
             v-model="ruleForm.email"
-            disabled
-            placeholder="Deine E-Mail Addresse, falls bei der Lieferung etwas schief geht."
+            placeholder="Deine E-Mail Adresse, falls bei der Lieferung etwas schief geht."
           ></el-input>
         </el-form-item>
         <div class="form-footer">
@@ -68,8 +62,8 @@
             <h5>Summe</h5>
           </div>
           <el-form-item class="submit-btn">
-            <el-button disabled type="primary" @click="onSubmit('ruleForm')"
-              >Bald Zahlungspflichtig bestellen</el-button
+            <el-button type="primary" @click="onSubmit('ruleForm')"
+              >Zahlungspflichtig bestellen</el-button
             >
           </el-form-item>
         </div>
@@ -108,14 +102,14 @@ export default {
     const checkAmount = (rule, value, callback) => {
       if (!value) {
         return callback(
-          new Error('Bitte gib an, wieviel Exemplare du möchtest.')
+          new Error('Bitte gib an, wie viel Exemplare du möchtest.')
         )
       }
       setTimeout(() => {
         if (!Number.isInteger(value)) {
           callback(new Error('Bitte gibt eine Zahl ein.'))
         } else if (value < 0) {
-          callback(new Error('Komm schon, die Zahl muss gößer als 0 sein :-)'))
+          callback(new Error('Komm schon, die Zahl muss größer als 0 sein :-)'))
         } else {
           callback()
         }
@@ -128,6 +122,7 @@ export default {
       qrCodeData: null,
       final_price: 10,
       order: null,
+      txpending: false,
       paypal_credentials: {
         sandbox:
           'ARytaJaq51tIosygQrzAvBhZcPSLd3YX6gn_kvGZN3uesBNSBcPi1VUgHQ7CrCG83onm7PQUHOATOxeH',
@@ -326,9 +321,16 @@ export default {
     connect() {
       console.log('socket connected')
     },
-    payments() {
-      console.log('payments')
-      alert()
+    payments(r) {
+      console.log(' payments')
+      console.log(r)
+      if (r.status === 'paymentIncoming' && this.txpending === false) {
+        this.txpending = true
+        alert('Ausstehende Transaktion gefunden')
+      }
+      if (r.status === 'paymentSuccess') {
+        alert('Zahlung erhalten, vielen Dank für deine Bestellung!')
+      }
     },
     disconnect() {
       console.log('socket disconnect')

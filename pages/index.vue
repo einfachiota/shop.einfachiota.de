@@ -7,7 +7,7 @@
         </div>
         <div class="column box">
           <h1>Das erste IOTA Magazin</h1>
-          <p>Jetzt bald die erste Ausgabe der eiMag online vorbestellen.</p>
+          <p>Jetzt die erste Ausgabe der eiMag online vorbestellen.</p>
           <Order />
         </div>
       </div>
