@@ -360,4 +360,19 @@ h5 {
 .submit-btn {
   margin-bottom: 0;
 }
+
+@media only screen and (max-width: 740px) {
+  .form-footer {
+    display: inline;
+  }
+  .price {
+    width: 100%;
+    text-align: right;
+    margin-bottom: 20px;
+  }
+  .submit-btn {
+    text-align: center;
+    width: 100%;
+  }
+}
 </style>
