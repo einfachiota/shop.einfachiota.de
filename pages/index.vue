@@ -29,7 +29,7 @@
           <p class="fine-print">
             *1 Fülle deinen Wunschnamen in das zugehörige Feld. Dein Name wird
             auf der Supportseite erscheinen.
-            <strong>Achtung:</strong>Wir drucken keine obszönen Wörter!
+            <strong>Achtung:</strong> Wir drucken keine obszönen Wörter!
           </p>
           <p class="fine-print">
             *2 Falls wir zu wenig Magazine im Vorverkauf verkaufen, können wir

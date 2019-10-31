@@ -56,9 +56,17 @@
             placeholder="Deine E-Mail Adresse, falls bei der Lieferung etwas schief geht."
           ></el-input>
         </el-form-item>
+        <div class="costs">
+          <p><strong>Kosten</strong></p>
+          <p>
+            Magazin x{{ ruleForm.amount }}:
+            {{ (ruleForm.amount * magazinPrice).toFixed(2) }}€
+          </p>
+          <p>Lieferung: {{ shippmendPrice.toFixed(2) }}€</p>
+        </div>
         <div class="form-footer">
           <div class="price">
-            <h3>{{ ruleForm.amount * 10 }}€</h3>
+            <h3>{{ currentPrice }}€</h3>
             <h5>Summe</h5>
           </div>
           <el-form-item class="submit-btn">
@@ -72,9 +80,11 @@
 
     <div v-if="order_step == 2">
       <h3>Wie willst du bezahlen?</h3>
-      <p>Kosten: {{ final_price }}</p>
+      <p>
+        <strong> Zu zahlen: {{ finalPriceInEur }}€</strong>
+      </p>
       <paypal-checkout
-        :amount="`${final_price}`"
+        :amount="`${finalPriceInEur}`"
         currency="EUR"
         :client="paypal_credentials"
         env="sandbox"
@@ -88,7 +98,9 @@
       <img v-if="qrCodeData" :src="qrCodeData.src" alt="QR CODE" />
     </div>
     <div v-if="order_step == 3">
-      <h3>Danke für deinen Kauf</h3>
+      <h3>Danke für deinen Support!</h3>
+      <p>Wir wünschen dir noch einen schönen Tag.</p>
+      <p>Dein einfachIOTA Team.</p>
     </div>
   </div>
 </template>
@@ -116,11 +128,12 @@ export default {
       }, 200)
     }
     return {
+      magazinPrice: 8.0,
+      finalPriceInEur: 0,
       socket: null,
       order_step: 1,
       ordered: false,
       qrCodeData: null,
-      final_price: 10,
       order: null,
       txpending: false,
       paypal_credentials: {
@@ -142,8 +155,7 @@ export default {
         zip_code: '',
         city: '',
         country: 'de',
-        amount: 1,
-        final_price: null
+        amount: 1
       },
       rules: {
         email: [
@@ -230,6 +242,21 @@ export default {
   created() {
     console.log('created()')
   },
+  computed: {
+    shippmendPrice() {
+      if (this.ruleForm.country === 'de') {
+        return 1.55
+      } else {
+        return 3.7
+      }
+    },
+    currentPrice() {
+      return (
+        this.ruleForm.amount * this.magazinPrice +
+        this.shippmendPrice
+      ).toFixed(2)
+    }
+  },
   methods: {
     onSubmit(formName) {
       this.$refs[formName].validate((valid) => {
@@ -242,7 +269,7 @@ export default {
               console.log(result)
               self.order_step = 2
               self.order = result.data
-              self.final_price = result.data.final_price
+              self.finalPriceInEur = result.data.final_price.toFixed(2)
             })
             .catch((err) => {
               console.log('err')
@@ -341,8 +368,6 @@ export default {
 
 <style lang="scss">
 .form-footer {
-  display: flex;
-  justify-content: space-between;
   align-items: center;
   margin-top: 50px;
 }
@@ -357,8 +382,23 @@ h5 {
   opacity: 0.5;
   font-family: 'Roboto Slab', serif;
 }
+.price {
+  width: 100%;
+  text-align: right;
+  margin-bottom: 20px;
+}
+
 .submit-btn {
   margin-bottom: 0;
+  text-align: center;
+  width: 100%;
+}
+
+.costs {
+  text-align: right;
+  p {
+    margin: 0;
+  }
 }
 
 @media only screen and (max-width: 740px) {
