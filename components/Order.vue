@@ -96,6 +96,17 @@
       ></paypal-checkout>
       <el-button @click="payWithIota">Pay with IOTA</el-button>
       <img v-if="qrCodeData" :src="qrCodeData.src" alt="QR CODE" />
+      <a
+        v-if="qrCodeData"
+        class="btn btn-primary"
+        :href="
+          `
+            iota://${data.payment.address}/?amount=${data.payment.value}
+          `
+        "
+      >
+        Zur Trinity App
+      </a>
     </div>
     <div v-if="order_step == 3">
       <h3>Danke für deinen Support!</h3>
@@ -130,6 +141,7 @@ export default {
     return {
       magazinPrice: 8.0,
       finalPriceInEur: 0,
+      data: null,
       socket: null,
       order_step: 1,
       ordered: false,
