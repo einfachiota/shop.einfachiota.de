@@ -95,7 +95,6 @@
           :amount="`${finalPriceInEur}`"
           currency="EUR"
           :client="paypal_credentials"
-          env="sandbox"
           :invoice-number="order._id"
           :experience="experience"
           @payment-authorized="paymentAuthorized"
@@ -168,7 +167,8 @@ export default {
       paypal_credentials: {
         sandbox:
           'ARytaJaq51tIosygQrzAvBhZcPSLd3YX6gn_kvGZN3uesBNSBcPi1VUgHQ7CrCG83onm7PQUHOATOxeH',
-        production: '<production client id>'
+        production:
+          'Af0NiYrpf-exmfjb4jMqDhzkW3m9Vj4BpE2IEFe8J8yzG7sv7ITa_P4A_LSqp-Mwh2yPGQEYeLp-0lKE'
       },
 
       experience: {
