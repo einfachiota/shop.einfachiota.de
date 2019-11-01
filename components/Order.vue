@@ -56,6 +56,12 @@
             placeholder="Deine E-Mail Adresse, falls bei der Lieferung etwas schief geht."
           ></el-input>
         </el-form-item>
+        <el-form-item label="Dein Wunschname" prop="print_name">
+          <el-input
+            v-model="ruleForm.print_name"
+            placeholder="Gib hier deinen Namen ein, welcher in das Magazin gedruckt wird."
+          ></el-input>
+        </el-form-item>
         <div class="costs">
           <p><strong>Kosten</strong></p>
           <p>
@@ -167,6 +173,7 @@ export default {
         zip_code: '',
         city: '',
         country: 'de',
+        print_name: '',
         amount: 1
       },
       rules: {
@@ -247,7 +254,15 @@ export default {
             trigger: 'blur'
           }
         ],
-        amount: [{ validator: checkAmount, trigger: 'blur' }]
+        amount: [{ validator: checkAmount, trigger: 'blur' }],
+        print_name: [
+          {
+            min: 1,
+            max: 30,
+            message: 'Länge nur zwischen 1 und 30 Zeichen möglich!',
+            trigger: 'blur'
+          }
+        ]
       }
     }
   },
