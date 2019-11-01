@@ -141,60 +141,88 @@ a {
   background-color: var(--primary);
 }
 
-@media only screen and (max-width: 740px) {
-  .hero {
-    padding-top: 40px;
+@media only screen and (max-width: 1440px) {
+  p {
+    font-size: 14px;
   }
-  .headline-wrapper {
-    flex-wrap: wrap;
-    h2 {
-      margin-bottom: 20px;
-    }
+  h1 {
+    font-size: 32px;
   }
-  .btn-social {
-    margin-bottom: 5px !important;
-  }
-  .container {
-    flex-direction: column;
-    padding: 0;
-  }
-  .column {
-    width: 100%;
-    &.image {
-      height: 300px;
-      flex-grow: 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    &.box {
-      max-width: 600px;
-      height: 100%;
-      margin: 5px 0;
-      padding: 30px 20px;
-    }
-  }
-  .magazin-cover {
-    height: 100%;
-  }
-}
-@media only screen and (max-width: 1280px) {
   .column {
     width: 50%;
     height: 100vh;
     overflow-y: auto;
     box-sizing: border-box;
     &.image {
+    }
+    &.box {
+      width: 350px;
+      padding: 30px;
+    }
+  }
+}
+@media only screen and (max-width: 1260px) {
+  .container {
+    padding: 0;
+  }
+  .column {
+    &.box {
+      width: 350px;
+    }
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: auto;
+    padding: 60px 0;
+  }
+  .container {
+    overflow: hidden;
+    width: 600px;
+    flex-direction: column;
+    padding: 0;
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+  }
+  .column {
+    width: 100%;
+    &.image {
+      height: 300px;
+      width: 100%;
       flex-grow: 1;
       display: flex;
       justify-content: center;
       align-items: center;
     }
     &.box {
-      background-color: var(--white);
-      padding: 100px 50px;
-      max-width: 500px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      overflow: inherit;
+      box-shadow: none;
+    }
+  }
+  .magazin-cover {
+    height: 100%;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .section {
+    padding: 0;
+  }
+  .container {
+    width: 100%;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .column {
+    &.image {
+      height: 240px;
     }
   }
 }
