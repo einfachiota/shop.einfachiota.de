@@ -134,6 +134,7 @@
 <script>
 import * as IotaQR from '@tangle-frost/iota-qr-lib/pkg/iota-qr-lib.js'
 
+const API_URL = 'https://store.einfachiota.de/api'
 export default {
   data() {
     console.log('socket', this.$socket)
@@ -302,7 +303,7 @@ export default {
           console.log('submit!')
           const self = this
           this.$axios
-            .post('http://localhost:5000/api/orders', this.ruleForm)
+            .post(`${API_URL}/orders`, this.ruleForm)
             .then((result) => {
               console.log(result)
               self.order_step = 2
@@ -334,10 +335,7 @@ export default {
       const self = this
       this.payIota = true
       this.$axios
-        .post(
-          `http://localhost:5000/api/pay_with_iota?id=${this.order._id}`,
-          this.order
-        )
+        .post(`${API_URL}/pay_with_iota?id=${this.order._id}`, this.order)
         .then(function(response) {
           console.log(response)
           self.data = response.data
@@ -369,10 +367,7 @@ export default {
       const self = this
       console.log('payWithPaypal', payment)
       this.$axios
-        .post(
-          `http://localhost:5000/api/pay_with_paypal?id=${this.order._id}`,
-          { payment }
-        )
+        .post(`${API_URL}/pay_with_paypal?id=${this.order._id}`, { payment })
         .then(function(response) {
           console.log(response)
         })

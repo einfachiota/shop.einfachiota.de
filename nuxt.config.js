@@ -61,7 +61,7 @@ module.exports = {
     proxy: true // Can be also an object with default options
   },
   proxy: {
-    '/api': { target: 'http://localhost:5000', ws: true }
+    '/api': { target: 'http://store.einfachiota.de/', ws: true }
   },
   /*
    ** Build configuration
