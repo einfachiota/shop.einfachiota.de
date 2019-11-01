@@ -102,7 +102,7 @@
           @payment-completed="paymentCompleted"
           @payment-cancelled="paymentCancelled"
         ></paypal-checkout>
-        <el-button v-if="!payIota" @click="payWithIota">
+        <el-button v-if="!payIota" class="btn-iota" @click="payWithIota">
           Pay with IOTA
         </el-button>
         <div class="iota-payment" v-if="qrCodeData">
@@ -392,7 +392,7 @@ export default {
       console.log(r)
       if (r.status === 'paymentIncoming' && this.txpending === false) {
         this.txpending = true
-        alert('Ausstehende Transaktion gefunden')
+        this.order_step = 3
       }
       if (r.status === 'paymentSuccess') {
         alert('Zahlung erhalten, vielen Dank für deine Bestellung!')
@@ -448,6 +448,10 @@ h5 {
   &--success {
     background-color: rgba(103, 194, 58, 0.2);
   }
+}
+
+.btn-iota {
+  background-color: rgba(64, 158, 255, 0.5);
 }
 
 @media only screen and (max-width: 1440px) {
