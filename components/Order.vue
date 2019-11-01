@@ -85,39 +85,49 @@
     </div>
 
     <div v-if="order_step == 2">
-      <h3>Wie willst du bezahlen?</h3>
-      <p>
-        <strong> Zu zahlen: {{ finalPriceInEur }}€</strong>
-      </p>
-      <paypal-checkout
-        :amount="`${finalPriceInEur}`"
-        currency="EUR"
-        :client="paypal_credentials"
-        env="sandbox"
-        :invoice-number="order._id"
-        :experience="experience"
-        @payment-authorized="paymentAuthorized"
-        @payment-completed="paymentCompleted"
-        @payment-cancelled="paymentCancelled"
-      ></paypal-checkout>
-      <el-button @click="payWithIota">Pay with IOTA</el-button>
-      <img v-if="qrCodeData" :src="qrCodeData.src" alt="QR CODE" />
-      <a
-        v-if="qrCodeData"
-        class="btn btn-primary"
-        :href="
-          `
-            iota://${data.payment.address}/?amount=${data.payment.value}
-          `
-        "
-      >
-        Zur Trinity App
-      </a>
+      <el-card shadow="always">
+        <h3>Wie willst du bezahlen?</h3>
+        <p>
+          <strong> Zu zahlen: {{ finalPriceInEur }}€</strong>
+        </p>
+        <paypal-checkout
+          v-if="!payIota"
+          :amount="`${finalPriceInEur}`"
+          currency="EUR"
+          :client="paypal_credentials"
+          env="sandbox"
+          :invoice-number="order._id"
+          :experience="experience"
+          @payment-authorized="paymentAuthorized"
+          @payment-completed="paymentCompleted"
+          @payment-cancelled="paymentCancelled"
+        ></paypal-checkout>
+        <el-button v-if="!payIota" @click="payWithIota">
+          Pay with IOTA
+        </el-button>
+        <div class="iota-payment" v-if="qrCodeData">
+          <img v-if="qrCodeData" :src="qrCodeData.src" alt="QR CODE" />
+          <br />
+          <a
+            v-if="qrCodeData"
+            class="btn btn-primary"
+            :href="
+              `
+                iota://${data.payment.address}/?amount=${data.payment.value}
+              `
+            "
+          >
+            Zahle hier mit Trinity
+          </a>
+        </div>
+      </el-card>
     </div>
     <div v-if="order_step == 3">
-      <h3>Danke für deinen Support!</h3>
-      <p>Wir wünschen dir noch einen schönen Tag.</p>
-      <p>Dein einfachIOTA Team.</p>
+      <el-card class="card--success" shadow="always">
+        <h3>Danke für deinen Support!</h3>
+        <p>Wir wünschen dir noch einen schönen Tag.</p>
+        <p>Dein einfachIOTA Team.</p>
+      </el-card>
     </div>
   </div>
 </template>
@@ -145,7 +155,7 @@ export default {
       }, 200)
     }
     return {
-      magazinPrice: 8.0,
+      magazinPrice: 8.45,
       finalPriceInEur: 0,
       data: null,
       socket: null,
@@ -154,6 +164,7 @@ export default {
       qrCodeData: null,
       order: null,
       txpending: false,
+      payIota: false,
       paypal_credentials: {
         sandbox:
           'ARytaJaq51tIosygQrzAvBhZcPSLd3YX6gn_kvGZN3uesBNSBcPi1VUgHQ7CrCG83onm7PQUHOATOxeH',
@@ -321,6 +332,7 @@ export default {
     },
     payWithIota() {
       const self = this
+      this.payIota = true
       this.$axios
         .post(
           `http://localhost:5000/api/pay_with_iota?id=${this.order._id}`,
@@ -399,7 +411,7 @@ export default {
   margin-top: 50px;
 }
 h3 {
-  font-size: 72px;
+  font-size: 42px;
   line-height: 1;
 }
 h5 {
@@ -425,6 +437,25 @@ h5 {
   text-align: right;
   p {
     margin: 0;
+  }
+}
+
+.iota-payment {
+  text-align: center;
+}
+
+.card {
+  &--success {
+    background-color: rgba(103, 194, 58, 0.2);
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  p {
+    font-size: 14px;
+  }
+  h3 {
+    font-size: 32px;
   }
 }
 
