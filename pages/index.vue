@@ -39,6 +39,7 @@
             Ende November und werden sie umgehend versenden. Ab diesem Zeitpunkt
             ist die Post für das Zustellungsdatum verantwortlich.
           </p>
+          <Footer />
         </div>
       </div>
     </div>
@@ -47,8 +48,10 @@
 
 <script>
 import Order from '../components/Order'
+import Footer from '../components/Footer'
+
 export default {
-  components: { Order }
+  components: { Order, Footer }
 }
 </script>
 
