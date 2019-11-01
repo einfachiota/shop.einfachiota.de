@@ -34,9 +34,9 @@
           <p class="fine-print">
             *2 Falls wir zu wenig Magazine im Vorverkauf verkaufen, können wir
             den Druck leider nicht in Auftrag geben. Wir werden das Geld dann
-            natürlich zurückzahlen. Wir werden den Druck nach direkt
+            natürlich zurückzahlen. Wir werden den Druck direkt nach
             erfolgreichem Vorverkauf in Auftrag geben. Die Magazine erwarten wir
-            Ende November und werde sie umgehen Versenden. Ab diesem Zeitpunkt
+            Ende November und werden sie umgehend versenden. Ab diesem Zeitpunkt
             ist die Post für das Zustellungsdatum verantwortlich.
           </p>
         </div>
@@ -161,7 +161,7 @@ a {
   .column {
     width: 100%;
     &.image {
-      height: 500px;
+      height: 300px;
       flex-grow: 1;
       display: flex;
       justify-content: center;
@@ -176,6 +176,26 @@ a {
   }
   .magazin-cover {
     height: 100%;
+  }
+}
+@media only screen and (max-width: 1280px) {
+  .column {
+    width: 50%;
+    height: 100vh;
+    overflow-y: auto;
+    box-sizing: border-box;
+    &.image {
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &.box {
+      background-color: var(--white);
+      padding: 100px 50px;
+      max-width: 500px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    }
   }
 }
 </style>
