@@ -60,9 +60,6 @@ module.exports = {
   axios: {
     proxy: true // Can be also an object with default options
   },
-  proxy: {
-    '/api': { target: 'https://eimag.einfachiota.de', ws: true }
-  },
   /*
    ** Build configuration
    */
