@@ -24,7 +24,20 @@
           <h4>Jetzt vorbestellen</h4>
           <p>Zahle bequem per IOTA oder Paypal.</p>
           <Order />
-          <br />
+          <p class="fine-print">
+            Durch Anklicken von BESTELLEN bestätigst Du den Warenkorb und Deine
+            eingegebenen Daten und stimmst unseren
+            <a
+              href="https://www.einfachiota.de/#/privacy"
+              target="_blank"
+              class="link"
+            >
+              Datenschutzbestimmungen
+            </a>
+            zu.
+            <br />
+            <strong>Was passiert mit meinen Daten?<sup>*3</sup></strong>
+          </p>
           <hr />
           <p class="fine-print">
             *1 Fülle deinen Wunschnamen in das zugehörige Feld. Dein Name wird
@@ -38,6 +51,22 @@
             erfolgreichem Vorverkauf in Auftrag geben. Die Magazine erwarten wir
             Ende November und werden sie umgehend versenden. Ab diesem Zeitpunkt
             ist die Post für das Zustellungsdatum verantwortlich.
+          </p>
+          <p class="fine-print">
+            *3 Wir verwenden deine Daten nur für eine erfolgreiche Zusendung und
+            unsere Buchhaltung. Die Email Adresse wird benötigt, falls wir mit
+            dir in Kontakt treten müssen. Dies tun wir aber nur, wenn es
+            unbedingt nötig ist. Ausser du möchtest mit Neugkeiten von
+            einfachIOTA erhalten, dafür musst du nur die dazu passende Checkbox
+            anklicken. Mehr Informationen zum Datenschutz findest du auf unserer
+            <a
+              href="http://localhost:8080/#/privacy#eimag"
+              target="_blank"
+              class="link"
+            >
+              Datenschutzerklärungs
+            </a>
+            Seite.
           </p>
           <Footer />
         </div>
@@ -120,6 +149,15 @@ a {
 
 .fine-print {
   font-size: 0.8em;
+}
+
+.link {
+  color: rgba(0, 0, 0, 0.75);
+  text-decoration: none;
+  transition: color 200ms ease-in-out;
+  &:hover {
+    color: var(--primary);
+  }
 }
 
 /* width */

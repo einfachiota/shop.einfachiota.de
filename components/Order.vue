@@ -56,6 +56,11 @@
             placeholder="Deine E-Mail Adresse, falls bei der Lieferung etwas schief geht."
           ></el-input>
         </el-form-item>
+        <el-form-item label="Neuigkeiten per E-Mail" prop="print_name">
+          <el-checkbox v-model="ruleForm.newsletter">
+            Ich möchte Neuigkeiten erhalten.
+          </el-checkbox>
+        </el-form-item>
         <el-form-item label="Dein Wunschname" prop="print_name">
           <el-input
             v-model="ruleForm.print_name"
@@ -83,7 +88,6 @@
         </div>
       </el-form>
     </div>
-
     <div v-if="order_step == 2">
       <el-card shadow="always">
         <h3>Wie willst du bezahlen?</h3>
@@ -171,7 +175,6 @@ export default {
         production:
           'Af0NiYrpf-exmfjb4jMqDhzkW3m9Vj4BpE2IEFe8J8yzG7sv7ITa_P4A_LSqp-Mwh2yPGQEYeLp-0lKE'
       },
-
       experience: {
         input_fields: {
           no_shipping: 1
