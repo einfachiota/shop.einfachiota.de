@@ -159,7 +159,7 @@ export default {
       }, 200)
     }
     return {
-      magazinPrice: 8.45,
+      magazinPrice: 9.0,
       finalPriceInEur: 0,
       data: null,
       socket: null,
