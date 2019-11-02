@@ -60,9 +60,6 @@ module.exports = {
   axios: {
     proxy: true // Can be also an object with default options
   },
-  proxy: {
-    '/api': { target: 'http://localhost:3000', ws: true }
-  },
   /*
    ** Build configuration
    */
