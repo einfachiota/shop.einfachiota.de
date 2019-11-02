@@ -23,6 +23,11 @@
           <p>Das Magazin wird im Dezember bei dir ankommen.<sup>*2</sup></p>
           <h4>Jetzt vorbestellen</h4>
           <p>Zahle bequem per IOTA oder Paypal.</p>
+          <h4>Vorverkaufsende</h4>
+          <p>
+            Der Vorverkauf endet am
+            <strong>15. November 2019 um 15 Uhr.</strong>
+          </p>
           <Order />
           <p class="fine-print">
             Durch Anklicken von BESTELLEN bestätigst Du den Warenkorb und Deine
