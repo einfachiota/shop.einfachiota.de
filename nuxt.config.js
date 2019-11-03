@@ -58,6 +58,9 @@ module.exports = {
    ** See https://axios.nuxtjs.org/options
    */
   axios: {
+    proxy: true
+  },
+  proxy: {
     '/api/': {
       target: 'https://store.einfachiota.de/',
       pathRewrite: { '^/api/': '' },
