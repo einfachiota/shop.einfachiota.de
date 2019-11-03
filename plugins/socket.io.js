@@ -8,8 +8,6 @@ export default ({ store }) => {
     VueSocketIO,
     io('https://store.einfachiota.de', {
       path: '/api/iota_payments/socket',
-      log: false,
-      agent: false,
       origins: '*:*'
     }),
     {
