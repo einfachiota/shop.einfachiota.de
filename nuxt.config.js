@@ -49,7 +49,7 @@ module.exports = {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     'vue-scrollto/nuxt',
-
+    '@nuxtjs/proxy',
     // Or if you have custom options...
     ['vue-scrollto/nuxt', { duration: 300 }]
   ],
@@ -58,10 +58,11 @@ module.exports = {
    ** See https://axios.nuxtjs.org/options
    */
   axios: {
-    proxy: true // Can be also an object with default options
-  },
-  proxy: {
-    '/api': { target: 'http://localhost:3000', ws: true }
+    '/api/': {
+      target: 'https://store.einfachiota.de/',
+      pathRewrite: { '^/api/': '' },
+      changeOrigin: true
+    }
   },
   /*
    ** Build configuration
