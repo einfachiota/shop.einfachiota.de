@@ -10,8 +10,7 @@ export default ({ store }) => {
       path: '/api/iota_payments/socket',
       log: false,
       agent: false,
-      origins: '*:*',
-      transports: ['websocket', 'xhr-polling', 'jsonp-polling', 'polling']
+      origins: '*:*'
     }),
     {
       store
