@@ -1,4 +1,4 @@
-# eimag.einfachiota.de
+# magazin.einfachiota.de
 
 > Startseite und Vorverkaufsstelle für das einfachIOTA Magazin
 
