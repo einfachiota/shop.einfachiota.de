@@ -138,7 +138,7 @@
 <script>
 import * as IotaQR from '@tangle-frost/iota-qr-lib/pkg/iota-qr-lib.js'
 
-const API_URL = 'https://store.einfachiota.de/api'
+const API_URL = 'https://magazin.einfachiota.de/api'
 export default {
   data() {
     console.log('socket', this.$socket)

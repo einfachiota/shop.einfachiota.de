@@ -62,7 +62,7 @@ module.exports = {
   },
   proxy: {
     '/api/': {
-      target: 'https://store.einfachiota.de/',
+      target: 'https://magazin.einfachiota.de/',
       pathRewrite: { '^/api/': '' },
       changeOrigin: true
     }
