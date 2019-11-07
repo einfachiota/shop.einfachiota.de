@@ -60,13 +60,6 @@ module.exports = {
   axios: {
     proxy: true
   },
-  proxy: {
-    '/api/': {
-      target: 'https://magazin.einfachiota.de/',
-      pathRewrite: { '^/api/': '' },
-      changeOrigin: true
-    }
-  },
   /*
    ** Build configuration
    */
@@ -78,5 +71,15 @@ module.exports = {
      ** You can extend webpack config here
      */
     extend(config, ctx) {}
+  },
+  env: {
+    backendUrl: process.env.BACKEND_URL || 'http://localhost:5000'
+  },
+  proxy: {
+    '/api/': {
+      target: process.env.BACKEND_URL || 'http://localhost:5000',
+      pathRewrite: { '^/api/': '' },
+      changeOrigin: true
+    }
   }
 }

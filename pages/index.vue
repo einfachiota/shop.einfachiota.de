@@ -65,7 +65,7 @@
             einfachIOTA erhalten, dafür musst du nur die dazu passende Checkbox
             anklicken. Mehr Informationen zum Datenschutz findest du auf unserer
             <a
-              href="http://localhost:8080/#/privacy#magazin"
+              href="https://www.einfachiota.de/#/privacy#magazin"
               target="_blank"
               class="link"
             >
