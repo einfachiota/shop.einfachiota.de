@@ -61,9 +61,9 @@
             *3 Wir verwenden deine Daten nur für eine erfolgreiche Zusendung und
             unsere Buchhaltung. Die Email Adresse wird benötigt, falls wir mit
             dir in Kontakt treten müssen. Dies tun wir aber nur, wenn es
-            unbedingt nötig ist. Ausser du möchtest die Neugkeiten von
-            einfachIOTA erhalten, dafür musst du nur die dazu passende Checkbox
-            anklicken. Mehr Informationen zum Datenschutz findest du auf unserer
+            unbedingt nötig ist. Ausser du möchtest Neuigkeiten von einfachIOTA
+            erhalten, dafür musst du nur die dazu passende Checkbox anklicken.
+            Mehr Informationen zum Datenschutz findest du auf unserer
             <a
               href="https://www.einfachiota.de/#/privacy#magazin"
               target="_blank"
