@@ -26,7 +26,7 @@
           <h4>Vorverkaufsende</h4>
           <p>
             Der Vorverkauf endet am
-            <strong>15. November 2019 um 15 Uhr.</strong>
+            <strong>20. November 2019 um 15 Uhr.</strong>
           </p>
           <Order />
           <p class="fine-print">
