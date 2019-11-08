@@ -12,7 +12,7 @@
           </p>
           <p>
             Diese Ausgabe hat das Motto <strong>Hallo Welt</strong> und gibt dir
-            eine Einfürung in die Welt von IOTA und dem Ökosystem.
+            eine Einführung in die Welt von IOTA und dem Ökosystem.
           </p>
           <h4>Du bist mit dabei!</h4>
           <p>
@@ -61,7 +61,7 @@
             *3 Wir verwenden deine Daten nur für eine erfolgreiche Zusendung und
             unsere Buchhaltung. Die Email Adresse wird benötigt, falls wir mit
             dir in Kontakt treten müssen. Dies tun wir aber nur, wenn es
-            unbedingt nötig ist. Ausser du möchtest mit Neugkeiten von
+            unbedingt nötig ist. Ausser du möchtest die Neugkeiten von
             einfachIOTA erhalten, dafür musst du nur die dazu passende Checkbox
             anklicken. Mehr Informationen zum Datenschutz findest du auf unserer
             <a

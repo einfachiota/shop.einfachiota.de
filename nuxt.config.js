@@ -74,12 +74,5 @@ module.exports = {
   },
   env: {
     backendUrl: process.env.BACKEND_URL || 'http://localhost:5000'
-  },
-  proxy: {
-    '/api/': {
-      target: process.env.BACKEND_URL || 'http://localhost:5000',
-      pathRewrite: { '^/api/': '' },
-      changeOrigin: true
-    }
   }
 }
