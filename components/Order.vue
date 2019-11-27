@@ -61,12 +61,6 @@
             Ich möchte Neuigkeiten erhalten.
           </el-checkbox>
         </el-form-item>
-        <el-form-item label="Dein Wunschname" prop="print_name">
-          <el-input
-            v-model="ruleForm.print_name"
-            placeholder="Gib hier deinen Namen ein, welcher in das Magazin gedruckt wird."
-          ></el-input>
-        </el-form-item>
         <div class="costs">
           <p><strong>Kosten</strong></p>
           <p>

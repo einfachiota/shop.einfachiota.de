@@ -8,26 +8,14 @@
         <div class="column box">
           <h1>Das erste IOTA Magazin</h1>
           <p>
-            Jetzt die erste Ausgabe des einfachIOTA Magazins hier vorbestellen.
+            Jetzt die erste Ausgabe des einfachIOTA Magazins hier bestellen.
           </p>
           <p>
             Diese Ausgabe hat das Motto <strong>Hallo Welt</strong> und gibt dir
             eine Einführung in die Welt von IOTA und dem Ökosystem.
           </p>
-          <h4>Du bist mit dabei!</h4>
-          <p>
-            Nimmst du bei der Vorbestellung teil, wird dein Wunschname gedruckt.
-            <sup>*1</sup>
-          </p>
-          <h4>Wann kommt es?</h4>
-          <p>Das Magazin wird im Dezember bei dir ankommen.<sup>*2</sup></p>
-          <h4>Jetzt vorbestellen</h4>
+          <h4>Jetzt bestellen!</h4>
           <p>Zahle bequem per IOTA oder Paypal.</p>
-          <h4>Vorverkaufsende</h4>
-          <p>
-            Der Vorverkauf endet am
-            <strong>20. November 2019 um 15 Uhr.</strong>
-          </p>
           <Order />
           <p class="fine-print">
             Durch Anklicken von BESTELLEN bestätigst Du den Warenkorb und Deine
@@ -41,24 +29,11 @@
             </a>
             zu.
             <br />
-            <strong>Was passiert mit meinen Daten?<sup>*3</sup></strong>
+            <strong>Was passiert mit meinen Daten?<sup>*</sup></strong>
           </p>
           <hr />
           <p class="fine-print">
-            *1 Fülle deinen Wunschnamen in das zugehörige Feld. Dein Name wird
-            auf der Supportseite erscheinen.
-            <strong>Achtung:</strong> Wir drucken keine obszönen Wörter!
-          </p>
-          <p class="fine-print">
-            *2 Falls wir zu wenig Magazine im Vorverkauf verkaufen, können wir
-            den Druck leider nicht in Auftrag geben. Wir werden das Geld dann
-            natürlich zurückzahlen. Wir werden den Druck direkt nach
-            erfolgreichem Vorverkauf in Auftrag geben. Die Magazine erwarten wir
-            Ende November und werden sie umgehend versenden. Ab diesem Zeitpunkt
-            ist die Post für das Zustellungsdatum verantwortlich.
-          </p>
-          <p class="fine-print">
-            *3 Wir verwenden deine Daten nur für eine erfolgreiche Zusendung und
+            * Wir verwenden deine Daten nur für eine erfolgreiche Zusendung und
             unsere Buchhaltung. Die Email Adresse wird benötigt, falls wir mit
             dir in Kontakt treten müssen. Dies tun wir aber nur, wenn es
             unbedingt nötig ist. Ausser du möchtest Neuigkeiten von einfachIOTA
