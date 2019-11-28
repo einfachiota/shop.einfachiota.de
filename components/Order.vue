@@ -102,7 +102,7 @@
         <el-button v-if="!payIota" class="btn-iota" @click="payWithIota">
           Pay with IOTA
         </el-button>
-        <div class="iota-payment" v-if="qrCodeData">
+        <div v-if="qrCodeData" class="iota-payment">
           <img v-if="qrCodeData" :src="qrCodeData.src" alt="QR CODE" />
           <br />
           <a
@@ -275,9 +275,6 @@ export default {
       }
     }
   },
-  created() {
-    console.log('created()')
-  },
   computed: {
     shippmendPrice() {
       if (this.ruleForm.country === 'de') {
@@ -292,6 +289,9 @@ export default {
         this.shippmendPrice
       ).toFixed(2)
     }
+  },
+  created() {
+    console.log('created()')
   },
   methods: {
     onSubmit(formName) {

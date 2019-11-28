@@ -2,65 +2,85 @@
   <div id="home">
     <div class="section section--light">
       <div class="container">
-        <div class="column image">
-          <div class="magazin-cover"></div>
+        <div class="column column--image">
+          <div class="magazin-cover" :class="{ active: isActive }">
+            <div class="overlay" />
+            <div class="supporters">
+              <p>
+                Weit hinten, hinter den Wortbergen, fern der Länder Vokalien und
+                Konsonantien leben die Blindtexte. Abgeschieden wohnen sie in
+                Buchstabhausen an der Küste des Semantik, eines großen
+                Sprachozeans. Ein kleines Bächlein namens Duden fließt durch
+                ihren Ort und versorgt sie mit den nötigen Regelialien. Es ist
+                ein paradiesmatisches Land, in dem einem gebratene Satzteile in
+                den Mund fliegen. Nicht einmal von der allmächtigen
+                Interpunktion werden die Blindtexte beherrscht – ein geradezu
+                unorthographisches Leben. Eines Tages aber beschloß eine kleine
+                Zeile Blindtext, ihr Name war Lorem Ipsum, hinaus zu gehen in
+                die weite Grammatik. Der große Oxmox riet ihr davon ab, da es
+                dort wimmele von bösen Kommata, wilden Fragezeichen und
+                hinterhältigen Semikoli, doch das Blindtextchen ließ sich nicht
+                beirren. Es packte seine sieben Versalien, schob sich sein
+                Initial in den Gürtel und machte sich auf den Weg. Als es die
+                ersten Hügel des Kursivgebirges erklommen hatte, warf es einen
+                letzten Blick zurück auf die Skyline seiner Heimatstadt
+                Buchstabhausen, die Headline von Alphabetdorf und die Subline
+                seiner eigenen Straße, der Zeilengasse. Wehmütig lief ihm eine
+                rhetorische Frage über die Wange, dann setzte es seinen Weg
+                fort. Unterwegs traf es eine Copy. Die Copy warnte das
+                Blindtextchen, da, wo sie herkäme wäre sie
+              </p>
+            </div>
+            <div class="sales-counter">
+              <span class="sales-number">628</span>
+              <span class="sales-unit">Unterstützer</span>
+            </div>
+          </div>
         </div>
-        <div class="column box">
-          <h1>Das erste IOTA Magazin</h1>
+        <div class="column column--box">
+          <span class="subtitle">11. Dezember 2019</span>
+          <h1>Bald verfügber</h1>
           <p>
-            Jetzt die erste Ausgabe des einfachIOTA Magazins hier bestellen.
+            Dank unseren
+            <span class="supporter-link" @click="showSupporter()"
+              >628 Unterstützern</span
+            >, die bereits im Vorverkauf das einfachIOTA Magazin bestellt haben,
+            konnten wir dieses Projekt überhaupt erst möglich machen. Am 11.
+            Dezember startet offiziell der Verkauf, sei dabei beim ersten
+            einfachIOTA Magazin.
           </p>
+          <h4>Newsletter abonnieren</h4>
           <p>
-            Diese Ausgabe hat das Motto <strong>Hallo Welt</strong> und gibt dir
-            eine Einführung in die Welt von IOTA und dem Ökosystem.
+            Abonnier doch einfach unseren Newsletter. Wir halten dich auf dem
+            Laufenden und informieren dich sobald wir die Tore öffnen.
           </p>
-          <h4>Jetzt bestellen!</h4>
-          <p>Zahle bequem per IOTA oder Paypal.</p>
-          <Order />
-          <p class="fine-print">
-            Durch Anklicken von BESTELLEN bestätigst Du den Warenkorb und Deine
-            eingegebenen Daten und stimmst unseren
-            <a
-              href="https://www.einfachiota.de/#/privacy"
-              target="_blank"
-              class="link"
-            >
-              Datenschutzbestimmungen
-            </a>
-            zu.
-            <br />
-            <strong>Was passiert mit meinen Daten?<sup>*</sup></strong>
-          </p>
-          <hr />
-          <p class="fine-print">
-            * Wir verwenden deine Daten nur für eine erfolgreiche Zusendung und
-            unsere Buchhaltung. Die Email Adresse wird benötigt, falls wir mit
-            dir in Kontakt treten müssen. Dies tun wir aber nur, wenn es
-            unbedingt nötig ist. Ausser du möchtest Neuigkeiten von einfachIOTA
-            erhalten, dafür musst du nur die dazu passende Checkbox anklicken.
-            Mehr Informationen zum Datenschutz findest du auf unserer
-            <a
-              href="https://www.einfachiota.de/#/privacy#magazin"
-              target="_blank"
-              class="link"
-            >
-              Datenschutzerklärungs
-            </a>
-            Seite.
-          </p>
+          <Newsletter />
           <Footer />
         </div>
+        <Roadmap />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import Order from '../components/Order'
 import Footer from '../components/Footer'
+import Roadmap from '../components/Roadmap'
+import Newsletter from '../components/Newsletter'
 
 export default {
-  components: { Order, Footer }
+  components: { Footer, Roadmap, Newsletter },
+  data() {
+    return {
+      isActive: false
+    }
+  },
+  methods: {
+    showSupporter() {
+      console.log('Läuft')
+      this.isActive = !this.isActive
+    }
+  }
 }
 </script>
 
@@ -68,16 +88,30 @@ export default {
 .el-main {
   padding: 0px !important;
 }
+.subtitle {
+  font-weight: 900;
+  opacity: 0.5;
+}
 #home {
   text-align: left;
 }
 p {
-  font-size: 1.2em;
+  font-size: 1em;
   max-width: 600px;
   margin: 15px auto 30px;
 }
-a {
+.supporter-link {
+  background-color: var(--primary);
   text-decoration: none;
+  transition: var(--transition);
+  margin: 0 5px;
+  border-radius: 5px;
+  padding: 2px 8px;
+  color: var(--white);
+  &:hover {
+    background-color: var(--primary-darken);
+    cursor: pointer;
+  }
 }
 .info-box {
   display: flex;
@@ -91,33 +125,114 @@ a {
   }
 }
 .magazin-cover {
-  height: 100vh;
+  position: relative;
+  height: 85vh;
   width: 100%;
   background-image: url('~assets/front.jpg');
   background-size: cover;
   background-position: center center;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .overlay {
+    transition: all 300ms ease-in-out;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: rgb(0, 0, 0);
+    background: radial-gradient(
+      circle,
+      rgba(0, 0, 0, 0.7539390756302521) 0%,
+      rgba(0, 0, 0, 1) 100%
+    );
+    opacity: 0;
+  }
+  &.active {
+    .overlay {
+      opacity: 0.8;
+    }
+    .supporters {
+      opacity: 1;
+    }
+  }
+  .supporters {
+    transition: all 300ms ease-in-out;
+    z-index: 2;
+    position: relative;
+    color: var(--white);
+    opacity: 0;
+  }
+  .sales-counter {
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    background-color: var(--primary);
+    height: 150px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transform: rotatez(-12deg);
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+    &.open {
+      width: 600px;
+      height: 80%;
+      border-radius: 10px;
+      transform: rotate(0);
+      margin-right: 50px;
+      margin-bottom: 50px;
+    }
+    .sales-number,
+    .sales-unit {
+      color: var(--white);
+      font-weight: bold;
+      font-size: 48px;
+    }
+    .sales-unit {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.05rem;
+      margin-bottom: 5px;
+    }
+  }
 }
 .container {
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
 }
 .column {
-  width: 50%;
-  height: 100vh;
-  overflow-y: auto;
   box-sizing: border-box;
-  &.image {
+  &--image {
     flex-grow: 1;
+    width: 50%;
+    height: 85vh;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  &.box {
+  &--box {
+    max-width: 600px;
+    height: 85vh;
     background-color: var(--white);
     padding: 100px 50px;
-    max-width: 600px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    overflow-y: auto;
+  }
+  &--footer {
+    background-color: var(--dark);
+    height: 15vh;
+    width: 100%;
+    flex-grow: 1;
   }
 }
 .headline-wrapper {
@@ -125,24 +240,6 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-}
-
-.fine-print {
-  font-size: 0.8em;
-}
-
-.link {
-  color: rgba(0, 0, 0, 0.75);
-  text-decoration: none;
-  transition: color 200ms ease-in-out;
-  &:hover {
-    color: var(--primary);
-  }
-}
-
-/* width */
-::-webkit-scrollbar {
-  width: 10px;
 }
 
 /* Track */
@@ -170,30 +267,30 @@ a {
     font-size: 32px;
   }
   .column {
-    width: 50%;
+    /* width: 50%;
     height: 100vh;
     overflow-y: auto;
-    box-sizing: border-box;
+    box-sizing: border-box; */
     &.image {
     }
     &.box {
-      width: 350px;
-      padding: 30px;
+      /* width: 350px;
+      padding: 30px; */
     }
   }
 }
 @media only screen and (max-width: 1260px) {
-  .container {
+  /* .container {
     padding: 0;
   }
   .column {
     &.box {
       width: 350px;
     }
-  }
+  } */
 }
 @media only screen and (max-width: 1024px) {
-  .section {
+  /* .section {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -230,10 +327,10 @@ a {
   }
   .magazin-cover {
     height: 100%;
-  }
+  } */
 }
 @media only screen and (max-width: 640px) {
-  .section {
+  /* .section {
     padding: 0;
   }
   .container {
@@ -245,6 +342,6 @@ a {
     &.image {
       height: 240px;
     }
-  }
+  } */
 }
 </style>

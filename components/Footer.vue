@@ -79,6 +79,7 @@
   text-align: center;
   border-top: 5px solid var(--primary);
   color: var(--dark);
+  margin-top: 100px;
   .row {
     display: flex;
     justify-content: space-between;
