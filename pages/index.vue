@@ -38,23 +38,23 @@
           </div>
         </div>
         <div class="column column--box">
-          <span class="subtitle">11. Dezember 2019</span>
-          <h1>Bald verfügber</h1>
+          <span class="subtitle">Jetzt verfügbar</span>
+          <h1>Das erste einfach IOTA Magazin.</h1>
           <p>
             Dank unseren
             <span class="supporter-link" @click="showSupporter()"
-              >628 Unterstützern</span
+              >Unterstützern</span
             >, die bereits im Vorverkauf das einfachIOTA Magazin bestellt haben,
-            konnten wir dieses Projekt überhaupt erst möglich machen. Am 11.
-            Dezember startet offiziell der Verkauf, sei dabei beim ersten
-            einfachIOTA Magazin.
+            konnten wir dieses Projekt überhaupt erst möglich machen. Jetzt
+            startet offiziell der Verkauf, sei dabei beim ersten einfachIOTA
+            Magazin.
           </p>
           <h4>Newsletter abonnieren</h4>
           <p>
             Abonnier doch einfach unseren Newsletter. Wir halten dich auf dem
             Laufenden und informieren dich sobald wir die Tore öffnen.
           </p>
-          <Newsletter />
+          <Order />
           <Footer />
         </div>
         <Roadmap />
@@ -66,10 +66,10 @@
 <script>
 import Footer from '../components/Footer'
 import Roadmap from '../components/Roadmap'
-import Newsletter from '../components/Newsletter'
+import Order from '../components/Order'
 
 export default {
-  components: { Footer, Roadmap, Newsletter },
+  components: { Footer, Roadmap, Order },
   data() {
     return {
       isActive: false
