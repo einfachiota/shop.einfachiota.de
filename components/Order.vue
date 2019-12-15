@@ -76,7 +76,7 @@
           </div>
           <el-form-item class="submit-btn">
             <el-button type="primary" @click="onSubmit('ruleForm')"
-              >Bestellen</el-button
+              >Jetzt Kaufen</el-button
             >
           </el-form-item>
         </div>
