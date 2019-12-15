@@ -7,9 +7,9 @@
           <div class="wave"></div>
           <div class="wave wave_double"></div>
           <div class="wave wave_two-thirds"></div>
-          <div class="counter">
-            <span class="counter__number">14 Tage</span>
-          </div>
+          <!--<div class="counter">
+            <span class="counter__number">Heute</span>
+          </div>-->
         </div>
         <div class="roadmap__line"></div>
         <div class="roadmap__line transparent"></div>
@@ -27,7 +27,7 @@
     <div class="roadmap__item">
       <div class="roadmap__item-wrapper">
         <div class="roadmap__indicator empty"></div>
-        <h5>11.12.2019</h5>
+        <h5>20.12.2019</h5>
         <span>Verkauf Start</span>
       </div>
     </div>
@@ -119,7 +119,7 @@
       width: 20px;
       height: 20px;
       top: -2.5px;
-      left: calc(16.66vw * 3.25);
+      left: calc(16.66vw * 4.38);
       /* animation-duration: 2s;
       animation-name: changescale;
       animation-iteration-count: infinite;
@@ -129,7 +129,7 @@
   &__line {
     position: absolute;
     z-index: 10;
-    width: calc(16.66vw * 3.25 - 100px);
+    width: calc(16.66vw * 4.38 - 100px);
     left: 50%;
     top: 10px;
     height: 5px;
