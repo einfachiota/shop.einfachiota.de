@@ -286,7 +286,7 @@ export default {
     currentPrice() {
       return (
         this.ruleForm.amount * this.magazinPrice +
-        this.shippmendPrice
+        this.ruleForm.amount * this.shippmendPrice
       ).toFixed(2)
     }
   },
