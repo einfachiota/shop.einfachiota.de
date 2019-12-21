@@ -67,7 +67,7 @@
             Magazin x{{ ruleForm.amount }}:
             {{ (ruleForm.amount * magazinPrice).toFixed(2) }}€
           </p>
-          <p>Lieferung: {{ shippmendPrice.toFixed(2) }}€</p>
+          <p>Lieferung: {{ (ruleForm.amount * shippmendPrice).toFixed(2) }}€</p>
         </div>
         <div class="form-footer">
           <div class="price">
