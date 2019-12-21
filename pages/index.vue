@@ -6,34 +6,13 @@
           <div class="magazin-cover" :class="{ active: isActive }">
             <div class="overlay" />
             <div class="supporters">
-              <p>
-                Weit hinten, hinter den Wortbergen, fern der Länder Vokalien und
-                Konsonantien leben die Blindtexte. Abgeschieden wohnen sie in
-                Buchstabhausen an der Küste des Semantik, eines großen
-                Sprachozeans. Ein kleines Bächlein namens Duden fließt durch
-                ihren Ort und versorgt sie mit den nötigen Regelialien. Es ist
-                ein paradiesmatisches Land, in dem einem gebratene Satzteile in
-                den Mund fliegen. Nicht einmal von der allmächtigen
-                Interpunktion werden die Blindtexte beherrscht – ein geradezu
-                unorthographisches Leben. Eines Tages aber beschloß eine kleine
-                Zeile Blindtext, ihr Name war Lorem Ipsum, hinaus zu gehen in
-                die weite Grammatik. Der große Oxmox riet ihr davon ab, da es
-                dort wimmele von bösen Kommata, wilden Fragezeichen und
-                hinterhältigen Semikoli, doch das Blindtextchen ließ sich nicht
-                beirren. Es packte seine sieben Versalien, schob sich sein
-                Initial in den Gürtel und machte sich auf den Weg. Als es die
-                ersten Hügel des Kursivgebirges erklommen hatte, warf es einen
-                letzten Blick zurück auf die Skyline seiner Heimatstadt
-                Buchstabhausen, die Headline von Alphabetdorf und die Subline
-                seiner eigenen Straße, der Zeilengasse. Wehmütig lief ihm eine
-                rhetorische Frage über die Wange, dann setzte es seinen Weg
-                fort. Unterwegs traf es eine Copy. Die Copy warnte das
-                Blindtextchen, da, wo sie herkäme wäre sie
-              </p>
+              <h1>Unterstützer</h1>
+              <p class="supporters--list">{{ supp }}</p>
             </div>
             <div class="sales-counter">
-              <span class="sales-number">628</span>
-              <span class="sales-unit">Unterstützer</span>
+              <span class="sales-unit">Nur noch</span>
+              <span class="sales-number">{{ limiitedEditionCount }}</span>
+              <span class="sales-unit">Magazine</span>
             </div>
           </div>
         </div>
@@ -49,15 +28,22 @@
             startet offiziell der Verkauf, sei dabei beim ersten einfachIOTA
             Magazin.
           </p>
-          <h4>Newsletter abonnieren</h4>
+          <h2>Jetzt kaufen</h2>
           <p>
-            Abonnier doch einfach unseren Newsletter. Wir halten dich auf dem
-            Laufenden und informieren dich sobald wir die Tore öffnen.
+            Wir haben noch {{ limiitedEditionCount }} Exemplare der Erstauflage
+            Limitted Edition auf Lager.
           </p>
+          <p>
+            <strong>Lieferzeit:</strong>
+            ~14 Tage
+            <br />
+            <strong>Auf Lager:</strong>
+            {{ limiitedEditionCount }} Magazine
+          </p>
+
           <Order />
           <Footer />
         </div>
-        <Roadmap />
       </div>
     </div>
   </div>
@@ -65,19 +51,20 @@
 
 <script>
 import Footer from '../components/Footer'
-import Roadmap from '../components/Roadmap'
 import Order from '../components/Order'
 
 export default {
-  components: { Footer, Roadmap, Order },
+  components: { Footer, Order },
   data() {
     return {
-      isActive: false
+      isActive: false,
+      limiitedEditionCount: 542,
+      supp:
+        'NO8ODY, Olsche, Marcus & Frida, Peter Schiff, Markus, playnight, Bender, Bender, D. Dorsey, Martin Neubauer, Kryptonaut, SammyTS, Daniel T. Dorsey, Edur, moon? kommt!, Joe McWeirdo, Dimitrios, Bö, Mr. Tiii, Antonio Nardella - #IOTALove!, JΛn, JΛn, Antonio Nardella - #IOTALove!, Yannick Berberat, Christian Dennis Markert, Schmucklos, Andysun, Frank Pörtner, Holger Preßmar, Holger Preßmar, Dimitrios, Onur Usta, M.Wiesenhütter, huhn511, r3p0x, Denka, Roman Fischer (AT), LaK, Adrian Saxer, Phillipp Becker, Mirko Waschke, Mirko Waschke, Philipp, ToMo, Komplettmitscharf, Patrick Köhnen, DonTorti, Marco Talmann, Annette S., www.easy-passphrase-saver.de, Sven, Thomas, Scarface, Stoevi, Scarface, dsk0_, Stefano, Daniel Kühn, WurstsalatX, bIOTAtar, m.riemensperger@web.de, Tobi, Joe McWeirdo, Patrick, Tobias, Maik Binding, Thorsten Seehofer?, oldjohn, Stefano, Ad_Moon, Chnöbi, Sebi, Sylvia Lermann, Paladin - TarKar, Michael Weiße, King Keb, Sebastian Krämer, Matthias Terzer, Fabi, Big_O, Mark Schmidt, Nicholas Karg, David Voth, Nesastor, Qaiz, Alex, Alex, IOTAshops.com - Felix R., Thomas Mehling, Philip Noack, MaSoHoliK, Philip Noack, Helmut Pessek, Mijota 007, Christian Oosting (Oostech), Rainer, Rainer, Mcell80, IOTA Team FZI, rambazamba, Jacqueline, Christian Zimon, Mcell80, Mathias Rupprecht, Linnemann Akustik, Ralph Scheyer, Zwi, Abraxas147, Moritz, PeterPaaaaaaaan, Simon Jegelka, Mario Lehenauer, Mario Lehenauer, VIO, M2M, K.Güvenc Armitli, Kai Neuschwander (Kaineahnung), Andi Knauer, PIOTA, Wiota, Patches O‘houlahan, Energine, Jacek, Peter Lameyer, OldJimmy, Iota4Future, Losche, Yammi, Tom, Elfer, Elfer, Flashdel, Nic0x36, ockerocker, Oliver und Gesche Stais, CDM aka ©ryptolotl, Sven Feuchtmüller, Ch.Zue alias Major Lazer ;), Christian Peter, Lars, Kai Zachert, Lars, IOTA Team FZI, IREMMOS, Jens S., Christoph Baumann, Heiko Faust, Nr.1 Papa Joe Nr.2 Becko, iota.coupons, Don Ted, Mario Steckel, @cbe78, Panni, L.G., L.G., lonny986, Picknicker, Richard (rck), Stefan Sommer, Mike Spyrka, Felix, Mauro, Roadrunner, Fr4sh, Johannes Bargehr, David P., Aleks, Oliver Ebach, Fabrilogy GmbH & Co KG.,  Benedikt Bachmann, Becks, Marco, syncroworks, infi, LukSu TAbt, Pascal | Corinna | Schürmann, Pascal | Corinna | Schürmann, SKay, Erstausgabe für J.Messing, Simon Schumacher, Bazel, olifa, Thorsten, Thorsten, Michael Burger, Michael Burger, Horst Rieder, Pero, Silvio Schannak, jonmaxmue, Jan, Flomo, Roger Nussbaumer, jonmaxmue, dennis nagpal, Tilli, Tilli, Paschinho, Paschinho, Netsch, HPK, Bekir Bicer, Sabri Goldberg, MAIBACH, anynines GmbH, Bastel, Arne Flick, Daniel, Marko, ReffatG, julianlavii, Kevin Scheurer, Kevin Scheurer, Zwi, Johannes, Markus Kösters, Stefan, Stefan, BaBaTz, Tom & Mumpitz, Tom & Mumpitz, Ivo Simunic, d0ms0n, Ivo Simunic, Daniel Schwan, Sebastian, wismut, Benedikt, ockerocker, Durstin, Simon Schumacher, Nicolai, el Yeti, Denis, Pascal Müller, Bern, Pascal Müller, Bern, Socke, Lenny B., Jazz811, Cmon, Mario Sommer, Sibb, 123, Pascal Müller, Bern, AKITA Blockchain Solutions, Josef Schiebel, Darmo, Fynn, Rüdi, IOTAPower, Niklas Wehberg, Felipe Rehm, Moonshot, Sascha Hotz, Hank, Dedl, hallo Mario und Jutta., hallo Mario und Jutta., Artur, emobiton, Nou, Max Kirn, Da_krieh, Nou, stone3d, Marco Stirmlinger, flintstone, F.B., Zwi, Felix, Hobst, Arminator, Johannes PzH, C. & C. Albinus, Mike, Mike, Dombronick, Zwi, Paul `Skypaul´ Kellermann, NWiOta, Mario Rangelov, Mike, Alessandro Buser, Elfer, LuLi Wunit, Dennis, Dennis, CEO Hans-Jürgen Felsch, ToswoSteven, ToswoSteju, iotadev.org, Reithi98, Thomas Lindemann, Iotina, Iotina, O. Falko S., Ferrior, Ferrior, TingelTangelBoB, Peter, Marco Grull, Armin Simon - NetStream GmbH, Mischa, Vernon Koch, WebtapeteDE, Thomas Heisig, IOTA, Fries Textil, Tobinski, RogueThorn, Monni, Leonhard Klein, Monni, Adin Softic, Cornelia Faust, tntRistan, F&L<3, Dennis, Andi Rupp, IOTA (Arno Hoffmann), Daniel Schmidt, Rico Loschke, DoubleK, randombit, Niklas Redh, Kai Umland, McEck, Peter Galley, Andre@s, Jonas Mock, Michael, Oberst Papillion, Oberst-Papillion, Witali, Danicoin, C.D., Thomas Lindemann, elmanulito, Mathias P., SISTI, Jan Leonhard Fändrich, Steven Makinin, x2Ente, Astro Dawg, Rudolf Haberler, Justus Granzow, Torsten Reeder, André Berger, Pipo, Hiko29, Florian Gebhard, Patrick Schönwälder, tangle.glumb.de, Chico, Chico, Fred Stein, slook, Alex 13 Micha 09 Müller, André, Alf A.O. Mega, David F. Oder WWW.RAVE-ON.DE, Felix, Clixmile, Andreas Bach, Max B., Martin Huzanic, Dennis, randombit, Tobi, kushmaster420, KingFelix, Burns, Jan Niclas Bardenhagen, girwes, girwes, Freedom for Lombardos, Markus Wagner = WagIOTA, GnrGnr, Von Lukas, corrigo.io, Ramona und Daniel Jakob m.Bear, Cartman SpecX, N. Graf, Cartman , dancatt, Attila, Thomas FleXChange-Medical GmbH, Kay Bieser, masxhi, masxhi, Fabian Odermatt, Julian Bärwald, Bennett Warda / adraw, Norbert Nicolaus, Marcel S., Malte Peters, BastiJan, Alf A.O. Mega, Lars R., JWS, Tim, atr4xxas, Gregor, Gregor, KevinS, Thomas Mächler, Lippstadt, Tim T., Denis Rösken / Philipp Köther, ANDREAS, Toni, Onur Usta, Dietz, Pierre Christian, Aventin, sERvERfRoG, sERvERfRoG, LFO-ONE, René Widmer, Noah, Noah, #wascostadiewelt, pixonauten, Bibip, Janeck aka Merkelcoin, Kalaschnikow, Simon Mall, Samuel-Norah, Stefan Überegger, Samuel-Norah, moses, vrom, Rolf aus Aichtal, Tim, vrom, Yunus Kara, Bastian, Thomas Mächler, Wolfgang Hentschel, Wolfgang Hentschel, Wolfgang Hentschel, Wolfgang Hentschel, RobiwanKenobi, SplinterTM, V. Illemann, Stefan und Salmana Ahmad, Daniel Wittchow, Stefan K, Middendorf, Frank Reichenberg, Freddy, Bastian Künzel, Patrick Ulloth, M2M, Roadrunner, Roadrunner, KI-OTA, Martin Mayrhofer, Martin Sturm, AutoteileTREND.de, www.Passives-Einkommen.blog, Robin, Daniel Stampfl, m0535_1989, Silvio'
     }
   },
   methods: {
     showSupporter() {
-      console.log('Läuft')
       this.isActive = !this.isActive
     }
   }
@@ -85,6 +72,25 @@ export default {
 </script>
 
 <style lang="scss">
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--dark);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
 .el-main {
   padding: 0px !important;
 }
@@ -120,13 +126,14 @@ p {
 }
 .section {
   height: 100vh;
+  overflow: hidden;
   &--light {
     background-color: var(--light);
   }
 }
 .magazin-cover {
   position: relative;
-  height: 85vh;
+  height: 100vh;
   width: 100%;
   background-image: url('~assets/front.jpg');
   background-size: cover;
@@ -164,6 +171,19 @@ p {
     position: relative;
     color: var(--white);
     opacity: 0;
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto;
+    padding: 250px;
+    h1 {
+      margin-top: 100px;
+      margin-bottom: 15px;
+    }
+    &--list {
+      width: 100%;
+      max-width: 100%;
+      margin: 0;
+    }
   }
   .sales-counter {
     position: absolute;
@@ -176,7 +196,7 @@ p {
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    transform: rotatez(-12deg);
+    transform: rotatez(-12deg) scale(1.3);
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.15);
     display: flex;
     flex-direction: column;
@@ -195,10 +215,12 @@ p {
     .sales-unit {
       color: var(--white);
       font-weight: bold;
-      font-size: 48px;
+      font-size: 60px;
+      line-height: 1;
+      margin-bottom: 5px;
     }
     .sales-unit {
-      font-size: 12px;
+      font-size: 10px;
       text-transform: uppercase;
       letter-spacing: 0.05rem;
       margin-bottom: 5px;
@@ -215,14 +237,14 @@ p {
   &--image {
     flex-grow: 1;
     width: 50%;
-    height: 85vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
   }
   &--box {
     max-width: 600px;
-    height: 85vh;
+    height: 100vh;
     background-color: var(--white);
     padding: 100px 50px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
