@@ -80,6 +80,9 @@
   border-top: 5px solid var(--primary);
   color: var(--dark);
   margin-top: 100px;
+  margin-left: -50px;
+  width: calc(100% + 100px);
+  margin-bottom: -95px;
   .row {
     display: flex;
     justify-content: space-between;
