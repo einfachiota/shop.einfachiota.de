@@ -31,7 +31,7 @@
           <h2>Jetzt kaufen</h2>
           <p>
             Wir haben noch {{ limiitedEditionCount }} Exemplare der Erstauflage
-            Limitted Edition auf Lager.
+            Limited Edition auf Lager.
           </p>
           <p>
             <strong>Lieferzeit:</strong>
