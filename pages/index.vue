@@ -32,7 +32,7 @@
           <p>Einfach bezahlen mit <strong>IOTA oder Paypal</strong></p>
           <p>
             Wir haben noch {{ limiitedEditionCount }} Exemplare der Erstauflage
-            Limit ed Edition auf Lager.
+            Limited Edition auf Lager.
           </p>
           <p>
             <strong>Liefertermin:</strong>
