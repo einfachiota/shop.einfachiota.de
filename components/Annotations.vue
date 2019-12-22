@@ -1,6 +1,9 @@
 <template>
   <div class="annotations">
     <p class="fine-print">
+      * Alle Preise verstehen sich inklusive der gesetzlichen MwSt.
+    </p>
+    <p class="fine-print">
       Durch Anklicken von BESTELLEN bestätigst Du den Warenkorb und Deine
       eingegebenen Daten und stimmst unseren
       <a
