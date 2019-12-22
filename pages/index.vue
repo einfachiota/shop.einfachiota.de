@@ -29,13 +29,14 @@
             Magazin.
           </p>
           <h2>Jetzt kaufen</h2>
+          <p>Einfach bezahlen mit <strong>IOTA oder Paypal</strong></p>
           <p>
             Wir haben noch {{ limiitedEditionCount }} Exemplare der Erstauflage
-            Limitted Edition auf Lager.
+            Limit ed Edition auf Lager.
           </p>
           <p>
-            <strong>Lieferzeit:</strong>
-            ~14 Tage
+            <strong>Liefertermin:</strong>
+            bis zu 14 Tage
             <br />
             <strong>Auf Lager:</strong>
             {{ limiitedEditionCount }} Magazine

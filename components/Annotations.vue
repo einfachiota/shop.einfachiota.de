@@ -3,8 +3,9 @@
     <p class="fine-print">
       * Alle Preise verstehen sich inklusive der gesetzlichen MwSt.
     </p>
+    <br />
     <p class="fine-print">
-      Durch Anklicken von BESTELLEN bestätigst Du den Warenkorb und Deine
+      Durch Anklicken von JETZT KAUFEN bestätigst Du den Warenkorb und Deine
       eingegebenen Daten und stimmst unseren
       <a
         href="https://www.einfachiota.de/#/privacy"
@@ -14,6 +15,7 @@
         Datenschutzbestimmungen
       </a>
       zu.
+      <br />
       <br />
       <strong>Was passiert mit meinen Daten?<sup>*</sup></strong>
     </p>

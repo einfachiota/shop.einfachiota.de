@@ -373,7 +373,7 @@
           </el-checkbox>
         </el-form-item>
         <div class="costs">
-          <p><strong>Kosten</strong></p>
+          <p><strong>Kosten*</strong></p>
           <p>
             Magazin x{{ ruleForm.amount }}:
             {{ (ruleForm.amount * magazinPrice).toFixed(2) }}€
@@ -397,7 +397,7 @@
       <el-card shadow="always">
         <h3>Wie willst du bezahlen?</h3>
         <p>
-          <strong> Zu zahlen: {{ finalPriceInEur }}€</strong>
+          <strong> Zu zahlen: {{ finalPriceInEur }}€*</strong>
         </p>
         <paypal-checkout
           v-if="!payIota"
@@ -437,14 +437,18 @@
         <p>Dein einfachIOTA Team.</p>
       </el-card>
     </div>
+    <br />
+    <Annotations />
   </div>
 </template>
 
 <script>
 import * as IotaQR from '@tangle-frost/iota-qr-lib/pkg/iota-qr-lib.js'
+import Annotations from './Annotations'
 
 const API_URL = process.env.backendUrl + '/api'
 export default {
+  components: { Annotations },
   data() {
     console.log('socket', this.$socket)
     const checkAmount = (rule, value, callback) => {
