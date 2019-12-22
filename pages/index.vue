@@ -88,25 +88,6 @@ export default {
 </script>
 
 <style lang="scss">
-/* width */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: var(--dark);
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: var(--primary);
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
 .el-main {
   padding: 0px !important;
 }
@@ -190,7 +171,7 @@ p {
     width: 100%;
     height: 100vh;
     overflow-y: auto;
-    padding: 250px;
+    padding: 200px;
     h1 {
       margin-top: 100px;
       margin-bottom: 15px;
@@ -199,6 +180,7 @@ p {
       width: 100%;
       max-width: 100%;
       margin: 0;
+      margin-bottom: 100px;
     }
   }
   .sales-counter {
@@ -280,19 +262,18 @@ p {
   align-items: flex-start;
 }
 
-/* Track */
+// S C R O L L B A R   S T Y L E S
+::-webkit-scrollbar {
+  width: 10px;
+}
 ::-webkit-scrollbar-track {
   background: var(--light);
 }
-
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background-color: var(--primary_50);
   border-radius: 5px;
   transition: all 0.3s ease-in-out;
 }
-
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background-color: var(--primary);
 }
@@ -304,82 +285,100 @@ p {
   h1 {
     font-size: 32px;
   }
-  .column {
-    /* width: 50%;
-    height: 100vh;
-    overflow-y: auto;
-    box-sizing: border-box; */
-    &.image {
+  .magazin-cover {
+    .supporters {
+      padding: 200px 100px;
     }
-    &.box {
-      /* width: 350px;
-      padding: 30px; */
+    .sales-counter {
+      z-index: 10;
     }
   }
 }
 @media only screen and (max-width: 1260px) {
-  /* .container {
+  .container {
     padding: 0;
   }
-  .column {
-    &.box {
-      width: 350px;
-    }
-  } */
+}
+@media only screen and (max-width: 1200px) {
+  .container {
+    flex-wrap: nowrap;
+  }
 }
 @media only screen and (max-width: 1024px) {
-  /* .section {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    height: auto;
-    padding: 60px 0;
+  body {
+    overflow: hidden;
+  }
+  h1,
+  h2 {
+    margin-bottom: 10px;
+  }
+  h2 {
+    margin-top: 20px;
+  }
+  .footer {
+    margin-bottom: -45px;
+  }
+  .section {
+    padding: 50px;
+    overflow-y: auto;
   }
   .container {
-    overflow: hidden;
-    width: 600px;
-    flex-direction: column;
-    padding: 0;
-    background-color: var(--white);
+    flex-wrap: wrap;
     border-radius: 10px;
-    box-shadow: var(--box-shadow);
-  }
-  .column {
-    width: 100%;
-    &.image {
-      height: 300px;
+    overflow: hidden;
+    margin-bottom: 100px;
+    .column {
       width: 100%;
-      flex-grow: 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
     }
-    &.box {
-      width: 100%;
+    .column--image {
+      height: 400px;
+      .magazin-cover {
+        height: inherit;
+        .supporters {
+          display: none;
+          height: inherit;
+        }
+        .sales-counter {
+          transform: rotatez(-12deg) scale(1);
+          bottom: 10px;
+          right: 10px;
+        }
+      }
+    }
+    .column--box {
       max-width: 100%;
+      overflow: initial;
       height: auto;
-      overflow: inherit;
-      box-shadow: none;
+      padding: 50px;
+      p {
+        max-width: 100%;
+        margin: 0;
+      }
     }
   }
-  .magazin-cover {
-    height: 100%;
-  } */
 }
 @media only screen and (max-width: 640px) {
-  /* .section {
-    padding: 0;
+  .section {
+    padding: 10px;
+    padding-top: 0;
   }
   .container {
-    width: 100%;
-    border-radius: 0;
-    box-shadow: none;
-  }
-  .column {
-    &.image {
-      height: 240px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    .column--image {
+      .sales-counter {
+        transform: rotatez(-12deg) scale(0.7);
+        bottom: 0px;
+        right: 0px;
+      }
     }
-  } */
+    .column--box {
+      padding: 20px;
+    }
+  }
+  .footer {
+    margin-bottom: -15px;
+    margin-top: 50px;
+  }
 }
 </style>
