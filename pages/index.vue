@@ -41,7 +41,6 @@
             <strong>Auf Lager:</strong>
             {{ limiitedEditionCount }} Magazine
           </p>
-
           <Order />
           <Footer />
         </div>
@@ -52,7 +51,7 @@
 
 <script>
 import Footer from '../components/Footer'
-import Order from '../components/Order'
+import Order from '../components/Order/index'
 const API_URL = process.env.backendUrl + '/api'
 
 export default {
