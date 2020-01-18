@@ -51,8 +51,25 @@ module.exports = {
     'vue-scrollto/nuxt',
     '@nuxtjs/proxy',
     // Or if you have custom options...
-    ['vue-scrollto/nuxt', { duration: 300 }]
+    ['vue-scrollto/nuxt', { duration: 300 }],
+    'nuxt-i18n'
   ],
+
+  i18n: {
+    locales: ['en', 'de'],
+    defaultLocale: 'de',
+    vueI18n: {
+      fallbackLocale: 'de',
+      messages: {
+        en: {
+          greeting: 'Hello world!'
+        },
+        de: {
+          greeting: 'Hallo Welt!'
+        }
+      }
+    }
+  },
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
