@@ -1,4 +1,4 @@
-# magazin.einfachiota.de
+# shop.einfachiota.de
 
 > Startseite und Vorverkaufsstelle für das einfachIOTA Magazin
 
