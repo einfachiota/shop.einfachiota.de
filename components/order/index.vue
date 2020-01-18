@@ -8,39 +8,48 @@
         status-icon
         :rules="rules"
       >
-        <el-form-item label="Vorname" prop="first_name">
+        <el-form-item
+          :label="$t('order.form.first_name_label')"
+          prop="first_name"
+        >
           <el-input
             v-model="ruleForm.first_name"
-            placeholder="Dein Vorname"
+            :placeholder="$t('order.form.first_name_placeholder')"
             required="true"
           ></el-input>
         </el-form-item>
-        <el-form-item label="Nachname" prop="last_name">
+        <el-form-item
+          :label="$t('order.form.last_name_label')"
+          prop="last_name"
+        >
           <el-input
             v-model="ruleForm.last_name"
-            placeholder="Dein Nachname"
+            :placeholder="$t('order.form.last_name_placeholder')"
           ></el-input>
         </el-form-item>
-        <el-form-item label="Adresse" prop="address">
+        <el-form-item :label="$t('order.form.address_label')" prop="address">
           <el-input
             v-model="ruleForm.address"
-            placeholder="Deine Straße und Hausnummer"
+            :placeholder="$t('order.form.address_placeholder')"
           ></el-input>
         </el-form-item>
-        <el-form-item label="Postleitzahl" prop="zip_code">
+        <el-form-item :label="$t('order.form.zip_code_label')" prop="zip_code">
           <el-input
             v-model="ruleForm.zip_code"
-            placeholder="Deine Postleitzahl"
+            :placeholder="$t('order.form.zip_code_placeholder')"
           ></el-input>
         </el-form-item>
-        <el-form-item label="Stadt" prop="city">
+        <el-form-item :label="$t('order.form.city_label')" prop="city">
           <el-input
             v-model="ruleForm.city"
-            placeholder="Deine Stadt"
+            :placeholder="$t('order.form.city_placeholder')"
           ></el-input>
         </el-form-item>
-        <el-form-item label="Land" prop="country">
-          <el-select v-model="ruleForm.country" placeholder="Wähle dein Land">
+        <el-form-item :label="$t('order.form.country_label')" prop="country">
+          <el-select
+            v-model="ruleForm.country"
+            :placeholder="$t('order.form.country_placeholder')"
+          >
             <el-option value="Afghanistan">Afghanistan</el-option>
             <el-option value="Ägypten">Ägypten</el-option>
             <el-option value="Åland">Åland-Inseln</el-option>
@@ -358,18 +367,21 @@
             >
           </el-select>
         </el-form-item>
-        <el-form-item label="Anzahl" prop="amount">
+        <el-form-item :label="$t('order.form.amount_label')" prop="amount">
           <el-input v-model.number="ruleForm.amount"></el-input>
         </el-form-item>
-        <el-form-item label="E-Mail Adresse" prop="email">
+        <el-form-item :label="$t('order.form.email_label')" prop="email">
           <el-input
             v-model="ruleForm.email"
-            placeholder="Deine E-Mail Adresse, falls bei der Lieferung etwas schief geht."
+            :placeholder="$t('order.form.email_placeholder')"
           ></el-input>
         </el-form-item>
-        <el-form-item label="Neuigkeiten per E-Mail" prop="print_name">
+        <el-form-item
+          :label="$t('order.form.newsletter_label')"
+          prop="newsletter"
+        >
           <el-checkbox v-model="ruleForm.newsletter">
-            Ich möchte Neuigkeiten erhalten.
+            {{ $t('order.form.newsletter_placeholder') }}
           </el-checkbox>
         </el-form-item>
         <div class="costs">
