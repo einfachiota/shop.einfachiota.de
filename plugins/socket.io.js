@@ -7,7 +7,7 @@ export default ({ store }) => {
   Vue.use(
     VueSocketIO,
     io(process.env.backendUrl, {
-      path: '/api/iota_payments/socket',
+      path: '/iotapay/socket',
       origins: '*:*'
     }),
     {
