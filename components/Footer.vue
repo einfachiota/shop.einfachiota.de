@@ -52,9 +52,9 @@
       <div class="footer-bottom-col">© einfachIOTA</div>
       <div class="footer-bottom-col">
         <nuxt-link
-          class="footer-main-link"
           v-for="locale in availableLocales"
           :key="locale.code"
+          class="footer-main-link"
           :to="switchLocalePath(locale.code)"
           >{{ locale.name }}</nuxt-link
         >

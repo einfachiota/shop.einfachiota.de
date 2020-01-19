@@ -17,6 +17,9 @@ module.exports = {
       amount_label: 'Amount',
       email_label: 'Email',
       email_placeholder: 'Your email address',
+      print_name_label: 'Print name (optional)',
+      print_name_placeholder:
+        'Your name, which will be printed into the magazine',
       newsletter_label: 'Neuigkeiten per E-Mail',
       newsletter_placeholder: 'Ich möchte Neuigkeiten erhalten.'
     }

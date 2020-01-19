@@ -377,6 +377,15 @@
           ></el-input>
         </el-form-item>
         <el-form-item
+          :label="$t('order.form.print_name_label')"
+          prop="print_name"
+        >
+          <el-input
+            v-model="ruleForm.print_name"
+            :placeholder="$t('order.form.print_name_placeholder')"
+          ></el-input>
+        </el-form-item>
+        <el-form-item
           :label="$t('order.form.newsletter_label')"
           prop="newsletter"
         >

@@ -18,6 +18,8 @@ module.exports = {
       email_label: 'E-Mail',
       email_placeholder:
         'Deine E-Mail Adresse, falls bei der Lieferung etwas schief geht.',
+      print_name_label: 'Name für den Druck (optional)',
+      print_name_placeholder: 'Dein Name, der ins Magazin gedruckt werden soll',
       newsletter_label: 'Neuigkeiten per E-Mail',
       newsletter_placeholder: 'Ich möchte Neuigkeiten erhalten.'
     }

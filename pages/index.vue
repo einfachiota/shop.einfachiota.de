@@ -51,7 +51,7 @@
 
 <script>
 import Footer from '../components/Footer'
-import Order from '../components/Order/index'
+import Order from '../components/Order'
 const API_URL = process.env.backendUrl + '/api'
 
 export default {
