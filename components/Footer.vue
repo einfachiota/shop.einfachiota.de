@@ -51,6 +51,15 @@
     <div class="row footer-bottom">
       <div class="footer-bottom-col">© einfachIOTA</div>
       <div class="footer-bottom-col">
+        <nuxt-link
+          class="footer-main-link"
+          v-for="locale in availableLocales"
+          :key="locale.code"
+          :to="switchLocalePath(locale.code)"
+          >{{ locale.name }}</nuxt-link
+        >
+      </div>
+      <div class="footer-bottom-col">
         <a
           href="https://www.einfachiota.de/#/imprint"
           target="_blank"
@@ -69,6 +78,16 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  computed: {
+    availableLocales() {
+      return this.$i18n.locales.filter((i) => i.code !== this.$i18n.locale)
+    }
+  }
+}
+</script>
 
 <style lang="scss">
 .footer {

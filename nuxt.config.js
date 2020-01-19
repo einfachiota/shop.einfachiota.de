@@ -56,7 +56,16 @@ module.exports = {
   ],
 
   i18n: {
-    locales: ['en', 'de'],
+    locales: [
+      {
+        code: 'en',
+        name: 'English'
+      },
+      {
+        code: 'de',
+        name: 'Deutsch'
+      }
+    ],
     defaultLocale: 'de',
     vueI18n: {
       fallbackLocale: 'de',
