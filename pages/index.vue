@@ -132,7 +132,7 @@ p {
   position: relative;
   height: 100vh;
   width: 100%;
-  background-image: url('~assets/front.jpg');
+  background-image: url('~assets/front_mag01_en.jpg');
   background-size: cover;
   background-position: center center;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
