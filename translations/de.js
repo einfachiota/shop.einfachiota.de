@@ -34,7 +34,24 @@ module.exports = {
       print_name_label: 'Name für den Druck (optional)',
       print_name_placeholder: 'Dein Name, der ins Magazin gedruckt werden soll',
       newsletter_label: 'Neuigkeiten per E-Mail',
-      newsletter_placeholder: 'Ich möchte Neuigkeiten erhalten.'
+      newsletter_placeholder: 'Ich möchte Neuigkeiten erhalten.',
+      submit: 'Jetzt kaufen'
+    },
+    costs: {
+      title: 'Kosten',
+      amount: 'Menge',
+      shipping: 'Lieferung',
+      sum: 'Summe'
+    },
+    payment: {
+      title: 'Wie willst du bezahlen?',
+      to_pay: 'Zu zahlen',
+      pay_with_trinity: 'Zahle hier mit Trinity',
+      success: {
+        title: 'Danke für deinen Support!',
+        thanks: 'Wir wünschen dir noch einen schönen Tag.',
+        greetings: 'Dein einfachIOTA Team.'
+      }
     }
   }
 }

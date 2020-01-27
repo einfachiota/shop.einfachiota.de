@@ -34,7 +34,24 @@ module.exports = {
       print_name_placeholder:
         'Your name, which will be printed into the magazine',
       newsletter_label: 'News via email',
-      newsletter_placeholder: 'I want to receive news via mail.'
+      newsletter_placeholder: 'I want to receive news via mail.',
+      submit: 'buy now'
+    },
+    costs: {
+      title: 'Costs',
+      amount: 'Amount',
+      shipping: 'Shipping',
+      sum: 'Sum'
+    },
+    payment: {
+      title: 'How do you want to pay?',
+      to_pay: 'To pay',
+      pay_with_trinity: 'Pay here with Trinity',
+      success: {
+        title: 'Thanks for your support!',
+        thanks: 'We wish you a nice day.',
+        greetings: 'Your einfachIOTA Team.'
+      }
     }
   }
 }

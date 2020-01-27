@@ -394,31 +394,38 @@
           </el-checkbox>
         </el-form-item>
         <div class="costs">
-          <p><strong>Kosten*</strong></p>
           <p>
-            Magazin x{{ ruleForm.amount }}:
+            <strong>{{ $t('order.costs.title') }}*</strong>
+          </p>
+          <p>
+            {{ $t('order.costs.amount') }} x{{ ruleForm.amount }}:
             {{ (ruleForm.amount * magazinPrice).toFixed(2) }}€
           </p>
-          <p>Lieferung: {{ (ruleForm.amount * shippmendPrice).toFixed(2) }}€</p>
+          <p>
+            {{ $t('order.costs.shipping') }}:
+            {{ (ruleForm.amount * shippmendPrice).toFixed(2) }}€
+          </p>
         </div>
         <div class="form-footer">
           <div class="price">
             <h3>{{ currentPrice }}€</h3>
-            <h5>Summe</h5>
+            <h5>{{ $t('order.costs.sum') }}</h5>
           </div>
           <el-form-item class="submit-btn">
-            <el-button type="primary" @click="onSubmit('ruleForm')"
-              >Jetzt Kaufen</el-button
-            >
+            <el-button type="primary" @click="onSubmit('ruleForm')">{{
+              $t('order.form.submit')
+            }}</el-button>
           </el-form-item>
         </div>
       </el-form>
     </div>
     <div v-if="order_step == 2">
       <el-card shadow="always">
-        <h3>Wie willst du bezahlen?</h3>
+        <h3>{{ $t('order.payment.title') }}</h3>
         <p>
-          <strong> Zu zahlen: {{ finalPriceInEur }}€*</strong>
+          <strong
+            >{{ $t('order.payment.title') }}: {{ finalPriceInEur }}€*</strong
+          >
         </p>
         <paypal-checkout
           v-if="!payIota"
@@ -446,16 +453,16 @@
               `
             "
           >
-            Zahle hier mit Trinity
+            {{ $t('order.payment.pay_with_trinity') }}
           </a>
         </div>
       </el-card>
     </div>
     <div v-if="order_step == 3">
       <el-card class="card--success" shadow="always">
-        <h3>Danke für deinen Support!</h3>
-        <p>Wir wünschen dir noch einen schönen Tag.</p>
-        <p>Dein einfachIOTA Team.</p>
+        <h3>{{ $t('order.payment.success.title') }}</h3>
+        <p>{{ $t('order.payment.success.thanks') }}</p>
+        <p>{{ $t('order.payment.success.greetings') }}</p>
       </el-card>
     </div>
     <br />
