@@ -53,5 +53,15 @@ module.exports = {
         greetings: 'Your einfachIOTA Team.'
       }
     }
+  },
+  annotations: {
+    mwst: 'All prices including taxes',
+    confirm:
+      'All prices include the legal VAT. By clicking BUY NOW you confirm the shopping cart and your entered data and agree to ours',
+    data: 'Privacy Policy Page.',
+    what_data: 'What happens with my data?',
+    what_data_text:
+      'We only use your data for a successful delivery and our accounting. The email address is required if we need to get in touch with you. We only do this if absolutely necessary. Unless you want to receive news from einfachIOTA, all you have to do is click the appropriate checkbox. You can find more information on data protection on our',
+    what_data_link: 'Privacy Policy page.'
   }
 }

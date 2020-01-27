@@ -424,7 +424,7 @@
         <h3>{{ $t('order.payment.title') }}</h3>
         <p>
           <strong
-            >{{ $t('order.payment.title') }}: {{ finalPriceInEur }}€*</strong
+            >{{ $t('order.payment.to_pay') }}: {{ finalPriceInEur }}€*</strong
           >
         </p>
         <paypal-checkout

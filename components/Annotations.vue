@@ -1,40 +1,30 @@
 <template>
   <div class="annotations">
-    <p class="fine-print">
-      * Alle Preise verstehen sich inklusive der gesetzlichen MwSt.
-    </p>
+    <p class="fine-print">* {{ $t('annotations.mwst') }}.</p>
     <br />
     <p class="fine-print">
-      Durch Anklicken von JETZT KAUFEN bestätigst Du den Warenkorb und Deine
-      eingegebenen Daten und stimmst unseren
+      {{ $t('annotations.confirm') }}
       <a
         href="https://www.einfachiota.de/#/privacy"
         target="_blank"
         class="link"
       >
-        Datenschutzbestimmungen
+        {{ $t('annotations.data') }}
       </a>
-      zu.
       <br />
       <br />
-      <strong>Was passiert mit meinen Daten?<sup>*</sup></strong>
+      <strong>{{ $t('annotations.what_data') }}<sup>*</sup></strong>
     </p>
     <hr />
     <p class="fine-print">
-      Wir verwenden deine Daten nur für eine erfolgreiche Zusendung und unsere
-      Buchhaltung. Die Email Adresse wird benötigt, falls wir mit dir in Kontakt
-      treten müssen. Dies tun wir aber nur, wenn es unbedingt nötig ist. Ausser
-      du möchtest Neuigkeiten von einfachIOTA erhalten, dafür musst du nur die
-      dazu passende Checkbox anklicken. Mehr Informationen zum Datenschutz
-      findest du auf unserer
+      {{ $t('annotations.what_data_text') }}
       <a
         href="https://www.einfachiota.de/#/privacy#magazin"
         target="_blank"
         class="link"
       >
-        Datenschutzerklärungs
+        {{ $t('annotations.what_data_link') }}
       </a>
-      Seite.
     </p>
   </div>
 </template>

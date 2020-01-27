@@ -9,11 +9,13 @@
               <h1>{{ $t('home.supporter') }}</h1>
               <p class="supporters--list">{{ supp }}</p>
             </div>
+            <!--
             <div class="sales-counter">
               <span class="sales-unit">Nur noch</span>
               <span class="sales-number">{{ limiitedEditionCount }}</span>
               <span class="sales-unit">Magazine</span>
             </div>
+            -->
           </div>
         </div>
         <div class="column column--box">
@@ -26,7 +28,7 @@
           <p>{{ $t('home.pay_with') }}</p>
           <p>
             <strong>{{ $t('home.delivery.title') }}</strong>
-            {{ $t('home.delivery.title') }}
+            {{ $t('home.delivery.text') }}
           </p>
           <Order />
           <Footer />
