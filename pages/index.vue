@@ -6,7 +6,7 @@
           <div class="magazin-cover" :class="{ active: isActive }">
             <div class="overlay" />
             <div class="supporters">
-              <h1>Unterstützer</h1>
+              <h1>{{ $t('home.supporter') }}</h1>
               <p class="supporters--list">{{ supp }}</p>
             </div>
             <div class="sales-counter">
@@ -17,29 +17,16 @@
           </div>
         </div>
         <div class="column column--box">
-          <span class="subtitle">Jetzt verfügbar</span>
-          <h1>Das erste einfach IOTA Magazin.</h1>
+          <span class="subtitle">{{ $t('home.available') }}</span>
+          <h1>{{ $t('home.title') }}</h1>
           <p>
-            Dank unseren
-            <span class="supporter-link" @click="showSupporter()"
-              >Unterstützern</span
-            >, die bereits im Vorverkauf das einfachIOTA Magazin bestellt haben,
-            konnten wir dieses Projekt überhaupt erst möglich machen. Jetzt
-            startet offiziell der Verkauf, sei dabei beim ersten einfachIOTA
-            Magazin.
+            {{ $t('home.supporter_text') }}
           </p>
-          <h2>Jetzt kaufen</h2>
-          <p>Einfach bezahlen mit <strong>IOTA oder Paypal</strong></p>
+          <h2>{{ $t('home.buy_now') }}</h2>
+          <p>{{ $t('home.pay_with') }}</p>
           <p>
-            Wir haben noch {{ limiitedEditionCount }} Exemplare der Erstauflage
-            Limited Edition auf Lager.
-          </p>
-          <p>
-            <strong>Liefertermin:</strong>
-            bis zu 14 Tage
-            <br />
-            <strong>Auf Lager:</strong>
-            {{ limiitedEditionCount }} Magazine
+            <strong>{{ $t('home.delivery.title') }}</strong>
+            {{ $t('home.delivery.title') }}
           </p>
           <Order />
           <Footer />

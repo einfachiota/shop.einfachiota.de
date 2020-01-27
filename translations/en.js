@@ -1,5 +1,18 @@
 module.exports = {
   greeting: 'Hello world!',
+  home: {
+    available: 'Now available',
+    title: 'The first einfachIOTA magazine.',
+    supporter: 'Supporter',
+    supporter_text:
+      'Thanks to our supporters, who had already ordered the einfachIOTA magazine in advance, we were able to make this project possible in the first place. Now the sale officially starts, be it with the first simplyIOTA magazine.',
+    buy_now: 'Buy now',
+    pay_with: 'Simply pay with: IOTA or Paypal',
+    delivery: {
+      title: 'Duration of delivery:',
+      text: 'in April'
+    }
+  },
   order: {
     form: {
       first_name_label: 'First name',
@@ -20,8 +33,8 @@ module.exports = {
       print_name_label: 'Print name (optional)',
       print_name_placeholder:
         'Your name, which will be printed into the magazine',
-      newsletter_label: 'Neuigkeiten per E-Mail',
-      newsletter_placeholder: 'Ich möchte Neuigkeiten erhalten.'
+      newsletter_label: 'News via email',
+      newsletter_placeholder: 'I want to receive news via mail.'
     }
   }
 }

@@ -1,5 +1,18 @@
 module.exports = {
   greeting: 'Hallo Welt!',
+  home: {
+    available: 'Jetzt verfügbar',
+    title: 'Das erste einfach IOTA Magazin.',
+    supporter: 'Unterstützer',
+    supporter_text:
+      'Dank unseren Unterstützern, die bereits im Vorverkauf das einfachIOTA Magazin bestellt haben, konnten wir dieses Projekt überhaupt erst möglich machen. Jetzt startet offiziell der Verkauf, sei dabei beim ersten einfachIOTA Magazin.',
+    buy_now: 'Jetzt kaufen',
+    pay_with: 'Einfach bezahlen mit: IOTA oder Paypal',
+    delivery: {
+      title: 'Liefertermin:',
+      text: 'bis zu 14 Tage'
+    }
+  },
   order: {
     form: {
       first_name_label: 'Vorname',
