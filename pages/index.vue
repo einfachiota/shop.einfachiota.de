@@ -21,9 +21,7 @@
         <div class="column column--box">
           <span class="subtitle">{{ $t('home.available') }}</span>
           <h1>{{ $t('home.title') }}</h1>
-          <p>
-            {{ $t('home.supporter_text') }}
-          </p>
+          <p>{{ $t('home.supporter_text') }}</p>
           <h2>{{ $t('home.buy_now') }}</h2>
           <p>{{ $t('home.pay_with') }}</p>
           <p>
@@ -64,7 +62,7 @@ export default {
       this.$axios
         .get(`${API_URL}/amount`)
         .then((result) => {
-          console.log('result', result)
+          // console.log('result', result)
           this.limiitedEditionCount = result.data.amount
         })
         .catch((err) => {
