@@ -480,15 +480,13 @@ export default {
     console.log('socket', this.$socket)
     const checkAmount = (rule, value, callback) => {
       if (!value) {
-        return callback(
-          new Error('Bitte gib an, wie viel Exemplare du möchtest.')
-        )
+        return callback(new Error(this.$i18n.t('order.form.errors.amount')))
       }
       setTimeout(() => {
         if (!Number.isInteger(value)) {
-          callback(new Error('Bitte gibt eine Zahl ein.'))
+          callback(new Error(this.$i18n.t('order.form.errors.number')))
         } else if (value < 0) {
-          callback(new Error('Komm schon, die Zahl muss größer als 0 sein :-)'))
+          callback(new Error(this.$i18n.t('order.form.errors.number_zero')))
         } else {
           callback()
         }
