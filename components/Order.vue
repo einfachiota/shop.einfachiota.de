@@ -639,6 +639,13 @@ export default {
         if (valid) {
           console.log('submit!')
           const self = this
+
+          // check ref link existence and add it
+          if (this.$route.query.refLink) {
+            console.log('refLink order')
+            this.ruleForm.ref_address = this.$route.query.refLink
+          }
+
           this.$axios
             .post(`${API_URL}/orders`, this.ruleForm)
             .then((result) => {
