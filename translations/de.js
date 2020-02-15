@@ -15,6 +15,11 @@ module.exports = {
   },
   order: {
     form: {
+      errors: {
+        amount: 'Bitte gib an, wie viel Exemplare du möchtest.',
+        number: 'Bitte gibt eine Zahl ein.',
+        number_zero: 'Komm schon, die Zahl muss größer als 0 sein :-)'
+      },
       first_name_label: 'Vorname',
       first_name_placeholder: 'Dein Vorname',
       last_name_label: 'Nachname',

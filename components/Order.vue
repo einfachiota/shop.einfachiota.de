@@ -389,9 +389,9 @@
           :label="$t('order.form.newsletter_label')"
           prop="newsletter"
         >
-          <el-checkbox v-model="ruleForm.newsletter">
-            {{ $t('order.form.newsletter_placeholder') }}
-          </el-checkbox>
+          <el-checkbox v-model="ruleForm.newsletter">{{
+            $t('order.form.newsletter_placeholder')
+          }}</el-checkbox>
         </el-form-item>
         <div class="costs">
           <p>
@@ -412,16 +412,16 @@
             <h5>{{ $t('order.costs.sum') }}</h5>
           </div>
           <el-form-item class="submit-btn">
-            <el-button type="primary" @click="onSubmit('ruleForm')">{{
-              $t('order.form.submit')
-            }}</el-button>
+            <el-button type="primary" @click="onSubmit('ruleForm')">
+              {{ $t('order.form.submit') }}
+            </el-button>
           </el-form-item>
         </div>
       </el-form>
     </div>
     <div v-if="order_step == 2">
       <el-card shadow="always">
-        <h3>{{ $t('order.payment.title') }}</h3>
+        <h3 v-if="!payIota">{{ $t('order.payment.title') }}</h3>
         <p>
           <strong
             >{{ $t('order.payment.to_pay') }}: {{ finalPriceInEur }}€*</strong
@@ -438,9 +438,9 @@
           @payment-completed="paymentCompleted"
           @payment-cancelled="paymentCancelled"
         ></paypal-checkout>
-        <el-button v-if="!payIota" class="btn-iota" @click="payWithIota">
-          Pay with IOTA
-        </el-button>
+        <el-button v-if="!payIota" class="btn-iota" @click="payWithIota"
+          >Pay with IOTA</el-button
+        >
         <div v-if="qrCodeData" class="iota-payment">
           <img v-if="qrCodeData" :src="qrCodeData.src" alt="QR CODE" />
           <br />
@@ -452,9 +452,8 @@
                 iota://${data.payment.address}/?amount=${data.payment.value}
               `
             "
+            >{{ $t('order.payment.pay_with_trinity') }}</a
           >
-            {{ $t('order.payment.pay_with_trinity') }}
-          </a>
         </div>
       </el-card>
     </div>
@@ -481,15 +480,13 @@ export default {
     console.log('socket', this.$socket)
     const checkAmount = (rule, value, callback) => {
       if (!value) {
-        return callback(
-          new Error('Bitte gib an, wie viel Exemplare du möchtest.')
-        )
+        return callback(new Error(this.$i18n.t('order.form.errors.amount')))
       }
       setTimeout(() => {
         if (!Number.isInteger(value)) {
-          callback(new Error('Bitte gibt eine Zahl ein.'))
+          callback(new Error(this.$i18n.t('order.form.errors.number')))
         } else if (value < 0) {
-          callback(new Error('Komm schon, die Zahl muss größer als 0 sein :-)'))
+          callback(new Error(this.$i18n.t('order.form.errors.number_zero')))
         } else {
           callback()
         }
