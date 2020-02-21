@@ -45,325 +45,17 @@
             :placeholder="$t('order.form.city_placeholder')"
           ></el-input>
         </el-form-item>
+
         <el-form-item :label="$t('order.form.country_label')" prop="country">
           <el-select
             v-model="ruleForm.country"
             :placeholder="$t('order.form.country_placeholder')"
           >
-            <el-option value="Afghanistan">Afghanistan</el-option>
-            <el-option value="Ägypten">Ägypten</el-option>
-            <el-option value="Åland">Åland-Inseln</el-option>
-            <el-option value="Albanien">Albanien</el-option>
-            <el-option value="Algerien">Algerien</el-option>
-            <el-option value="Amerikanische Jungferninseln"
-              >Amerikanische Jungferninseln</el-option
-            >
-            <el-option value="Amerikanisch-Samoa">Amerikanisch-Samoa</el-option>
-            <el-option value="Andorra">Andorra</el-option>
-            <el-option value="Angola">Angola</el-option>
-            <el-option value="Anguilla">Anguilla</el-option>
-            <el-option value="Antigua und Barbuda"
-              >Antigua und Barbuda</el-option
-            >
-            <el-option value="Äquatorialguinea">Äquatorialguinea</el-option>
-            <el-option value="Argentinien">Argentinien</el-option>
-            <el-option value="Armenien">Armenien</el-option>
-            <el-option value="Aruba">Aruba</el-option>
-            <el-option value="Ascension">Ascension</el-option>
-            <el-option value="Äthiopien">Äthiopien</el-option>
-            <el-option value="Australien">Australien</el-option>
-            <el-option value="Azerbaidschan">Azerbaidschan</el-option>
-            <el-option value="Bahamas">Bahamas</el-option>
-            <el-option value="Bahrain">Bahrain</el-option>
-            <el-option value="Bangladesh">Bangladesh</el-option>
-            <el-option value="Barbados">Barbados</el-option>
-            <el-option value="Belarus">Belarus</el-option>
-            <el-option value="Belgien">Belgien</el-option>
-            <el-option value="Belize">Belize</el-option>
-            <el-option value="Benin">Benin</el-option>
-            <el-option value="Berg Athos (Griechenland)"
-              >Berg Athos (Griechenland)</el-option
-            >
-            <el-option value="Bermuda">Bermuda</el-option>
-            <el-option value="Bhutan">Bhutan</el-option>
-            <el-option value="Bolivien">Bolivien</el-option>
-            <el-option value="Bonaire, Sint Eustatius und Saba"
-              >Bonaire, Sint Eustatius und Saba</el-option
-            >
-            <el-option value="Bosnien und Herzegowina"
-              >Bosnien und Herzegowina</el-option
-            >
-            <el-option value="Botsuana (Botswana)"
-              >Botsuana (Botswana)</el-option
-            >
-            <el-option value="Brasilien">Brasilien</el-option>
-            <el-option value="Britische Jungferninseln"
-              >Britische Jungferninseln</el-option
-            >
-            <el-option value="Brunei Darussalam">Brunei Darussalam</el-option>
-            <el-option value="Bulgarien">Bulgarien</el-option>
-            <el-option value="Burkina Faso">Burkina Faso</el-option>
-            <el-option value="Burundi">Burundi</el-option>
-            <el-option value="Campione d'Italia">Campione d'Italia</el-option>
-            <el-option value="Ceuta und Melilla (Spanien)"
-              >Ceuta und Melilla (Spanien)</el-option
-            >
-            <el-option value="Chile">Chile</el-option>
-            <el-option value="China, Volksrepublik"
-              >China, Volksrepublik</el-option
-            >
-            <el-option value="Cookinseln">Cookinseln</el-option>
-            <el-option value="CRI">Costa Rica</el-option>
-            <el-option value="CIV">Côte d’Ivoire (Elfenbeinküste)</el-option>
-            <el-option value="CUW">Curaçao</el-option>
-            <el-option value="Deutschland">Deutschland</el-option>
-            <el-option value="Dänemark">Dänemark</el-option>
-            <el-option value="Dominica">Dominica</el-option>
-            <el-option value="Dominikanische Republik"
-              >Dominikanische Republik</el-option
-            >
-            <el-option value="Dschibuti">Dschibuti</el-option>
-            <el-option value="Ecuador">Ecuador</el-option>
-            <el-option value="El Salvador">El Salvador</el-option>
-            <el-option value="Eritrea">Eritrea</el-option>
-            <el-option value="Estland">Estland</el-option>
-            <el-option value="Eswatini">Eswatini</el-option>
-            <el-option value="Falklandinseln">Falklandinseln</el-option>
-            <el-option value="Färöer">Färöer</el-option>
-            <el-option value="Fidschi">Fidschi</el-option>
-            <el-option value="Finnland">Finnland</el-option>
-            <el-option value="Frankreich">Frankreich</el-option>
-            <el-option value="Französische Süd- und Antarktisgebiete"
-              >Französische Süd- und Antarktisgebiete</el-option
-            >
-            <el-option value="Französisch-Guayana"
-              >Französisch-Guayana</el-option
-            >
-            <el-option value="Französisch-Polynesien"
-              >Französisch-Polynesien</el-option
-            >
-            <el-option value="Gabun">Gabun</el-option>
-            <el-option value="Gambia">Gambia</el-option>
-            <el-option value="Georgien">Georgien</el-option>
-            <el-option value="Ghana">Ghana</el-option>
-            <el-option value="Gibraltar">Gibraltar</el-option>
-            <el-option value="Grenada">Grenada</el-option>
-            <el-option value="Griechenland">Griechenland</el-option>
-            <el-option value="Dänemark"
-              >Grönland (Dänemark(Dänemark">Grönland (Dänemark)</el-option
-            >
-            <el-option value="Großbritannien">Großbritannien</el-option>
-            <el-option value="Guadeloupe">Guadeloupe</el-option>
-            <el-option value="Guam">Guam</el-option>
-            <el-option value="Guatemala">Guatemala</el-option>
-            <el-option value="Guernsey">Guernsey</el-option>
-            <el-option value="Guinea">Guinea</el-option>
-            <el-option value="Guinea-Bissau">Guinea-Bissau</el-option>
-            <el-option value="Guyana">Guyana</el-option>
-            <el-option value="Haiti">Haiti</el-option>
-            <el-option value="Honduras">Honduras</el-option>
-            <el-option value="Hongkong">Hongkong</el-option>
-            <el-option value="Indien">Indien</el-option>
-            <el-option value="Indonesien">Indonesien</el-option>
-            <el-option value="Insel Man">Insel Man</el-option>
-            <el-option value="Irak">Irak</el-option>
-            <el-option value="Iran">Iran</el-option>
-            <el-option value="Irland">Irland</el-option>
-            <el-option value="Island">Island</el-option>
-            <el-option value="Israel">Israel</el-option>
-            <el-option value="Italien">Italien</el-option>
-            <el-option value="Jamaika">Jamaika</el-option>
-            <el-option value="Japan">Japan</el-option>
-            <el-option value="Jemen">Jemen</el-option>
-            <el-option value="Jersey">Jersey</el-option>
-            <el-option value="Jordanien">Jordanien</el-option>
-            <el-option value="Kaimaninseln">Kaimaninseln</el-option>
-            <el-option value="Kambodscha">Kambodscha</el-option>
-            <el-option value="Kamerun">Kamerun</el-option>
-            <el-option value="Kanada">Kanada</el-option>
-            <el-option value="Kanarische Inseln (Spanien"
-              >Kanarische Inseln (Spanien)</el-option
-            >
-            <el-option value="Kap Verde">Kap Verde</el-option>
-            <el-option value="Kasachstan">Kasachstan</el-option>
-            <el-option value="Katar">Katar</el-option>
-            <el-option value="Kenia">Kenia</el-option>
-            <el-option value="Kirgisistan">Kirgisistan</el-option>
-            <el-option value="Kiribati">Kiribati</el-option>
-            <el-option value="Kolumbien">Kolumbien</el-option>
-            <el-option value="Komoren">Komoren</el-option>
-            <el-option value="Kongo (Dem. Rep)">Kongo (Dem. Rep.)</el-option>
-            <el-option value="Kongo (Rep)">Kongo (Rep.)</el-option>
-            <el-option value="Korea Nord">Korea Nord</el-option>
-            <el-option value="Korea Süd">Korea Süd</el-option>
-            <el-option value="Kosovo">Kosovo</el-option>
-            <el-option value="Kroatien">Kroatien</el-option>
-            <el-option value="Kuba">Kuba</el-option>
-            <el-option value="Kuwait">Kuwait</el-option>
-            <el-option value="Laos">Laos</el-option>
-            <el-option value="Lesotho">Lesotho</el-option>
-            <el-option value="Lettland">Lettland</el-option>
-            <el-option value="Libanon">Libanon</el-option>
-            <el-option value="Liberia">Liberia</el-option>
-            <el-option value="Libyen">Libyen</el-option>
-            <el-option value="Liechtenstein">Liechtenstein</el-option>
-            <el-option value="Litauen">Litauen</el-option>
-            <el-option value="Livigno">Livigno</el-option>
-            <el-option value="Luxemburg">Luxemburg</el-option>
-            <el-option value="Macau">Macau</el-option>
-            <el-option value="Madagaskar">Madagaskar</el-option>
-            <el-option value="Malawi">Malawi</el-option>
-            <el-option value="Malaysia">Malaysia</el-option>
-            <el-option value="Malediven">Malediven</el-option>
-            <el-option value="Mali">Mali</el-option>
-            <el-option value="Malta">Malta</el-option>
-            <el-option value="Marokko">Marokko</el-option>
-            <el-option value="Marschallinseln">Marschallinseln</el-option>
-            <el-option value="Martinique">Martinique</el-option>
-            <el-option value="Mauretanien">Mauretanien</el-option>
-            <el-option value="Mauritius">Mauritius</el-option>
-            <el-option value="Mayotte">Mayotte</el-option>
-            <el-option value="Mazedonien">Mazedonien</el-option>
-            <el-option value="Mexiko">Mexiko</el-option>
-            <el-option value="Mikronesien">Mikronesien</el-option>
-            <el-option value="Moldau">Moldau</el-option>
-            <el-option value="Monaco">Monaco</el-option>
-            <el-option value="Mongolei">Mongolei</el-option>
-            <el-option value="Montenegro">Montenegro</el-option>
-            <el-option value="Montserrat">Montserrat</el-option>
-            <el-option value="Mosambik">Mosambik</el-option>
-            <el-option value="Myanmar">Myanmar</el-option>
-            <el-option value="Namibia">Namibia</el-option>
-            <el-option value="Nauru">Nauru</el-option>
-            <el-option value="Nepal">Nepal</el-option>
-            <el-option value="Neukaledonien">Neukaledonien</el-option>
-            <el-option value="Neuseeland">Neuseeland</el-option>
-            <el-option value="Nicaragua">Nicaragua</el-option>
-            <el-option value="Niederlande">Niederlande</el-option>
-            <el-option value="Niederländische Antillen"
-              >Niederländische Antillen</el-option
-            >
-            <el-option value="Niger">Niger</el-option>
-            <el-option value="Nigeria">Nigeria</el-option>
-            <el-option value="Niue">Niue</el-option>
-            <el-option value="Nördliche Marianen">Nördliche Marianen</el-option>
-            <el-option value="Norfolkinsel">Norfolkinsel</el-option>
-            <el-option value="Norwegen">Norwegen</el-option>
-            <el-option value="Oman">Oman</el-option>
-            <el-option value="Österreich">Österreich</el-option>
-            <el-option value="Pakistan">Pakistan</el-option>
-            <el-option value="Palästina">Palästina</el-option>
-            <el-option value="Palau">Palau</el-option>
-            <el-option value="Panama">Panama</el-option>
-            <el-option value="Papua-Neuguinea">Papua-Neuguinea</el-option>
-            <el-option value="Paraguay">Paraguay</el-option>
-            <el-option value="Peru">Peru</el-option>
-            <el-option value="Philippinen">Philippinen</el-option>
-            <el-option value="Pitcairninseln">Pitcairninseln</el-option>
-            <el-option value="Polen">Polen</el-option>
-            <el-option value="Portugal">Portugal</el-option>
-            <el-option value="Puerto Rico">Puerto Rico</el-option>
-            <el-option value="Réunion">Réunion</el-option>
-            <el-option value="Ruanda">Ruanda</el-option>
-            <el-option value="Rumänien">Rumänien</el-option>
-            <el-option value="Russische Föderation"
-              >Russische Föderation</el-option
-            >
-            <el-option value="Saint Christopher und Nevis"
-              >Saint Christopher und Nevis</el-option
-            >
-            <el-option value="Saint Martin (franz. Teil)"
-              >Saint Martin (franz. Teil)</el-option
-            >
-            <el-option value="Saint Lucia">Saint Lucia</el-option>
-            <el-option value="Saint Vincent und die Grenadinen"
-              >Saint Vincent und die Grenadinen</el-option
-            >
-            <el-option value="Saint-Pierre und Miquelon"
-              >Saint-Pierre und Miquelon</el-option
-            >
-            <el-option value="Salomonen">Salomonen</el-option>
-            <el-option value="Sambia">Sambia</el-option>
-            <el-option value="Samoa">Samoa</el-option>
-            <el-option value="San Marino">San Marino</el-option>
-            <el-option value="Sao-Tome und Principe"
-              >Sao-Tome und Principe</el-option
-            >
-            <el-option value="Saudi Arabien">Saudi Arabien</el-option>
-            <el-option value="Schweden">Schweden</el-option>
-            <el-option value="Schweiz">Schweiz</el-option>
-            <el-option value="Senegal">Senegal</el-option>
-            <el-option value="Serbien">Serbien</el-option>
-            <el-option value="Seychellen">Seychellen</el-option>
-            <el-option value="Sierra Leone">Sierra Leone</el-option>
-            <el-option value="Simbabwe">Simbabwe</el-option>
-            <el-option value="Singapur">Singapur</el-option>
-            <el-option value="Sint Maarten">Sint Maarten</el-option>
-            <el-option value="Slowakei">Slowakei</el-option>
-            <el-option value="Slowenien">Slowenien</el-option>
-            <el-option value="Somalia">Somalia</el-option>
-            <el-option value="Spanien">Spanien</el-option>
-            <el-option value="Sri Lanka">Sri Lanka</el-option>
-            <el-option value="St. Barthélemy (St. Bartolomäus)"
-              >St. Barthélemy (St. Bartolomäus)</el-option
-            >
-            <el-option value="St. Helena">St. Helena</el-option>
-            <el-option value="Südafrika">Südafrika</el-option>
-            <el-option value="SDN">Sudan</el-option>
-            <el-option value="Südgeorgien (inkl. Südl. Sandwichinseln)"
-              >Südgeorgien (inkl. Südl. Sandwichinseln)</el-option
-            >
-            <el-option value="Südsudan">Südsudan</el-option>
-            <el-option value="Suriname">Suriname</el-option>
-            <el-option value="Svalbard und Jan Mayen Inseln"
-              >Svalbard und Jan Mayen Inseln</el-option
-            >
-            <el-option value="Syrien">Syrien</el-option>
-            <el-option value="Tadschikistan">Tadschikistan</el-option>
-            <el-option value="Taiwan">Taiwan</el-option>
-            <el-option value="Tansania">Tansania</el-option>
-            <el-option value="Thailand">Thailand</el-option>
-            <el-option value="Timor-Leste">Timor-Leste</el-option>
-            <el-option value="Togo">Togo</el-option>
-            <el-option value="Tokelau">Tokelau</el-option>
-            <el-option value="Tonga">Tonga</el-option>
-            <el-option value="Trinidad und Tobago"
-              >Trinidad und Tobago</el-option
-            >
-            <el-option value="Tristan da Cunha">Tristan da Cunha</el-option>
-            <el-option value="Tschad">Tschad</el-option>
-            <el-option value="Tschechien">Tschechien</el-option>
-            <el-option value="Tunesien">Tunesien</el-option>
-            <el-option value="Türkei">Türkei</el-option>
-            <el-option value="Turkmenistan">Turkmenistan</el-option>
-            <el-option value="Turks- und Caicosinseln"
-              >Turks- und Caicosinseln</el-option
-            >
-            <el-option value="Tuvalu">Tuvalu</el-option>
-            <el-option value="Uganda">Uganda</el-option>
-            <el-option value="Ukraine">Ukraine</el-option>
-            <el-option value="Ungarn">Ungarn</el-option>
-            <el-option value="Uruguay">Uruguay</el-option>
-            <el-option value="Usbekistan">Usbekistan</el-option>
-            <el-option value="Vanuatu">Vanuatu</el-option>
-            <el-option value="Vatikan">Vatikan</el-option>
-            <el-option value="Venezuela">Venezuela</el-option>
-            <el-option value="Vereinigte Arabische Emirate"
-              >Vereinigte Arabische Emirate</el-option
-            >
-            <el-option value="Vereinigte Staaten von Amerika"
-              >Vereinigte Staaten von Amerika</el-option
-            >
-            <el-option value="Vietnam">Vietnam</el-option>
-            <el-option value="Wallis und Futuna">Wallis und Futuna</el-option>
-            <el-option value="Weihnachtsinsel">Weihnachtsinsel</el-option>
-            <el-option value="Westsahara">Westsahara</el-option>
-            <el-option value="Zentralafrikanische Republik"
-              >Zentralafrikanische Republik</el-option
-            >
-            <el-option value="Zypern">Zypern</el-option>
-            <el-option value="Zypern (Republik Zypern-Nordteil)"
-              >Zypern (Republik Zypern-Nordteil)</el-option
+            <el-option
+              v-for="(country, index) in countries"
+              :key="index"
+              :value="country.name"
+              >{{ country.name }}</el-option
             >
           </el-select>
         </el-form-item>
@@ -471,6 +163,7 @@
 
 <script>
 import * as IotaQR from '@tangle-frost/iota-qr-lib/pkg/iota-qr-lib.js'
+import { getCountries } from '../translations/countries'
 import Annotations from './Annotations'
 
 const API_URL = process.env.backendUrl + '/api'
@@ -495,6 +188,7 @@ export default {
     return {
       magazinPrice: 9.0,
       finalPriceInEur: 0,
+      countries: getCountries(),
       data: null,
       socket: null,
       order_step: 1,
@@ -521,7 +215,7 @@ export default {
         address: '',
         zip_code: '',
         city: '',
-        country: 'Deutschland',
+        country: 'Germany',
         print_name: '',
         amount: 1
       },
@@ -529,19 +223,19 @@ export default {
         email: [
           {
             required: true,
-            message: 'Bitte gib deinen E-Mail an.',
+            message: 'Please enter your email.',
             trigger: 'blur'
           },
           {
             type: 'email',
-            message: 'Bitte gib eine korrekte E-Mail an.',
+            message: 'Please enter a correct email.',
             trigger: 'blur'
           }
         ],
         first_name: [
           {
             required: true,
-            message: 'Bitte gib deinen Vornamen an.',
+            message: 'Please enter your first name.',
             trigger: 'blur'
           },
           {
@@ -554,7 +248,7 @@ export default {
         last_name: [
           {
             required: true,
-            message: 'Bitte gib deinen Nachnamen an.',
+            message: 'Please enter your last name.',
             trigger: 'blur'
           },
           {
@@ -567,7 +261,7 @@ export default {
         address: [
           {
             required: true,
-            message: 'Bitte gib deine Adresse an.',
+            message: 'Please enter your address.',
             trigger: 'blur'
           },
           {
@@ -580,7 +274,7 @@ export default {
         zip_code: [
           {
             required: true,
-            message: 'Bitte gib deine Postleitzahl an.',
+            message: 'Please enter your zip code.',
             trigger: 'blur'
           },
           {
@@ -593,7 +287,7 @@ export default {
         city: [
           {
             required: true,
-            message: 'Bitte gib deine Stadt an.',
+            message: 'Please enter your city.',
             trigger: 'blur'
           },
           {
@@ -607,8 +301,8 @@ export default {
         print_name: [
           {
             min: 1,
-            max: 30,
-            message: 'Länge nur zwischen 1 und 30 Zeichen möglich!',
+            max: 42,
+            message: 'Length between 1 and 42 characters only!',
             trigger: 'blur'
           }
         ]
@@ -617,7 +311,7 @@ export default {
   },
   computed: {
     shippmendPrice() {
-      if (this.ruleForm.country === 'Deutschland') {
+      if (this.ruleForm.country === 'Germany') {
         return 1.55
       } else {
         return 3.7
