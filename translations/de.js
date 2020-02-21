@@ -10,7 +10,7 @@ module.exports = {
     pay_with: 'Einfach bezahlen mit: IOTA oder Paypal',
     delivery: {
       title: 'Liefertermin:',
-      text: 'April 2020'
+      text: 'Im April 2020'
     }
   },
   order: {
