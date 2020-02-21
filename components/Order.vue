@@ -136,6 +136,7 @@
         <div v-if="qrCodeData" class="iota-payment">
           <img v-if="qrCodeData" :src="qrCodeData.src" alt="QR CODE" />
           <br />
+          <button @click="copySign">Copy address</button>
           <a
             v-if="qrCodeData"
             class="btn btn-primary"
@@ -328,6 +329,10 @@ export default {
     console.log('created()')
   },
   methods: {
+    copySign() {
+      // btw writeText() returns a promise so you could utilize that somehow if you want
+      navigator.clipboard.writeText(this.data.payment.address)
+    },
     onSubmit(formName) {
       this.$refs[formName].validate((valid) => {
         if (valid) {
