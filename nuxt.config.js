@@ -66,9 +66,14 @@ module.exports = {
         name: 'Deutsch'
       }
     ],
-    defaultLocale: 'de',
+    defaultLocale: 'en',
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      alwaysRedirect: true
+    },
     vueI18n: {
-      fallbackLocale: 'de',
+      fallbackLocale: 'en',
       messages: {
         en: require('./translations/en.js'),
         de: require('./translations/de.js')
