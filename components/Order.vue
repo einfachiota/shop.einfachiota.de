@@ -377,6 +377,12 @@ export default {
     payWithIota() {
       const self = this
       this.payIota = true
+      this.fullscreenLoading = this.$loading({
+        lock: true,
+        text: 'Loading',
+        spinner: 'el-icon-loading',
+        background: 'rgba(0, 183, 197, 0.5)'
+      })
       this.$axios
         .post(`${API_URL}/pay_with_iota?id=${this.order._id}`, this.order)
         .then(function(response) {
@@ -397,6 +403,7 @@ export default {
               self.qrCodeData = qrCodeData
               console.log('qr_code_data', qrCodeData)
               console.log('qr_code_data', qrCodeData.src)
+              self.fullscreenLoading.close()
             }
           )
         })
