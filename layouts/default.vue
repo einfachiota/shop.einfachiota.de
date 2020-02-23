@@ -2,7 +2,7 @@
   <nuxt />
 </template>
 <style lang="scss">
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800|Roboto+Slab:700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,600,700,800|Roboto+Slab:700');
 body {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
@@ -37,16 +37,19 @@ p {
   line-height: 1.5;
 }
 :root {
-  --primary: #00b7c5;
+  --primary: rgba(0, 183, 197, 1);
   --primary_50: rgba(0, 183, 197, 0.5);
+  --primary_0: rgba(0, 183, 197, 0);
+  --primary_light: #00dbeb;
   --primary-darken: #03a3af;
   --secondary: #0b5d9e;
   --secondary-2: #5ab0b2;
   --dark: #3d4449;
+  --dark-transp: rgba(61, 68, 73, 0.5);
   --darker: #0f3535;
   --gray: #e2e2e2;
-  --light: #efefef;
-  --light_50: rgba(242, 242, 242, 0.5);
+  --light: rgba(234, 235, 243, 1);
+  --light_50: rgba(234, 235, 243, 0.5);
   --white: #ffffff;
   --white_5: rgba(255, 255, 255, 0.05);
   --white_10: rgba(255, 255, 255, 0.1);
@@ -59,17 +62,17 @@ p {
   --border-radius: 10px;
   --border-radius-sm: 5px;
   --box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
-  --transition-in-out: all 0.3s ease-in-out;
+  --transition: all 0.3s ease-in-out;
 }
 .el-footer {
   padding: 0 0 !important;
 }
 .el-button {
-  font-family: 'Roboto Slab' !important;
-  font-weight: bold !important;
+  font-family: 'Open Sans' !important;
+  font-weight: 900 !important;
   text-transform: uppercase !important;
   letter-spacing: 0.1em !important;
-  border-radius: 10px !important ;
+  border-radius: 50px !important ;
   padding: 15px 30px !important;
   transition: all 200ms ease-in-out !important;
   border: none !important;

@@ -51,10 +51,9 @@ module.exports = {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    'vue-scrollto/nuxt',
     '@nuxtjs/proxy',
     // Or if you have custom options...
-    ['vue-scrollto/nuxt', { duration: 300 }],
+    // ['vue-scrollto/nuxt', { duration: 300 }],
     'nuxt-i18n'
   ],
 
