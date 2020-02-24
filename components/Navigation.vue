@@ -1,10 +1,10 @@
 <template>
-  <div class="nav">
+  <div :class="{ open: navOpen }" class="nav">
     <div class="nav__primary">
       <div class="logo">
         <img src="~/assets/icons/logo-white-outline.svg" alt />
       </div>
-      <div class="mobile-btn">
+      <div class="mobile-btn" @click="navOpen = !navOpen">
         <div class="mobile-btn__line"></div>
         <div class="mobile-btn__line"></div>
         <div class="mobile-btn__line"></div>
@@ -61,7 +61,12 @@
 
 <script>
 export default {
-  components: {}
+  components: {},
+  data() {
+    return {
+      navOpen: false
+    }
+  }
 }
 </script>
 
