@@ -54,6 +54,7 @@ module.exports = {
     '@nuxtjs/proxy',
     // Or if you have custom options...
     // ['vue-scrollto/nuxt', { duration: 300 }],
+    'vue-scrollto/nuxt',
     'nuxt-i18n'
   ],
 
