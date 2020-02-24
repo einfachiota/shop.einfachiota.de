@@ -30,7 +30,7 @@ export default {
           layout_inverted: false,
           heading: 'The very first IOTA Magazine',
           description:
-            'We did it! We translated the whole magazine in English. Actually Katrin from {Partneragentur} did it. Anyway, there we go. Next up? We want to print it and this is what we need your help with. You can now preorder the limited edition of the very first IOTA magazine. We also going to print your name if you want. Click here if you want to see how it will look like - these guys made the very first German version happen! You can be the one making the very first English version happen. ',
+            'We did it! Our first magazine is now also available in English. Our Partner traduko (https://traduko.ch) did a excellent job! Next up? We want to print it and this is what we need your help with. You can now preorder the limited edition of the very first IOTA magazine. We also going to print your name if you want. Click here if you want to see how it will look like - these guys made the very first German version happen! You can be the one making the very first English version happen. ',
           icon: 'eimag-1--EN.svg',
           link: {
             text: 'Discover Blog',
