@@ -13,7 +13,6 @@
               <a v-scroll-to="'#presale'" href="#" class="btn btn--primary"
                 >Pre-order now</a
               >
-              <a href="" class="btn btn--secondary">Get reflink</a>
             </div>
           </div>
         </div>
