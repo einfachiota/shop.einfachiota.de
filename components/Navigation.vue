@@ -16,25 +16,17 @@
         <img src="~/assets/icons/nav-edge.svg" alt class="nav-edge" />
         <div class="menu">
           <div class="menu__item">
-            <a href="https://blog.einfachIOTA.de" target="_blank">Home</a>
+            <a href="https://www.einfachIOTA.com" target="_blank">Home</a>
           </div>
           <div class="menu__item">
             <a href="https://blog.einfachIOTA.de" target="_blank">Blog</a>
           </div>
-          <div class="menu__item">
-            <a href="https://learn.einfachIOTA.com" target="_blank">Learn</a>
-          </div>
           <div class="menu__item active">
-            <a href="https://shop.einfachIOTA.com" target="_blank">Shop</a>
+            <a href="https://shop.einfachIOTA.de" target="_blank">Shop</a>
           </div>
           <div class="menu__item">
             <a href="https://community.einfachIOTA.de" target="_blank"
               >Community</a
-            >
-          </div>
-          <div class="menu__item">
-            <a href="https://accosiation.einfachIOTA.com" target="_blank"
-              >Accosiation</a
             >
           </div>
         </div>

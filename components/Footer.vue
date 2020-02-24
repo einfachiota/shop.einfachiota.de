@@ -5,11 +5,11 @@
         <h4>einfachIOTA</h4>
         <div class="divider"></div>
         <a
-          href="https://www.einfachIOTA.de"
+          href="https://www.einfachIOTA.com"
           target="_blank"
           class="footer-main-link"
         >
-          einfachIOTA.de
+          einfachIOTA.com
         </a>
         <a
           href="https://discord.gg/WdfXseU"
