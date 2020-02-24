@@ -134,9 +134,14 @@
           @payment-completed="paymentCompleted"
           @payment-cancelled="paymentCancelled"
         ></paypal-checkout>
-        <el-button v-if="!payIota" class="btn-iota" @click="payWithIota"
+        <el-button
+          v-if="!payIota"
+          disabled="disabled"
+          class="btn-iota"
+          @click="payWithIota"
           >Pay with IOTA</el-button
         >
+        <p>We will open the IOTA payments if the coordinator is up again.</p>
         <div v-if="qrCodeData" class="iota-payment">
           <img v-if="qrCodeData" :src="qrCodeData.src" alt="QR CODE" />
           <br />
