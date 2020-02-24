@@ -1,48 +1,29 @@
 <template>
   <div id="home">
-    <div class="section section--light">
-      <div class="container">
-        <div class="column column--image">
-          <div class="magazin-cover" :class="{ active: isActive }">
-            <div class="overlay" />
-            <div class="supporters">
-              <h1>{{ $t('home.supporter') }}</h1>
-              <p class="supporters--list">{{ supp }}</p>
-            </div>
-            <!--
-            <div class="sales-counter">
-              <span class="sales-unit">Nur noch</span>
-              <span class="sales-number">{{ limiitedEditionCount }}</span>
-              <span class="sales-unit">Magazine</span>
-            </div>
-            -->
-          </div>
-        </div>
-        <div class="column column--box">
-          <span class="subtitle">{{ $t('home.available') }}</span>
-          <h1>{{ $t('home.title') }}</h1>
-          <p>{{ $t('home.supporter_text') }}</p>
-          <h2>{{ $t('home.buy_now') }}</h2>
-          <p>{{ $t('home.pay_with') }}</p>
-          <p>
-            <strong>{{ $t('home.delivery.title') }}</strong>
-            {{ $t('home.delivery.text') }}
-          </p>
-          <Order />
-          <Footer />
-        </div>
-      </div>
-    </div>
+    <Navigation />
+    <Hero />
+    <Content />
+    <!-- <div class="overlay" />
+    <div class="supporters">
+      <h1>{{ $t('home.supporter') }}</h1>
+      <p class="supporters--list">{{ supp }}</p>
+    </div> -->
+    <Presale />
+    <Footer />
   </div>
 </template>
 
 <script>
+import Navigation from '../components/Navigation.vue'
+import Hero from '../components/Hero.vue'
+import Content from '../components/Content.vue'
+import Presale from '../components/Presale.vue'
 import Footer from '../components/Footer'
-import Order from '../components/Order'
+
 const API_URL = process.env.backendUrl + '/api'
 
 export default {
-  components: { Footer, Order },
+  components: { Content, Presale, Hero, Navigation, Footer },
   data() {
     return {
       isActive: false,
@@ -75,6 +56,50 @@ export default {
 </script>
 
 <style lang="scss">
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 -15px;
+  .btn {
+    flex-grow: 1;
+    margin: 0 15px;
+  }
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  padding: 0 30px;
+  background-color: var(--light);
+  border-radius: 50px;
+  font-weight: 900;
+  font-size: 14px;
+  text-decoration: none;
+  transition: var(--transition);
+  img {
+    margin-right: 8px;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+  &--primary {
+    color: var(--white);
+    background-color: var(--primary);
+    &:hover {
+      background-color: var(--primary_light);
+    }
+  }
+  &--secondary {
+    color: var(--dark);
+    background-color: var(--light);
+    &:hover {
+      background-color: var(--light_50);
+    }
+  }
+}
+
 .el-main {
   padding: 0px !important;
 }
@@ -85,8 +110,13 @@ export default {
 #home {
   text-align: left;
 }
+h2 {
+  font-weight: 900;
+}
 p {
-  font-size: 1em;
+  font-size: 16px;
+  font-weight: 200;
+  line-height: 1.5;
   max-width: 600px;
   margin: 15px auto 30px;
 }
@@ -108,133 +138,8 @@ p {
   justify-content: center;
   align-items: center;
 }
-.section {
-  height: 100vh;
-  overflow: hidden;
-  &--light {
-    background-color: var(--light);
-  }
-}
-.magazin-cover {
-  position: relative;
-  height: 100vh;
-  width: 100%;
-  background-image: url('~assets/front_mag01_en.jpg');
-  background-size: cover;
-  background-position: center center;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  .overlay {
-    transition: all 300ms ease-in-out;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    background: rgb(0, 0, 0);
-    background: radial-gradient(
-      circle,
-      rgba(0, 0, 0, 0.7539390756302521) 0%,
-      rgba(0, 0, 0, 1) 100%
-    );
-    opacity: 0;
-  }
-  &.active {
-    .overlay {
-      opacity: 0.8;
-    }
-    .supporters {
-      opacity: 1;
-    }
-  }
-  .supporters {
-    transition: all 300ms ease-in-out;
-    z-index: 2;
-    position: relative;
-    color: var(--white);
-    opacity: 0;
-    width: 100%;
-    height: 100vh;
-    overflow-y: auto;
-    padding: 200px;
-    h1 {
-      margin-top: 100px;
-      margin-bottom: 15px;
-    }
-    &--list {
-      width: 100%;
-      max-width: 100%;
-      margin: 0;
-      margin-bottom: 100px;
-    }
-  }
-  .sales-counter {
-    position: absolute;
-    bottom: 50px;
-    right: 50px;
-    background-color: var(--primary);
-    height: 150px;
-    width: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    transform: rotatez(-12deg) scale(1.3);
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.15);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.3s ease-in-out;
-    &.open {
-      width: 600px;
-      height: 80%;
-      border-radius: 10px;
-      transform: rotate(0);
-      margin-right: 50px;
-      margin-bottom: 50px;
-    }
-    .sales-number,
-    .sales-unit {
-      color: var(--white);
-      font-weight: bold;
-      font-size: 60px;
-      line-height: 1;
-      margin-bottom: 5px;
-    }
-    .sales-unit {
-      font-size: 10px;
-      text-transform: uppercase;
-      letter-spacing: 0.05rem;
-      margin-bottom: 5px;
-    }
-  }
-}
-.container {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-}
 .column {
   box-sizing: border-box;
-  &--image {
-    flex-grow: 1;
-    width: 50%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  &--box {
-    max-width: 600px;
-    height: 100vh;
-    background-color: var(--white);
-    padding: 100px 50px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-    overflow-y: auto;
-  }
   &--footer {
     background-color: var(--dark);
     height: 15vh;
@@ -281,7 +186,7 @@ p {
     }
   }
 }
-@media only screen and (max-width: 1260px) {
+/* @media only screen and (max-width: 1260px) {
   .container {
     padding: 0;
   }
@@ -367,5 +272,5 @@ p {
     margin-bottom: -15px;
     margin-top: 50px;
   }
-}
+} */
 </style>

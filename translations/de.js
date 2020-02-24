@@ -6,11 +6,14 @@ module.exports = {
     supporter: 'Unterstützer',
     supporter_text:
       'Dank unseren Unterstützern, die bereits im Vorverkauf das einfachIOTA Magazin bestellt haben, konnten wir dieses Projekt überhaupt erst möglich machen. Jetzt startet offiziell der Verkauf, sei dabei beim ersten einfachIOTA Magazin.',
-    buy_now: 'Jetzt kaufen',
-    pay_with: 'Einfach bezahlen mit: IOTA oder Paypal',
+    buy_now: 'Pre-order now',
+    pay_with: {
+      title: 'Payment methods:',
+      text: 'IOTA, PayPal'
+    },
     delivery: {
-      title: 'Liefertermin:',
-      text: 'Im April 2020'
+      title: 'Delivery time:',
+      text: 'April 2020'
     }
   },
   order: {
@@ -60,10 +63,10 @@ module.exports = {
     }
   },
   annotations: {
-    mwst: 'Alle Preise verstehen sich inklusive der gesetzlichen MwSt',
+    mwst: 'Alle Preise verstehen sich inklusive der gesetzlichen MwSt.',
     confirm:
-      'Alle Preise verstehen sich inklusive der gesetzlichen MwStDurch Anklicken von JETZT KAUFEN bestätigst Du den Warenkorb und Deine eingegebenen Daten und stimmst unseren',
-    data: 'Datenschutzbestimmungen Seite.',
+      ' Alle Preise verstehen sich inklusive der gesetzlichen MwSt. Durch Anklicken von JETZT KAUFEN bestätigst Du den Warenkorb, sowie Deine eingegebenen Daten und stimmst unseren ',
+    data: 'Datenschutzbestimmungen zu.',
     what_data: 'Was passiert mit meinen Daten?',
     what_data_text:
       'Wir verwenden deine Daten nur für eine erfolgreiche Zusendung und unsere Buchhaltung. Die Email Adresse wird benötigt, falls wir mit dir in Kontakt treten müssen. Dies tun wir aber nur, wenn es unbedingt nötig ist. Ausser du möchtest Neuigkeiten von einfachIOTA erhalten, dafür musst du nur die dazu passende Checkbox anklicken. Mehr Informationen zum Datenschutz findest du auf unserer',

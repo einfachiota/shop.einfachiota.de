@@ -8,44 +8,50 @@
         status-icon
         :rules="rules"
       >
-        <el-form-item
-          :label="$t('order.form.first_name_label')"
-          prop="first_name"
-        >
-          <el-input
-            v-model="ruleForm.first_name"
-            :placeholder="$t('order.form.first_name_placeholder')"
-            required="true"
-          ></el-input>
-        </el-form-item>
-        <el-form-item
-          :label="$t('order.form.last_name_label')"
-          prop="last_name"
-        >
-          <el-input
-            v-model="ruleForm.last_name"
-            :placeholder="$t('order.form.last_name_placeholder')"
-          ></el-input>
-        </el-form-item>
+        <div class="input-group">
+          <el-form-item
+            :label="$t('order.form.first_name_label')"
+            prop="first_name"
+          >
+            <el-input
+              v-model="ruleForm.first_name"
+              :placeholder="$t('order.form.first_name_placeholder')"
+              required="true"
+            ></el-input>
+          </el-form-item>
+          <el-form-item
+            :label="$t('order.form.last_name_label')"
+            prop="last_name"
+          >
+            <el-input
+              v-model="ruleForm.last_name"
+              :placeholder="$t('order.form.last_name_placeholder')"
+            ></el-input>
+          </el-form-item>
+        </div>
         <el-form-item :label="$t('order.form.address_label')" prop="address">
           <el-input
             v-model="ruleForm.address"
             :placeholder="$t('order.form.address_placeholder')"
           ></el-input>
         </el-form-item>
-        <el-form-item :label="$t('order.form.zip_code_label')" prop="zip_code">
-          <el-input
-            v-model="ruleForm.zip_code"
-            :placeholder="$t('order.form.zip_code_placeholder')"
-          ></el-input>
-        </el-form-item>
-        <el-form-item :label="$t('order.form.city_label')" prop="city">
-          <el-input
-            v-model="ruleForm.city"
-            :placeholder="$t('order.form.city_placeholder')"
-          ></el-input>
-        </el-form-item>
-
+        <div class="input-group">
+          <el-form-item
+            :label="$t('order.form.zip_code_label')"
+            prop="zip_code"
+          >
+            <el-input
+              v-model="ruleForm.zip_code"
+              :placeholder="$t('order.form.zip_code_placeholder')"
+            ></el-input>
+          </el-form-item>
+          <el-form-item :label="$t('order.form.city_label')" prop="city">
+            <el-input
+              v-model="ruleForm.city"
+              :placeholder="$t('order.form.city_placeholder')"
+            ></el-input>
+          </el-form-item>
+        </div>
         <el-form-item :label="$t('order.form.country_label')" prop="country">
           <el-select
             v-model="ruleForm.country"
@@ -58,9 +64,6 @@
               >{{ country.name }}</el-option
             >
           </el-select>
-        </el-form-item>
-        <el-form-item :label="$t('order.form.amount_label')" prop="amount">
-          <el-input v-model.number="ruleForm.amount"></el-input>
         </el-form-item>
         <el-form-item :label="$t('order.form.email_label')" prop="email">
           <el-input
@@ -77,32 +80,33 @@
             :placeholder="$t('order.form.print_name_placeholder')"
           ></el-input>
         </el-form-item>
-        <el-form-item
-          :label="$t('order.form.newsletter_label')"
-          prop="newsletter"
-        >
+        <div class="costs">
+          <el-form-item :label="$t('order.form.amount_label')" prop="amount">
+            <el-input v-model.number="ruleForm.amount"></el-input>
+          </el-form-item>
+          <div class="costs-content">
+            <div class="price">
+              <h5>{{ $t('order.costs.sum') }}*</h5>
+              <h3>{{ currentPrice }}€</h3>
+            </div>
+            <p>
+              <strong>
+                {{ $t('order.costs.amount') }} x{{ ruleForm.amount }}:
+              </strong>
+              {{ (ruleForm.amount * magazinPrice).toFixed(2) }}€
+            </p>
+            <p>
+              <strong>{{ $t('order.costs.shipping') }}:</strong>
+              {{ (ruleForm.amount * shippmendPrice).toFixed(2) }}€
+            </p>
+          </div>
+        </div>
+        <el-form-item prop="newsletter">
           <el-checkbox v-model="ruleForm.newsletter">{{
             $t('order.form.newsletter_placeholder')
           }}</el-checkbox>
         </el-form-item>
-        <div class="costs">
-          <p>
-            <strong>{{ $t('order.costs.title') }}*</strong>
-          </p>
-          <p>
-            {{ $t('order.costs.amount') }} x{{ ruleForm.amount }}:
-            {{ (ruleForm.amount * magazinPrice).toFixed(2) }}€
-          </p>
-          <p>
-            {{ $t('order.costs.shipping') }}:
-            {{ (ruleForm.amount * shippmendPrice).toFixed(2) }}€
-          </p>
-        </div>
         <div class="form-footer">
-          <div class="price">
-            <h3>{{ currentPrice }}€</h3>
-            <h5>{{ $t('order.costs.sum') }}</h5>
-          </div>
           <el-form-item class="submit-btn">
             <el-button type="primary" @click="onSubmit('ruleForm')">
               {{ $t('order.form.submit') }}
@@ -451,38 +455,87 @@ export default {
 </script>
 
 <style lang="scss">
+.el-button {
+  width: 100%;
+}
+.el-form {
+  .input-group {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -15px;
+    .el-form-item {
+      flex: 1;
+      margin: 0 15px 30px;
+    }
+  }
+  .el-form-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    .el-input {
+      &__inner {
+        background-color: var(--light_50);
+        color: var(--dark_transp);
+        border: none;
+      }
+    }
+    &__content {
+      width: 100%;
+      background-color: transparent;
+      .el-select {
+        width: 100%;
+      }
+      .el-checkbox {
+        text-align: left;
+        display: flex;
+        align-items: center;
+      }
+    }
+    &__label {
+      font-size: 14px;
+      font-weight: 900;
+    }
+  }
+}
+.costs {
+  display: flex;
+  justify-content: space-between;
+  .costs-content {
+    text-align: right;
+    h3,
+    h5 {
+      font-family: 'Open Sans';
+    }
+    h3 {
+      font-size: 42px;
+      line-height: 1;
+      font-weight: 900;
+    }
+    h5 {
+      margin: 0;
+      text-transform: uppercase;
+      font-weight: 800;
+      opacity: 0.5;
+    }
+    p {
+      margin: 0;
+    }
+    .price {
+      width: 100%;
+      text-align: right;
+      margin-bottom: 20px;
+    }
+  }
+}
 .form-footer {
   align-items: center;
   margin-top: 50px;
-}
-h3 {
-  font-size: 42px;
-  line-height: 1;
-}
-h5 {
-  margin: 0;
-  text-transform: uppercase;
-  font-weight: 800;
-  opacity: 0.5;
-  font-family: 'Roboto Slab', serif;
-}
-.price {
-  width: 100%;
-  text-align: right;
-  margin-bottom: 20px;
 }
 
 .submit-btn {
   margin-bottom: 0;
   text-align: center;
   width: 100%;
-}
-
-.costs {
-  text-align: right;
-  p {
-    margin: 0;
-  }
 }
 
 .iota-payment {
