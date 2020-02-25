@@ -1,18 +1,64 @@
 <template>
   <div id="home">
     <Navigation />
-    <Imprint />
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="container">
+          <h1 class="heading">{{ $t('imprint.heading') }}</h1>
+
+          <h2 class="subheading">{{ $t('imprint.subheading') }}</h2>
+          <p>Sebastian Heußer</p>
+          <p>Collingstraße 104</p>
+          <p>66424 Homburg</p>
+
+          <h3>{{ $t('imprint.contact') }}</h3>
+          <p>E-Mail: support@einfachiota.de</p>
+          <h3>{{ $t('imprint.subheading2') }}</h3>
+
+          <p>Sebastian Heußer</p>
+          <p>Collingstraße 104</p>
+          <p>66424 Homburg</p>
+
+          <h3>{{ $t('imprint.subheading') }}</h3>
+          <p>
+            {{ $t('imprint.text1') }}
+          </p>
+          <p>
+            {{ $t('imprint.text2') }}
+          </p>
+          <p>
+            {{ $t('imprint.text3') }}
+          </p>
+          Icons made by
+          <a
+            href="https://www.flaticon.com/authors/darius-dan"
+            title="Darius Dan"
+            >Darius Dan</a
+          >
+          from
+          <a href="https://www.flaticon.com/" title="Flaticon"
+            >www.flaticon.com</a
+          >
+          is licensed by
+          <a
+            href="http://creativecommons.org/licenses/by/3.0/"
+            title="Creative Commons BY 3.0"
+            target="_blank"
+            >CC 3.0 BY</a
+          >
+        </div>
+      </div>
+    </div>
     <Footer />
   </div>
 </template>
 
 <script>
-import Imprint from '../components/Imprint.vue'
 import Navigation from '../components/Navigation.vue'
 import Footer from '../components/Footer'
 
 export default {
-  components: { Imprint, Navigation, Footer }
+  components: { Navigation, Footer }
 }
 </script>
 
@@ -147,91 +193,85 @@ p {
     }
   }
 }
-/* @media only screen and (max-width: 1260px) {
-  .container {
-    padding: 0;
+
+.content {
+  padding: 150px 0;
+  @media only screen and (max-width: 1240px) {
+    padding: 130px 50px;
+  }
+  @media only screen and (max-width: 900px) {
+    padding: 100px 30px;
+  }
+  @media only screen and (max-width: 500px) {
+    padding: 80px 20px;
   }
 }
-@media only screen and (max-width: 1200px) {
-  .container {
-    flex-wrap: nowrap;
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  @media only screen and (max-width: 1240px) {
+    width: 100%;
   }
 }
-@media only screen and (max-width: 1024px) {
-  body {
-    overflow: hidden;
+.row {
+  display: flex;
+  margin: 0 -25px;
+  &.inverted {
+    flex-direction: row-reverse;
   }
-  h1,
-  h2 {
-    margin-bottom: 10px;
-  }
-  h2 {
-    margin-top: 20px;
-  }
-  .footer {
-    margin-bottom: -45px;
-  }
-  .section {
-    padding: 50px;
-    overflow-y: auto;
-  }
-  .container {
+  @media only screen and (max-width: 900px) {
     flex-wrap: wrap;
-    border-radius: 10px;
-    overflow: hidden;
-    margin-bottom: 100px;
-    .column {
-      width: 100%;
+  }
+}
+.col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 50%;
+  margin: 0 25px;
+  &.center-center {
+    justify-content: center;
+    align-items: center;
+  }
+  @media only screen and (max-width: 900px) {
+    width: 100%;
+    p,
+    span {
+      font-size: 14px;
     }
-    .column--image {
-      height: 400px;
-      .magazin-cover {
-        height: inherit;
-        .supporters {
-          display: none;
-          height: inherit;
-        }
-        .sales-counter {
-          transform: rotatez(-12deg) scale(1);
-          bottom: 10px;
-          right: 10px;
-        }
-      }
-    }
-    .column--box {
-      max-width: 100%;
-      overflow: initial;
-      height: auto;
-      padding: 50px;
-      p {
-        max-width: 100%;
-        margin: 0;
-      }
+    .iso-icon {
+      max-width: 80%;
+      margin-bottom: 30px;
     }
   }
 }
-@media only screen and (max-width: 640px) {
-  .section {
-    padding: 10px;
-    padding-top: 0;
+
+h2 {
+  font-family: 'Open Sans';
+  font-size: 64px;
+  color: var(--dark);
+  text-transform: uppercase;
+  @media only screen and (max-width: 500px) {
+    font-size: 42px;
   }
-  .container {
-    margin-top: 20px;
-    margin-bottom: 10px;
-    .column--image {
-      .sales-counter {
-        transform: rotatez(-12deg) scale(0.7);
-        bottom: 0px;
-        right: 0px;
-      }
+  @media only screen and (max-width: 330px) {
+    font-size: 32px;
+  }
+}
+
+.list {
+  margin-bottom: 50px;
+  &__item {
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+    img {
+      margin-top: 1px;
+      height: 16px;
+      width: 20px;
+      border-radius: 10px;
+      margin-right: 8px;
     }
-    .column--box {
-      padding: 20px;
-    }
   }
-  .footer {
-    margin-bottom: -15px;
-    margin-top: 50px;
-  }
-} */
+}
 </style>
