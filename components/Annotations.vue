@@ -2,26 +2,18 @@
   <div class="annotations">
     <p class="fine-print">
       *{{ $t('annotations.confirm') }}
-      <a
-        href="https://www.einfachiota.de/#/privacy"
-        target="_blank"
-        class="link"
-      >
+      <router-link to="/privacy" class="link">
         {{ $t('annotations.data') }}
-      </a>
+      </router-link>
     </p>
     <hr />
     <div class="what-about-data">
       <p class="fine-print title">{{ $t('annotations.what_data') }}</p>
       <p class="fine-print">
         {{ $t('annotations.what_data_text') }}
-        <a
-          href="https://www.einfachiota.de/#/privacy#magazin"
-          target="_blank"
-          class="link"
-        >
+        <router-link to="/privacy" class="link">
           {{ $t('annotations.what_data_link') }}
-        </a>
+        </router-link>
       </p>
     </div>
   </div>
