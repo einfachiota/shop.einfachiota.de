@@ -7,7 +7,10 @@ module.exports = {
     supporter_text:
       'Thanks to our supporters, who had already ordered the einfachIOTA magazine in advance, we were able to make this project possible in the first place. Now the sale officially starts, be it with the first simplyIOTA magazine.',
     buy_now: 'Pre-order now',
-    pay_with: 'Simply pay with: IOTA or Paypal',
+    pay_with: {
+      title: 'Payment methods:',
+      text: 'IOTA, PayPal'
+    },
     delivery: {
       title: 'Duration of delivery:',
       text: 'In April 2020'
