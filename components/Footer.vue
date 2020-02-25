@@ -63,13 +63,9 @@
         <nuxt-link to="imprint" class="footer-main-link">
           {{ $t('imprint.heading') }}
         </nuxt-link>
-        <a
-          href="https://www.einfachiota.de/#/privacy"
-          target="_blank"
-          class="footer-main-link"
-        >
-          Datenschutz
-        </a>
+        <nuxt-link to="privacy" class="footer-main-link">
+          {{ $t('privacy.heading') }}
+        </nuxt-link>
       </div>
     </div>
   </div>

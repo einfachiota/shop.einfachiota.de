@@ -69,5 +69,6 @@ module.exports = {
       'We only use your data for a successful delivery and our accounting. The email address is required if we need to get in touch with you. We only do this if absolutely necessary. Unless you want to receive news from einfachIOTA, all you have to do is click the appropriate checkbox. You can find more information on data protection on our',
     what_data_link: 'Privacy Policy page.'
   },
-  imprint: require('./modules/imprint_en')
+  imprint: require('./modules/imprint_en'),
+  privacy: require('./modules/privacy_en')
 }

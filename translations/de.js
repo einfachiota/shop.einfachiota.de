@@ -72,5 +72,6 @@ module.exports = {
       'Wir verwenden deine Daten nur für eine erfolgreiche Zusendung und unsere Buchhaltung. Die Email Adresse wird benötigt, falls wir mit dir in Kontakt treten müssen. Dies tun wir aber nur, wenn es unbedingt nötig ist. Ausser du möchtest Neuigkeiten von einfachIOTA erhalten, dafür musst du nur die dazu passende Checkbox anklicken. Mehr Informationen zum Datenschutz findest du auf unserer',
     what_data_link: 'Datenschutzerklärungs Seite.'
   },
-  imprint: require('./modules/imprint_de')
+  imprint: require('./modules/imprint_de'),
+  privacy: require('./modules/privacy_de')
 }
