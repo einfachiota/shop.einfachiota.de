@@ -30,7 +30,7 @@ export default {
           layout_inverted: false,
           heading: 'The very first IOTA Magazine',
           description:
-            'We did it! Our first magazine is now also available in English. Our partner <a class="link" target="_blank" href="https://traduko.ch">traduko</a> did a excellent job! Next up? We want to print it and this is what we need your help with. You can now preorder the limited edition of the very first IOTA magazine. We also going to print your name if you want. You can be the one making the very first English version happen. ',
+            'We did it! Our first magazine is now also available in English. Our partner <a class="link" target="_blank" href="https://traduko.ch">traduko</a> did an excellent job!! Next up? We want to print it and this is where we need your help. You can now preorder the limited edition of the very first IOTA magazine. We also going to print your name if you want. You can be the one making the very first English version happen. ',
           icon: 'eimag-1--EN.svg',
           link: {
             text: 'Discover Blog',
