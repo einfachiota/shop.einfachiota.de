@@ -2,7 +2,9 @@
   <div :class="{ open: navOpen }" class="nav">
     <div class="nav__primary">
       <div class="logo">
-        <img src="~/assets/icons/logo.svg" alt />
+        <router-link to="/">
+          <img src="~/assets/icons/logo.svg" alt />
+        </router-link>
       </div>
       <div class="mobile-btn" @click="navOpen = !navOpen">
         <div class="mobile-btn__line"></div>
