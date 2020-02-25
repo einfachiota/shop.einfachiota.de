@@ -16,8 +16,7 @@
           href="https://blog.einfachiota.de/"
           target="_blank"
           class="footer-main-link"
-        >
-          {{ $t('footer.blog') }}</a
+          >{{ $t('footer.blog') }}</a
         >
         <a
           href="https://shop.einfachiota.de/"
@@ -57,9 +56,9 @@
           class="footer-main-link"
           >{{ $t('footer.iota_news') }}</a
         >
-        <a href="/#/pages/linkliste" class="footer-main-link">{{
-          $t('footer.iota_more')
-        }}</a>
+        <a href="/#/pages/linkliste" class="footer-main-link">
+          {{ $t('footer.iota_more') }}
+        </a>
       </div>
     </div>
     <div class="row footer-bottom">
@@ -85,12 +84,12 @@
         >
       </div>
       <div class="footer-bottom-col">
-        <router-link to="imprint" class="footer-main-link">{{
-          $t('footer.imprint')
-        }}</router-link>
-        <router-link to="privacy" class="footer-main-link">{{
-          $t('footer.privacy_policy')
-        }}</router-link>
+        <router-link to="imprint" class="footer-main-link">
+          {{ $t('footer.imprint') }}
+        </router-link>
+        <router-link to="privacy" class="footer-main-link">
+          {{ $t('footer.privacy_policy') }}
+        </router-link>
       </div>
     </div>
   </div>
@@ -98,13 +97,11 @@
 
 <style lang="scss">
 .footer {
-  margin-top: 100px;
   background-color: var(--white);
   width: 100%;
   padding: 50px 50px 0;
   box-sizing: border-box;
   text-align: center;
-  border-top: 5px solid var(--primary);
   color: var(--dark);
   .row {
     display: flex;

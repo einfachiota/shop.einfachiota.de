@@ -51,10 +51,6 @@
           </div>
         </div>
       </div>
-      <!-- <div class="nav__user">
-        <img src="~/assets/icons/nav-edge.svg" alt class="nav-edge" />
-        <Advertisement />
-      </div> -->
     </div>
   </div>
 </template>

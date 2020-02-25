@@ -4,6 +4,7 @@
     <Hero />
     <Content />
     <Presale />
+    <Socials />
     <Footer />
   </div>
 </template>
@@ -13,12 +14,13 @@ import Navigation from '../components/Navigation.vue'
 import Hero from '../components/Hero.vue'
 import Content from '../components/Content.vue'
 import Presale from '../components/Presale.vue'
+import Socials from '../components/Socials'
 import Footer from '../components/Footer'
 
 const API_URL = process.env.backendUrl + '/api'
 
 export default {
-  components: { Content, Presale, Hero, Navigation, Footer },
+  components: { Content, Presale, Hero, Navigation, Socials, Footer },
   data() {
     return {
       isActive: false,
