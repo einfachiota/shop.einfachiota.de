@@ -320,9 +320,6 @@ p {
 }
 
 @media only screen and (max-width: 1440px) {
-  p {
-    font-size: 14px;
-  }
   h1 {
     font-size: 32px;
   }

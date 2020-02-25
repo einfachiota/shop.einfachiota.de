@@ -13,6 +13,22 @@ module.exports = {
       text: 'In April 2020'
     }
   },
+  ei_description: 'IOTA simple and easy.',
+  ei_mission:
+    'Our mission is to provide content around IOTA and to explain IOTA in simple language.',
+  footer: {
+    title: 'einfachIOTA',
+    blog: 'Blog',
+    magazine: 'Magazine',
+    community: 'Community',
+    partners: 'Partners',
+    iota_title: 'IOTA',
+    iota_web: 'Official Website',
+    iota_news: 'News',
+    iota_more: 'More',
+    imprint: 'Imprint',
+    privacy_policy: ' Privacy Policy'
+  },
   order: {
     form: {
       errors: {

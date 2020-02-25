@@ -2,72 +2,103 @@
   <div class="footer">
     <div class="row">
       <div class="footer-main">
-        <h4>einfachIOTA</h4>
-        <div class="divider"></div>
-        <a
-          href="https://www.einfachIOTA.com"
-          target="_blank"
-          class="footer-main-link"
-        >
-          einfachIOTA.com
-        </a>
-        <a
-          href="https://discord.gg/WdfXseU"
-          target="_blank"
-          class="footer-main-link"
-        >
-          Discord
-        </a>
-        <a
-          href="https://twitter.com/einfachIOTA"
-          target="_blank"
-          class="footer-main-link"
-        >
-          Twitter
-        </a>
+        <router-link to="/" class="footer-logo" exact-active-class="active">
+          <img alt="einfachIOTA" class="logo" src="../assets/logo.svg" />
+        </router-link>
+        <p>{{ $t('ei_description') }}</p>
+        <p>{{ $t('ei_mission') }}</p>
       </div>
       <div class="footer-main">
-        <h4>IOTA</h4>
+        <h4>{{ $t('footer.title') }}</h4>
         <div class="divider"></div>
-        <a href="https://www.iota.org" target="_blank" class="footer-main-link">
-          Webseite
-        </a>
+        <!--<a href="https://magazin.einfachiota.de" target="_blank" class="footer-main-link">Magazin</a>-->
         <a
-          href="https://ecosystem.iota.org"
+          href="https://blog.einfachiota.de/"
           target="_blank"
           class="footer-main-link"
         >
-          Ökosystem
-        </a>
+          {{ $t('footer.blog') }}</a
+        >
+        <a
+          href="https://shop.einfachiota.de/"
+          target="_blank"
+          class="footer-main-link"
+          >{{ $t('footer.magazine') }}</a
+        >
+        <a
+          href="https://community.einfachiota.de/"
+          target="_blank"
+          class="footer-main-link"
+          >{{ $t('footer.community') }}</a
+        >
+      </div>
+      <div class="footer-main">
+        <h4>{{ $t('footer.partners') }}</h4>
+        <div class="divider"></div>
+        <a href="https://tanglebay.org" target="_blank" class="footer-main-link"
+          >Tangle Bay</a
+        >
+        <a href="https://iotashops.com" target="_blank" class="footer-main-link"
+          >IOTAshops.com</a
+        >
+      </div>
+      <div class="footer-main">
+        <h4>{{ $t('footer.iota_title') }}</h4>
+        <div class="divider"></div>
+        <a
+          href="https://www.iota.org"
+          target="_blank"
+          class="footer-main-link"
+          >{{ $t('footer.iota_web') }}</a
+        >
         <a
           href="https://blog.iota.org"
           target="_blank"
           class="footer-main-link"
+          >{{ $t('footer.iota_news') }}</a
         >
-          Blog
-        </a>
+        <a href="/#/pages/linkliste" class="footer-main-link">{{
+          $t('footer.iota_more')
+        }}</a>
       </div>
     </div>
     <div class="row footer-bottom">
-      <div class="footer-bottom-col">© einfachIOTA</div>
+      <div class="footer-bottom-col">© einfachIOTA.com</div>
       <div class="footer-bottom-col">
-        <nuxt-link to="imprint" class="footer-main-link">
-          {{ $t('imprint.heading') }}
-        </nuxt-link>
-        <nuxt-link to="privacy" class="footer-main-link">
-          {{ $t('privacy.heading') }}
-        </nuxt-link>
+        <a
+          href="https://discord.gg/WdfXseU"
+          target="_blank"
+          class="footer-main-link"
+          >Discord</a
+        >
+        <a
+          href="https://twitter.com/einfachIOTA"
+          target="_blank"
+          class="footer-main-link"
+          >Twitter</a
+        >
+        <a
+          href="https://github.com/einfachiota"
+          target="_blank"
+          class="footer-main-link"
+          >Github</a
+        >
+      </div>
+      <div class="footer-bottom-col">
+        <router-link to="imprint" class="footer-main-link">{{
+          $t('footer.imprint')
+        }}</router-link>
+        <router-link to="privacy" class="footer-main-link">{{
+          $t('footer.privacy_policy')
+        }}</router-link>
       </div>
     </div>
   </div>
 </template>
 
-<script>
-export default {}
-</script>
-
 <style lang="scss">
 .footer {
+  margin-top: 100px;
   background-color: var(--white);
   width: 100%;
   padding: 50px 50px 0;
@@ -75,7 +106,6 @@ export default {}
   text-align: center;
   border-top: 5px solid var(--primary);
   color: var(--dark);
-  margin-top: 100px;
   .row {
     display: flex;
     justify-content: space-between;
@@ -90,6 +120,7 @@ export default {}
     }
     .logo {
       height: 100px;
+      margin-left: -6px;
     }
     h4 {
       font-size: 20px;

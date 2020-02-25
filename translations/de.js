@@ -16,6 +16,22 @@ module.exports = {
       text: 'April 2020'
     }
   },
+  ei_description: 'IOTA einfach erklärt.',
+  ei_mission:
+    'Unsere Aufgabe ist es, deutschsprachigen Inhalt rund um IOTA bereitzustellen und IOTA in einfacher Sprache zu erklären.',
+  footer: {
+    title: 'einfachIOTA',
+    blog: 'Blog',
+    magazine: 'Magazin',
+    community: 'Community',
+    partners: 'Partner',
+    iota_title: 'IOTA',
+    iota_web: 'Offizielle Webseite',
+    iota_news: 'News',
+    iota_more: 'Mehr',
+    imprint: 'Impressum',
+    privacy_policy: 'Datenschutz'
+  },
   order: {
     form: {
       errors: {

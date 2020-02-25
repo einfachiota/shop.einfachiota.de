@@ -558,9 +558,6 @@ export default {
 }
 
 @media only screen and (max-width: 1440px) {
-  p {
-    font-size: 14px;
-  }
   h3 {
     font-size: 32px;
   }

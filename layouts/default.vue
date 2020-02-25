@@ -3,6 +3,16 @@
 </template>
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,600,700,800|Roboto+Slab:700');
+html {
+  font-size: 16px;
+  word-spacing: 1px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
@@ -10,13 +20,17 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: var(--dark);
 }
+
+.el-main {
+  margin-top: 150px;
+}
 h1,
 h2,
 h3,
 h4 {
   margin: 0;
-  font-weight: 700;
-  font-family: 'Roboto Slab', serif;
+  font-weight: 800;
+  font-family: 'Open Sans', serif;
 }
 h1 {
   font-size: 62px;
@@ -35,6 +49,10 @@ h4 {
 p {
   font-size: 16px;
   line-height: 1.5;
+}
+
+a {
+  color: var(--primary);
 }
 :root {
   --primary: rgba(0, 183, 197, 1);

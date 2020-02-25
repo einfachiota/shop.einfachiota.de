@@ -85,10 +85,6 @@ export default {
   }
   @media only screen and (max-width: 900px) {
     width: 100%;
-    p,
-    span {
-      font-size: 14px;
-    }
     .iso-icon {
       max-width: 80%;
       margin-bottom: 30px;

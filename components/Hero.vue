@@ -34,9 +34,14 @@ export default {}
   overflow: hidden;
   z-index: 0;
   background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
   background-image: url('/assets/hero.png');
   .btn-group {
     margin-top: 30px;
+    .btn {
+      flex-grow: 0;
+    }
   }
   .rounded-edge {
     position: absolute;
