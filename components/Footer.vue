@@ -60,13 +60,9 @@
         >
       </div>
       <div class="footer-bottom-col">
-        <a
-          href="https://www.einfachiota.de/#/imprint"
-          target="_blank"
-          class="footer-main-link"
-        >
-          Impressum
-        </a>
+        <nuxt-link to="imprint" class="footer-main-link">
+          {{ $t('imprint.heading') }}
+        </nuxt-link>
         <a
           href="https://www.einfachiota.de/#/privacy"
           target="_blank"
