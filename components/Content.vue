@@ -8,7 +8,7 @@
           </div>
           <div class="col">
             <h2>{{ item.heading }}</h2>
-            <p>{{ item.description }}</p>
+            <p v-html="item.description"></p>
             <div class="btn-group">
               <a v-scroll-to="'#presale'" href="#" class="btn btn--primary"
                 >Pre-order now</a
@@ -30,7 +30,7 @@ export default {
           layout_inverted: false,
           heading: 'The very first IOTA Magazine',
           description:
-            'We did it! Our first magazine is now also available in English. Our Partner traduko (https://traduko.ch) did a excellent job! Next up? We want to print it and this is what we need your help with. You can now preorder the limited edition of the very first IOTA magazine. We also going to print your name if you want. Click here if you want to see how it will look like - these guys made the very first German version happen! You can be the one making the very first English version happen. ',
+            'We did it! Our first magazine is now also available in English. Our partner <a class="link" target="_blank" href="https://traduko.ch">traduko</a> did a excellent job! Next up? We want to print it and this is what we need your help with. You can now preorder the limited edition of the very first IOTA magazine. We also going to print your name if you want. You can be the one making the very first English version happen. ',
           icon: 'eimag-1--EN.svg',
           link: {
             text: 'Discover Blog',

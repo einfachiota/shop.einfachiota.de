@@ -2,14 +2,14 @@
   <div class="hero">
     <div class="hero-image" />
     <div class="hello">
-      <span class="prefix">Coming in April</span>
+      <span class="prefix">Presale now!</span>
       <h1 class="title">Hello World</h1>
       <h2 class="subtitle">
-        First einfachIOTA Magazine now available in English
+        First einfachIOTA magazine now available in English
       </h2>
       <div class="btn-group">
         <a v-scroll-to="'#presale'" href="#" class="btn btn--primary"
-          >Pre-order now</a
+          >Presale now</a
         >
       </div>
     </div>
