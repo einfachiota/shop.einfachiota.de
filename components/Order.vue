@@ -134,18 +134,17 @@
           @payment-completed="paymentCompleted"
           @payment-cancelled="paymentCancelled"
         ></paypal-checkout>
-        <el-button
-          v-if="!payIota"
-          disabled="disabled"
-          class="btn-iota"
-          @click="payWithIota"
+        <el-button v-if="!payIota" class="btn-iota" @click="payWithIota"
           >Pay with IOTA</el-button
         >
-        <p>We will open the IOTA payments if the coordinator is up again.</p>
         <div v-if="qrCodeData" class="iota-payment">
+          <p>Current IOTA Price: {{ data.payment.live_price }} €</p>
+          <p>IOTA to pay: {{ data.payment.value }}</p>
           <img v-if="qrCodeData" :src="qrCodeData.src" alt="QR CODE" />
           <br />
-          <button @click="copySign">Copy address</button>
+          <el-button @click="copySign">Copy address</el-button>
+          <br />
+          <br />
           <a
             v-if="qrCodeData"
             class="btn btn-primary"
@@ -207,6 +206,7 @@ export default {
       order: null,
       txpending: false,
       payIota: false,
+      live_price: 0,
       paypal_credentials: {
         sandbox:
           'ARytaJaq51tIosygQrzAvBhZcPSLd3YX6gn_kvGZN3uesBNSBcPi1VUgHQ7CrCG83onm7PQUHOATOxeH',
