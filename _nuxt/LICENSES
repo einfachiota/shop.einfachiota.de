@@ -1,0 +1,510 @@
+/*!
+ * Vue.js v2.6.10
+ * (c) 2014-2019 Evan You
+ * Released under the MIT License.
+ */
+
+/*!
+  * vue-router v3.0.7
+  * (c) 2019 Evan You
+  * @license MIT
+  */
+
+/**
+ * vuex v3.1.1
+ * (c) 2019 Evan You
+ * @license MIT
+ */
+
+/*!
+ * JavaScript Cookie v2.2.1
+ * https://github.com/js-cookie/js-cookie
+ *
+ * Copyright 2006, 2015 Klaus Hartl & Fagner Brack
+ * Released under the MIT license
+ */
+
+/*!
+ * cookie
+ * Copyright(c) 2012-2014 Roman Shtylman
+ * Copyright(c) 2015 Douglas Christopher Wilson
+ * MIT Licensed
+ */
+
+/*!
+ * Determine if an object is a Buffer
+ *
+ * @author   Feross Aboukhadijeh <https://feross.org>
+ * @license  MIT
+ */
+
+/*!
+ * vue-no-ssr v1.1.1
+ * (c) 2018-present egoist <0x142857@gmail.com>
+ * Released under the MIT License.
+ */
+
+/*!
+ * The buffer module from node.js, for the browser.
+ *
+ * @author   Feross Aboukhadijeh <feross@feross.org> <http://feross.org>
+ * @license  MIT
+ */
+
+/*!
+ * vue-client-only v2.0.0
+ * (c) 2019-present egoist <0x142857@gmail.com>
+ * Released under the MIT License.
+ */
+
+/*!
+ * vue-i18n v8.15.3 
+ * (c) 2019 kazuya kawaguchi
+ * Released under the MIT License.
+ */
+
+/*!
+  * vue-scrollto v2.17.1
+  * (c) 2019 Randjelovic Igor
+  * @license MIT
+  */
+
+/**
+ * Checks if an event is supported in the current execution environment.
+ *
+ * NOTE: This will not work correctly for non-generic events such as `change`,
+ * `reset`, `load`, `error`, and `select`.
+ *
+ * Borrows from Modernizr.
+ *
+ * @param {string} eventNameSuffix Event name, e.g. "click".
+ * @param {?boolean} capture Check if the capture phase is supported.
+ * @return {boolean} True if the event is supported.
+ * @internal
+ * @license Modernizr 3.0.0pre (Custom Build) | MIT
+ */
+
+/*
+ * [hi-base32]{@link https://github.com/emn178/hi-base32}
+ *
+ * @version 0.5.0
+ * @author Chen, Yi-Cyuan [emn178@gmail.com]
+ * @copyright Chen, Yi-Cyuan 2015-2018
+ * @license MIT
+ */
+
+/*!
+ * Bowser - a browser detector
+ * https://github.com/ded/bowser
+ * MIT License | (c) Dustin Diaz 2015
+ */
+
+/*! https://mths.be/utf8js v2.1.2 by @mathias */
+
+/*!***************************************!*\
+  !*** ../iota-core/dist/data/color.js ***!
+  \***************************************/
+
+/*! no static exports found */
+
+/*! ../helpers/numberHelper */
+
+/*! ../helpers/stringHelper */
+
+/*!************************************************!*\
+  !*** ../iota-core/dist/data/linearGradient.js ***!
+  \************************************************/
+
+/*! ../helpers/arrayHelper */
+
+/*! ../helpers/objectHelper */
+
+/*!************************************************!*\
+  !*** ../iota-core/dist/data/radialGradient.js ***!
+  \************************************************/
+
+/*!**************************************************!*\
+  !*** ../iota-core/dist/factories/factoryBase.js ***!
+  \**************************************************/
+
+/*!************************************************!*\
+  !*** ../iota-core/dist/helpers/arrayHelper.js ***!
+  \************************************************/
+
+/*! ./objectHelper */
+
+/*!*************************************************!*\
+  !*** ../iota-core/dist/helpers/numberHelper.js ***!
+  \*************************************************/
+
+/*!*************************************************!*\
+  !*** ../iota-core/dist/helpers/objectHelper.js ***!
+  \*************************************************/
+
+/*!*************************************************!*\
+  !*** ../iota-core/dist/helpers/stringHelper.js ***!
+  \*************************************************/
+
+/*!*************************************************!*\
+  !*** ../iota-core/dist/helpers/trytesHelper.js ***!
+  \*************************************************/
+
+/*! ./stringHelper */
+
+/*!**********************************!*\
+  !*** ../iota-core/dist/index.js ***!
+  \**********************************/
+
+/*! ./data/color */
+
+/*! ./data/linearGradient */
+
+/*! ./data/radialGradient */
+
+/*! ./factories/factoryBase */
+
+/*! ./helpers/arrayHelper */
+
+/*! ./helpers/numberHelper */
+
+/*! ./helpers/objectHelper */
+
+/*! ./helpers/stringHelper */
+
+/*! ./helpers/trytesHelper */
+
+/*!***************************************************!*\
+  !*** ../iota-qr-core/dist/data/qrAlphaNumeric.js ***!
+  \***************************************************/
+
+/*! ../models/qrDataBase */
+
+/*! ../models/qrDataMode */
+
+/*!********************************************!*\
+  !*** ../iota-qr-core/dist/data/qrByte8.js ***!
+  \********************************************/
+
+/*!*********************************************!*\
+  !*** ../iota-qr-core/dist/data/qrNumber.js ***!
+  \*********************************************/
+
+/*!*************************************************!*\
+  !*** ../iota-qr-core/dist/helpers/bitBuffer.js ***!
+  \*************************************************/
+
+/*!**************************************************!*\
+  !*** ../iota-qr-core/dist/helpers/mathHelper.js ***!
+  \**************************************************/
+
+/*!**************************************************!*\
+  !*** ../iota-qr-core/dist/helpers/polynomial.js ***!
+  \**************************************************/
+
+/*! ./mathHelper */
+
+/*!************************************************!*\
+  !*** ../iota-qr-core/dist/helpers/qrHelper.js ***!
+  \************************************************/
+
+/*! ../models/errorCorrectLevel */
+
+/*! ../models/maskPattern */
+
+/*! ./polynomial */
+
+/*!***********************************************!*\
+  !*** ../iota-qr-core/dist/helpers/rsBlock.js ***!
+  \***********************************************/
+
+/*!*************************************!*\
+  !*** ../iota-qr-core/dist/index.js ***!
+  \*************************************/
+
+/*! ./qr */
+
+/*! ./models/errorCorrectLevel */
+
+/*!********************************************************!*\
+  !*** ../iota-qr-core/dist/models/errorCorrectLevel.js ***!
+  \********************************************************/
+
+/*!**************************************************!*\
+  !*** ../iota-qr-core/dist/models/maskPattern.js ***!
+  \**************************************************/
+
+/*!*************************************************!*\
+  !*** ../iota-qr-core/dist/models/qrDataBase.js ***!
+  \*************************************************/
+
+/*! ./qrDataMode */
+
+/*!*************************************************!*\
+  !*** ../iota-qr-core/dist/models/qrDataMode.js ***!
+  \*************************************************/
+
+/*!**********************************!*\
+  !*** ../iota-qr-core/dist/qr.js ***!
+  \**********************************/
+
+/*! @tangle-frost/iota-core/dist/helpers/numberHelper */
+
+/*! ./data/qrAlphaNumeric */
+
+/*! ./data/qrByte8 */
+
+/*! ./data/qrNumber */
+
+/*! ./helpers/bitBuffer */
+
+/*! ./helpers/mathHelper */
+
+/*! ./helpers/polynomial */
+
+/*! ./helpers/qrHelper */
+
+/*! ./helpers/rsBlock */
+
+/*!**********************************************!*\
+  !*** ../iota-qr-data/dist/data/addressQR.js ***!
+  \**********************************************/
+
+/*! @babel/runtime/regenerator */
+
+/*! @tangle-frost/iota-core/dist/helpers/objectHelper */
+
+/*! @tangle-frost/iota-core/dist/helpers/trytesHelper */
+
+/*! @tangle-frost/iota-qr-core/dist/qr */
+
+/*! @tangle-frost/iota-qr-render/dist/factories/qrRendererFactory */
+
+/*!*****************************************************!*\
+  !*** ../iota-qr-data/dist/data/trinityPaymentQR.js ***!
+  \*****************************************************/
+
+/*! @tangle-frost/iota-core/dist/helpers/stringHelper */
+
+/*!*************************************!*\
+  !*** ../iota-qr-data/dist/index.js ***!
+  \*************************************/
+
+/*! ./data/addressQR */
+
+/*! ./data/trinityPaymentQR */
+
+/*!************************************************************************!*\
+  !*** ../iota-qr-data/node_modules/@babel/runtime/regenerator/index.js ***!
+  \************************************************************************/
+
+/*! regenerator-runtime */
+
+/*!**************************************************************************!*\
+  !*** ../iota-qr-data/node_modules/regenerator-runtime/runtime-module.js ***!
+  \**************************************************************************/
+
+/*! ./runtime */
+
+/*!*******************************************************************!*\
+  !*** ../iota-qr-data/node_modules/regenerator-runtime/runtime.js ***!
+  \*******************************************************************/
+
+/*!*************************************************************!*\
+  !*** ../iota-qr-render/dist/factories/qrRendererFactory.js ***!
+  \*************************************************************/
+
+/*! @tangle-frost/iota-core/dist/factories/factoryBase */
+
+/*!*****************************************************!*\
+  !*** ../iota-qr-render/dist/helpers/imageHelper.js ***!
+  \*****************************************************/
+
+/*!****************************************************!*\
+  !*** ../iota-qr-render/dist/images/jpegEncoder.js ***!
+  \****************************************************/
+
+/*!***************************************************!*\
+  !*** ../iota-qr-render/dist/images/pngEncoder.js ***!
+  \***************************************************/
+
+/*! pako/lib/deflate */
+
+/*!***************************************!*\
+  !*** ../iota-qr-render/dist/index.js ***!
+  \***************************************/
+
+/*! ./initRender */
+
+/*! ./factories/qrRendererFactory */
+
+/*! ./helpers/imageHelper */
+
+/*! ./images/jpegEncoder */
+
+/*! ./images/pngEncoder */
+
+/*! ./renderTypes/jpegRenderer */
+
+/*! ./renderTypes/jpegRendererOptions */
+
+/*! ./renderTypes/canvasRenderer */
+
+/*! ./renderTypes/canvasRendererOptions */
+
+/*! ./renderTypes/pngRenderer */
+
+/*! ./renderTypes/pngRendererOptions */
+
+/*! ./renderTypes/svgRenderer */
+
+/*! ./renderTypes/svgRendererOptions */
+
+/*! ./renderTypes/textRenderer */
+
+/*! ./renderTypes/textRendererOptions */
+
+/*!********************************************!*\
+  !*** ../iota-qr-render/dist/initRender.js ***!
+  \********************************************/
+
+/*!************************************************************!*\
+  !*** ../iota-qr-render/dist/renderTypes/canvasRenderer.js ***!
+  \************************************************************/
+
+/*! @tangle-frost/iota-core/dist/data/color */
+
+/*! @tangle-frost/iota-core/dist/helpers/arrayHelper */
+
+/*!*******************************************************************!*\
+  !*** ../iota-qr-render/dist/renderTypes/canvasRendererOptions.js ***!
+  \*******************************************************************/
+
+/*!**********************************************************!*\
+  !*** ../iota-qr-render/dist/renderTypes/jpegRenderer.js ***!
+  \**********************************************************/
+
+/*! ../helpers/imageHelper */
+
+/*! ../images/jpegEncoder */
+
+/*!*****************************************************************!*\
+  !*** ../iota-qr-render/dist/renderTypes/jpegRendererOptions.js ***!
+  \*****************************************************************/
+
+/*!*********************************************************!*\
+  !*** ../iota-qr-render/dist/renderTypes/pngRenderer.js ***!
+  \*********************************************************/
+
+/*! ../images/pngEncoder */
+
+/*!****************************************************************!*\
+  !*** ../iota-qr-render/dist/renderTypes/pngRendererOptions.js ***!
+  \****************************************************************/
+
+/*!*********************************************************!*\
+  !*** ../iota-qr-render/dist/renderTypes/svgRenderer.js ***!
+  \*********************************************************/
+
+/*! @tangle-frost/iota-core/dist/data/linearGradient */
+
+/*! @tangle-frost/iota-core/dist/data/radialGradient */
+
+/*!****************************************************************!*\
+  !*** ../iota-qr-render/dist/renderTypes/svgRendererOptions.js ***!
+  \****************************************************************/
+
+/*!**********************************************************!*\
+  !*** ../iota-qr-render/dist/renderTypes/textRenderer.js ***!
+  \**********************************************************/
+
+/*!*****************************************************************!*\
+  !*** ../iota-qr-render/dist/renderTypes/textRendererOptions.js ***!
+  \*****************************************************************/
+
+/*!**************************************************************************!*\
+  !*** ../iota-qr-render/node_modules/@babel/runtime/regenerator/index.js ***!
+  \**************************************************************************/
+
+/*!**********************************************************!*\
+  !*** ../iota-qr-render/node_modules/pako/lib/deflate.js ***!
+  \**********************************************************/
+
+/*! ./zlib/deflate */
+
+/*! ./utils/common */
+
+/*! ./utils/strings */
+
+/*! ./zlib/messages */
+
+/*! ./zlib/zstream */
+
+/*!***************************************************************!*\
+  !*** ../iota-qr-render/node_modules/pako/lib/utils/common.js ***!
+  \***************************************************************/
+
+/*!****************************************************************!*\
+  !*** ../iota-qr-render/node_modules/pako/lib/utils/strings.js ***!
+  \****************************************************************/
+
+/*! ./common */
+
+/*!***************************************************************!*\
+  !*** ../iota-qr-render/node_modules/pako/lib/zlib/adler32.js ***!
+  \***************************************************************/
+
+/*!*************************************************************!*\
+  !*** ../iota-qr-render/node_modules/pako/lib/zlib/crc32.js ***!
+  \*************************************************************/
+
+/*!***************************************************************!*\
+  !*** ../iota-qr-render/node_modules/pako/lib/zlib/deflate.js ***!
+  \***************************************************************/
+
+/*! ../utils/common */
+
+/*! ./trees */
+
+/*! ./adler32 */
+
+/*! ./crc32 */
+
+/*! ./messages */
+
+/*!****************************************************************!*\
+  !*** ../iota-qr-render/node_modules/pako/lib/zlib/messages.js ***!
+  \****************************************************************/
+
+/*!*************************************************************!*\
+  !*** ../iota-qr-render/node_modules/pako/lib/zlib/trees.js ***!
+  \*************************************************************/
+
+/*!***************************************************************!*\
+  !*** ../iota-qr-render/node_modules/pako/lib/zlib/zstream.js ***!
+  \***************************************************************/
+
+/*!****************************************************************************!*\
+  !*** ../iota-qr-render/node_modules/regenerator-runtime/runtime-module.js ***!
+  \****************************************************************************/
+
+/*!*********************************************************************!*\
+  !*** ../iota-qr-render/node_modules/regenerator-runtime/runtime.js ***!
+  \*********************************************************************/
+
+/*!***************************!*\
+  !*** ./dist/index-all.js ***!
+  \***************************/
+
+/*! @tangle-frost/iota-core */
+
+/*! @tangle-frost/iota-qr-core */
+
+/*! @tangle-frost/iota-qr-render */
+
+/*! @tangle-frost/iota-qr-data */
+
+/*!**************************!*\
+  !*** ./pkg/bootstrap.js ***!
+  \**************************/
+
+/*! ../dist/index-all */
