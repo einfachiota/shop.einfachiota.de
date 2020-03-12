@@ -3,7 +3,7 @@
     <div class="row">
       <div class="footer-main">
         <router-link to="/" class="footer-logo" exact-active-class="active">
-          <img alt="einfachIOTA" class="logo" src="../assets/logo.svg" />
+          <img alt="einfachIOTA" class="logo" src="../assets/icons/logo.svg" />
         </router-link>
         <p>{{ $t('ei_description') }}</p>
         <p>{{ $t('ei_mission') }}</p>
