@@ -2,14 +2,14 @@
   <div class="hero">
     <div class="hero-image" />
     <div class="hello">
-      <span class="prefix">Presale now!</span>
-      <h1 class="title">Hello World</h1>
+      <span class="prefix">Jetzt im Vorverkauf</span>
+      <h1 class="title">IOTA in der Industrie</h1>
       <h2 class="subtitle">
-        First einfachIOTA magazine now available in English
+        Das zweite einfachIOTA Magazin jetzt im Vorverkauf sichern.
       </h2>
       <div class="btn-group">
         <a v-scroll-to="'#presale'" href="#" class="btn btn--primary"
-          >Presale now</a
+          >Jetzt vorbestellen</a
         >
       </div>
     </div>
