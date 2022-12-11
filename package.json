@@ -30,7 +30,7 @@
     "@tangle-frost/iota-qr-lib": "^0.0.9",
     "dotenv": "^8.2.0",
     "element-ui": "^2.4.11",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "node-sass": "^4.13.1",
     "nuxt": "^2.0.0",
     "nuxt-i18n": "^6.4.1",
